@@ -19,7 +19,7 @@
                 <span class="w-2 h-6 bg-red-600 rounded-full"></span>
                 1. Éditeur du site
             </h2>
-            <p class="mb-6">Le site <strong>apacc-martinique.org</strong> est édité par l'Association pour la Promotion de l'Art et la Culture Chrétienne (APACC-M).</p>
+            <p class="mb-6">Le site <strong>apacc-m.fr</strong> est édité par l'Association pour la Promotion de l'Art et la Culture Chrétienne (APACC-M).</p>
             
             <div class="grid sm:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-slate-100">
                 <div class="space-y-1">

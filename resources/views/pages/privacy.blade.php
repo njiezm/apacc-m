@@ -69,7 +69,7 @@
                 <p>Vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande, veuillez nous contacter :</p>
                 <div class="mt-6 inline-flex items-center gap-4 bg-slate-900 text-white px-8 py-4 rounded-2xl shadow-xl shadow-slate-900/10">
                     <i class="fas fa-envelope text-red-500"></i>
-                    <span class="font-bold tracking-wider">contact@apacc-martinique.org</span>
+                    <span class="font-bold tracking-wider">contact@apacc-m.fr</span>
                 </div>
             </div>
         </div>

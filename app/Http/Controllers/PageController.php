@@ -66,7 +66,7 @@ class PageController extends Controller
         ]);
 
         // Ici vous pourriez envoyer un email
-        // Mail::to('contact@apacc-martinique.org')->send(new ContactMail($validated));
+        // Mail::to('contact@apacc-m.fr')->send(new ContactMail($validated));
 
         return back()->with('success', 'Votre message a été envoyé avec succès !');
     }

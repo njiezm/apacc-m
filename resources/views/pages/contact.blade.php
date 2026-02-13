@@ -49,7 +49,7 @@
                                 </div>
                                 <div>
                                     <p class="text-red-500 text-[10px] uppercase font-black tracking-[0.2em] mb-2">Email</p>
-                                    <p class="text-lg font-medium text-slate-200">contact@apacc-martinique.org</p>
+                                    <p class="text-lg font-medium text-slate-200">contact@apacc-m.fr</p>
                                 </div>
                             </div>
                         </div>

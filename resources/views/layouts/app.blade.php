@@ -140,7 +140,7 @@
                         <p class="text-sm text-slate-400 leading-relaxed font-medium">
                             11 Avenue Franz Fanon<br>
                             97200 Fort-de-France<br>
-                            <span class="text-slate-500 mt-2 block">contact@apacc-martinique.org</span>
+                            <span class="text-slate-500 mt-2 block">contact@apacc-m.fr</span>
                         </p>
                     </div>
                 </div>
