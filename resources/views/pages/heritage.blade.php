@@ -3,102 +3,143 @@
 @section('title', 'Patrimoine Chrétien - APACC-M')
 
 @section('content')
-<section class="py-20 px-6 max-w-6xl mx-auto">
-    <div class="mb-12">
-        <h2 class="text-4xl font-extrabold text-slate-900 mb-4 uppercase tracking-tighter">Patrimoine Chrétien</h2>
-        <div class="w-20 h-1.5 bg-red-600 rounded-full"></div>
-    </div>
+{{-- Hero Section Patrimoine --}}
 
-    <div class="grid md:grid-cols-2 gap-12">
-        {{-- Section Églises --}}
-        <div class="space-y-6">
-            <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:border-red-100 transition-colors">
-                <div class="flex items-center gap-4 mb-8">
-                    <div class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-2xl">
-                        <i class="fas fa-church"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-900">Églises Historiques</h3>
-                </div>
-                <p class="text-slate-600 mb-8 leading-relaxed">Témoins de l'architecture coloniale et de la ferveur populaire, ces édifices sont le cœur de notre patrimoine.</p>
+<header class="pt-32 pb-24 px-6 bg-white overflow-hidden">
+<div class="max-w-6xl mx-auto text-center">
+<span class="font-accent text-[10px] uppercase tracking-[0.5em] text-red-800 mb-8 block">Histoire & Spiritualité</span>
+
+    <h1 class="font-display text-5xl md:text-8xl font-extrabold text-black mb-10 tracking-tighter uppercase leading-[0.9]">
+        Patrimoine <br>
+        <span class="italic font-light serif text-red-900 lowercase" style="font-family: 'Cinzel', serif;">Chrétien</span>
+    </h1>
+    
+    <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed italic">
+        "Découvrez les édifices et les lieux de mémoire qui façonnent l'âme spirituelle de la Martinique."
+    </p>
+</div>
+
+
+</header>
+
+<section class="pb-32 px-6 mt-5">
+<div class="max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+        {{-- Section Églises - Colonne Gauche --}}
+        <div class="space-y-16">
+            <div class="group">
                 
-                <ul class="space-y-4">
-                    <li class="flex items-start gap-4 p-4 rounded-2xl hover:bg-red-50 transition-all group">
-                        <span class="text-red-600 mt-1.5 text-xs group-hover:scale-125 transition-transform">●</span>
-                        <div>
-                            <span class="font-bold block text-slate-900">Cathédrale Saint-Louis</span>
-                            <span class="text-sm text-slate-500 italic">Fort-de-France (Structure métallique de Henri Picq)</span>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-4 p-4 rounded-2xl hover:bg-red-50 transition-all group">
-                        <span class="text-red-600 mt-1.5 text-xs group-hover:scale-125 transition-transform">●</span>
-                        <div>
-                            <span class="font-bold block text-slate-900">Sacré-Cœur de Balata</span>
-                            <span class="text-sm text-slate-500 italic">Réplique miniature de Montmartre</span>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-4 p-4 rounded-2xl hover:bg-red-50 transition-all group">
-                        <span class="text-red-600 mt-1.5 text-xs group-hover:scale-125 transition-transform">●</span>
-                        <div>
-                            <span class="font-bold block text-slate-900">Église du Carbet</span>
-                            <span class="text-sm text-slate-500 italic">L'une des plus anciennes de l'île</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        {{-- Section Calvaires --}}
-        <div class="space-y-6">
-            <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:border-amber-200 transition-colors">
-                <div class="flex items-center gap-4 mb-8">
-                    <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl">
-                        <i class="fas fa-cross"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-900">Calvaires & Chemins</h3>
-                </div>
-                <p class="text-slate-600 mb-8 leading-relaxed">Lieux de recueillement perchés sur nos mornes, ils offrent souvent des points de vue spectaculaires sur l'île.</p>
                 
-                <ul class="space-y-4">
-                    <li class="flex items-start gap-4 p-4 rounded-2xl hover:bg-amber-50 transition-all group">
-                        <span class="text-amber-500 mt-1.5 text-xs group-hover:scale-125 transition-transform">●</span>
-                        <div>
-                            <span class="font-bold block text-slate-900">Chemin de Croix du Morne-Rouge</span>
-                            <span class="text-sm text-slate-500 italic">Une ascension spirituelle face à la Pelée</span>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-4 p-4 rounded-2xl hover:bg-amber-50 transition-all group">
-                        <span class="text-amber-500 mt-1.5 text-xs group-hover:scale-125 transition-transform">●</span>
-                        <div>
-                            <span class="font-bold block text-slate-900">Calvaire de Sainte-Marie</span>
-                            <span class="text-sm text-slate-500 italic">Surplombant l'Atlantique</span>
-                        </div>
-                    </li>
-                </ul>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <span class="w-12 h-[1px] bg-red-900"></span>
+                        <h3 class="text-3xl font-bold tracking-tighter uppercase">Églises Historiques</h3>
+                    </div>
+                    <p class="text-gray-500 font-light italic leading-relaxed">
+                        Témoins de l'architecture coloniale et de la ferveur populaire, ces édifices sont le cœur battant de notre héritage.
+                    </p>
+                    
+                    <ul class="space-y-8 pt-6">
+                        <li class="border-b border-gray-100 pb-6 group/item">
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Fort-de-France</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Cathédrale Saint-Louis</h4>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">Structure métallique iconique signée Henri Picq.</p>
+                        </li>
+                        <li class="border-b border-gray-100 pb-6 group/item">
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Balata</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Sacré-Cœur</h4>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">L'élégance de Montmartre nichée dans la verdure tropicale.</p>
+                        </li>
+                        <li class="border-b border-gray-100 pb-6 group/item">
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Le Carbet</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Église Saint-Jacques</h4>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">Un sanctuaire historique parmi les plus anciens de l'île.</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
-    {{-- Visites Guidées --}}
-    <div class="mt-12 bg-slate-900 p-10 rounded-[3rem] border-l-8 border-red-600 shadow-2xl">
-        <h3 class="text-xl font-bold text-white mb-8 flex items-center gap-3">
-            <i class="fas fa-calendar-alt text-amber-500"></i> Prochaines Visites Guidées
-        </h3>
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl flex justify-between items-center border border-white/10 group hover:bg-white/10 transition-colors">
-                <div>
-                    <p class="font-bold text-white group-hover:text-amber-400 transition-colors">Circuit des Églises du Nord</p>
-                    <p class="text-sm text-slate-400 italic">Samedi 15 Mars - 08:30</p>
+        <div class="space-y-16">
+            <div class="group">
+                
+                
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <span class="w-12 h-[1px] bg-red-900"></span>
+                        <h3 class="text-3xl font-bold tracking-tighter uppercase">Calvaires & Chemins</h3>
+                    </div>
+                    <p class="text-gray-500 font-light italic leading-relaxed">
+                        Sentinelles silencieuses perchées sur nos mornes, ils offrent des points de recueillement face aux grands paysages.
+                    </p>
+                    
+                    <ul class="space-y-8 pt-6">
+                        <li class="border-b border-gray-100 pb-6 group/item">
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Morne-Rouge</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Chemin de Croix</h4>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">Une ascension spirituelle face à la majestueuse Montagne Pelée.</p>
+                        </li>
+                        <li class="border-b border-gray-100 pb-6 group/item">
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Sainte-Marie</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Le Calvaire</h4>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">Une halte sacrée surplombant l'immensité de l'Atlantique.</p>
+                        </li>
+                    </ul>
                 </div>
-                <a href="{{ route('contact') }}" class="px-5 py-2 bg-red-600 text-white text-xs font-black uppercase rounded-xl hover:bg-red-700 transition-colors">S'inscrire</a>
-            </div>
-            <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl flex justify-between items-center border border-white/10 group hover:bg-white/10 transition-colors">
-                <div>
-                    <p class="font-bold text-white group-hover:text-amber-400 transition-colors">Balade Spirituelle au Diamant</p>
-                    <p class="text-sm text-slate-400 italic">Dimanche 22 Mars - 09:00</p>
-                </div>
-                <a href="{{ route('contact') }}" class="px-5 py-2 bg-red-600 text-white text-xs font-black uppercase rounded-xl hover:bg-red-700 transition-colors">S'inscrire</a>
             </div>
         </div>
     </div>
+</div>
+
+
+</section>
+
+{{-- Section Visites Guidées - Style Narthex Sombre --}}
+
+<section class="py-32 bg-black text-white px-6">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-20">
+<h3 class="font-display text-3xl md:text-5xl font-bold mb-6 uppercase tracking-tighter">Visites <span class="italic font-light serif text-red-400" style="font-family: 'Cinzel', serif;">Guidées</span></h3>
+<p class="text-gray-400 font-light italic">Participez à nos circuits exclusifs pour comprendre l'histoire cachée de ces lieux.</p>
+</div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+        {{-- Carte Visite 1 --}}
+        <div class="p-10 border border-white/10 rounded-[2rem] hover:bg-white/5 transition-all flex flex-col justify-between">
+            <div>
+                <div class="flex justify-between items-start mb-8">
+                    <span class="text-[9px] font-black uppercase tracking-[0.3em] text-red-400 px-3 py-1 border border-red-400/30 rounded-full">Mars 2024</span>
+                    <i class="fas fa-arrow-right text-xs opacity-20 group-hover:opacity-100"></i>
+                </div>
+                <h4 class="text-2xl font-bold uppercase tracking-tight mb-2">Circuit des Églises du Nord</h4>
+                <p class="text-sm text-gray-400 font-light italic">Une journée d'exploration entre architecture et légendes.</p>
+            </div>
+            <div class="mt-12">
+                <a href="{{ route('contact') }}" class="inline-block w-full py-4 bg-white text-black text-center text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-red-400 transition-colors">
+                    S'inscrire
+                </a>
+            </div>
+        </div>
+
+        {{-- Carte Visite 2 --}}
+        <div class="p-10 border border-white/10 rounded-[2rem] hover:bg-white/5 transition-all flex flex-col justify-between">
+            <div>
+                <div class="flex justify-between items-start mb-8">
+                    <span class="text-[9px] font-black uppercase tracking-[0.3em] text-red-400 px-3 py-1 border border-red-400/30 rounded-full">Avril 2024</span>
+                </div>
+                <h4 class="text-2xl font-bold uppercase tracking-tight mb-2">Balade Spirituelle au Diamant</h4>
+                <p class="text-sm text-gray-400 font-light italic">Méditation et découverte du patrimoine côtier.</p>
+            </div>
+            <div class="mt-12">
+                <a href="{{ route('contact') }}" class="inline-block w-full py-4 border border-white/20 text-white text-center text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors">
+                    S'inscrire
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </section>
 @endsection

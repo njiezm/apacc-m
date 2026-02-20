@@ -3,78 +3,103 @@
 @section('title', 'Réseau d\'Artistes - APACC-M')
 
 @section('content')
-<section class="py-20 px-6 max-w-6xl mx-auto">
-    <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Réseau d'Artistes</h2>
-        <div class="w-24 h-2 bg-gradient-to-r from-red-600 to-amber-500 mx-auto rounded-full mb-8"></div>
-        <p class="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
-            Notre réseau rassemble des créateurs martiniquais s'inspirant de la culture chrétienne. 
-            Découvrez leurs talents et soutenez la création locale.
+
+<section class="py-24 px-6 max-w-7xl mx-auto">
+{{-- En-tête de section --}}
+<header class="mb-24 text-center">
+<div class="flex flex-col items-center mb-10">
+<span class="font-accent text-[10px] uppercase tracking-[0.4em] text-red-800 mb-6">Communauté Créative</span>
+<div class="h-[1px] w-12 bg-red-200 mb-10"></div>
+
+        <h2 class="font-display text-4xl md:text-6xl font-extrabold text-black mb-10 leading-[1.1] tracking-tighter uppercase">
+            Réseau <br>
+            <span class="italic font-light serif text-red-900 lowercase" style="font-family: 'Cinzel', serif;">d'Artistes</span>
+        </h2>
+        
+        <p class="text-xl text-gray-500 max-w-3xl mx-auto font-light leading-relaxed italic">
+            "Notre réseau rassemble des créateurs martiniquais s'inspirant de la culture chrétienne. Découvrez leurs talents et soutenez la création locale."
         </p>
     </div>
+</header>
 
-    <div class="grid md:grid-cols-3 gap-10">
-        @php
-            $artists = [
-                [
-                    'name' => 'Marie-Claire Dubois',
-                    'desc' => 'Peintre spécialisée dans les scènes bibliques en style créole vibrant.',
-                    'tags' => ['Peinture', 'Art Sacré'],
-                    'img' => 'artist1'
-                ],
-                [
-                    'name' => 'Jean-Baptiste Renard',
-                    'desc' => 'Sculpteur créant des pièces en bois local inspirées de symboles chrétiens.',
-                    'tags' => ['Sculpture', 'Bois'],
-                    'img' => 'artist2'
-                ],
-                [
-                    'name' => 'Sophie Léger',
-                    'desc' => 'Photographe capturant la spiritualité à travers les rituels de l\'île.',
-                    'tags' => ['Photo', 'Art Visuel'],
-                    'img' => 'artist3'
-                ]
-            ];
-        @endphp
+{{-- Grille des Artistes --}}
+<div class="grid md:grid-cols-3 gap-16 mb-32">
+    @php
+        $artists = [
+            [
+                'name' => 'Marie-Claire Dubois',
+                'desc' => 'Peintre spécialisée dans les scènes bibliques en style créole vibrant.',
+                'tags' => ['Peinture', 'Art Sacré'],
+                'img' => 'artist1'
+            ],
+            [
+                'name' => 'Jean-Baptiste Renard',
+                'desc' => 'Sculpteur créant des pièces en bois local inspirées de symboles chrétiens.',
+                'tags' => ['Sculpture', 'Bois'],
+                'img' => 'artist2'
+            ],
+            [
+                'name' => 'Sophie Léger',
+                'desc' => 'Photographe capturant la spiritualité à travers les rituels de l\'île.',
+                'tags' => ['Photo', 'Art Visuel'],
+                'img' => 'artist3'
+            ]
+        ];
+    @endphp
 
-        @foreach($artists as $artist)
-        <div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 hover:shadow-2xl hover:border-red-100 transition-all duration-500">
-            <div class="relative overflow-hidden h-64">
-                <img src="https://picsum.photos/seed/{{ $artist['img'] }}/600/500" alt="{{ $artist['name'] }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
-                    <span class="text-white text-xs font-bold uppercase tracking-widest">Voir le portfolio</span>
-                </div>
+    @foreach($artists as $artist)
+   <div class="group bg-white border border-neutral-200 p-8 hover:shadow-xl transition-all duration-500">
+        {{-- Image en Arche --}}
+        <div class="w-full mb-8 overflow-hidden">
+    <img src="https://picsum.photos/seed/{{ $artist['img'] }}/600/800" 
+         alt="{{ $artist['name'] }}" 
+         class="w-full aspect-[4/5] object-cover grayscale 
+                group-hover:grayscale-0 group-hover:scale-105 
+                transition-all duration-700">
+</div>
+
+        <div class="space-y-4 px-4">
+            <div class="flex justify-center gap-2">
+                @foreach($artist['tags'] as $tag)
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-red-700 px-2 py-1 bg-red-50 rounded">{{ $tag }}</span>
+                @endforeach
             </div>
-            <div class="p-8">
-                <h3 class="text-2xl font-bold mb-3 text-slate-900 group-hover:text-red-600 transition-colors">{{ $artist['name'] }}</h3>
-                <p class="text-sm text-slate-500 mb-6 leading-relaxed">{{ $artist['desc'] }}</p>
-                
-                <div class="flex flex-wrap gap-2 mb-8">
-                    @foreach($artist['tags'] as $tag)
-                        <span class="px-3 py-1 bg-red-50 text-red-600 rounded-lg text-[10px] font-black uppercase tracking-wider border border-red-100">{{ $tag }}</span>
-                    @endforeach
-                </div>
-                
-                <button class="flex items-center gap-2 text-red-600 font-black text-xs uppercase tracking-[0.2em] group-hover:gap-4 transition-all">
-                    Découvrir l'artiste <i class="fas fa-arrow-right"></i>
-                </button>
+            
+            <h3 class="text-2xl font-bold tracking-tighter uppercase group-hover:text-red-900 transition-colors">
+                {{ $artist['name'] }}
+            </h3>
+            
+            <p class="text-sm text-gray-500 font-light leading-relaxed italic">
+                {{ $artist['desc'] }}
+            </p>
+            
+            <div class="pt-6">
+                <a href="#" class="text-[10px] font-black uppercase tracking-[0.3em] text-black border-b border-gray-200 pb-1 hover:border-red-900 hover:text-red-900 transition-all">
+                    Voir le profil →
+                </a>
             </div>
         </div>
-        @endforeach
     </div>
+    @endforeach
+</div>
 
-    {{-- Appel aux artistes --}}
-    <div class="mt-24 bg-red-600 rounded-[3rem] p-12 text-center text-white relative overflow-hidden shadow-2xl shadow-red-600/30">
-        <div class="relative z-10">
-            <h3 class="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tighter">Vous êtes artiste ?</h3>
-            <p class="mb-10 text-red-50 opacity-90 text-lg max-w-xl mx-auto">Partagez votre talent et rejoignez une communauté engagée pour le rayonnement de notre culture.</p>
-            <a href="{{ route('contact') }}" class="inline-block px-10 py-5 bg-white text-red-600 rounded-2xl font-black uppercase tracking-widest hover:bg-amber-400 hover:text-slate-900 transition-all transform hover:-translate-y-1">
-                Devenir membre du réseau
-            </a>
-        </div>
-        {{-- Décoration --}}
-        <div class="absolute -top-12 -right-12 w-64 h-64 bg-white/10 rounded-full"></div>
-        <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-amber-400/20 rounded-full blur-2xl"></div>
+{{-- Appel aux artistes (Style Solennel) --}}
+<div class="bg-black text-white p-12 md:p-24 text-center relative overflow-hidden">
+    <div class="relative z-10 max-w-2xl mx-auto">
+        <h3 class="font-display text-3xl md:text-5xl font-bold mb-8 uppercase tracking-tighter italic" style="font-family: 'Cinzel', serif;">Vous êtes artiste ?</h3>
+        <p class="mb-12 text-gray-400 font-light text-lg leading-relaxed">
+            Partagez votre talent et rejoignez une communauté engagée pour le rayonnement de notre culture et de notre foi.
+        </p>
+        <a href="{{ route('contact') }}" class="inline-block px-12 py-5 border border-white/20 text-[11px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all duration-500">
+            Rejoindre le réseau
+        </a>
     </div>
+    
+    {{-- Décoration minimaliste --}}
+    <div class="absolute top-0 right-0 w-64 h-64 bg-red-900/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-red-900/10 rounded-full blur-3xl"></div>
+</div>
+
+
 </section>
 @endsection

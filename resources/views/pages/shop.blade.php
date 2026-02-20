@@ -3,36 +3,117 @@
 @section('title', 'Boutique - APACC-M')
 
 @section('content')
-<section class="py-24 px-6 max-w-6xl mx-auto">
-    <div class="mb-16">
-        <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-4 uppercase tracking-tighter">La Boutique</h2>
-        <div class="w-20 h-1.5 bg-red-600 rounded-full mb-6"></div>
-        <p class="text-slate-500 max-w-xl italic">Soutenez nos actions en acquérant nos ouvrages et créations originales.</p>
-    </div>
 
-    <div class="grid md:grid-cols-3 gap-10">
-        {{-- Produit 1 --}}
-        <div class="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500">
-            <div class="relative h-80 overflow-hidden">
-                <img src="https://picsum.photos/seed/book/600/800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                <div class="absolute top-6 right-6 bg-white/90 backdrop-blur px-4 py-2 rounded-2xl shadow-sm">
-                    <span class="text-xl font-black text-slate-900">35€</span>
-                </div>
-            </div>
+<section class="py-24 px-6 max-w-7xl mx-auto">
+{{-- En-tête de section --}}
+<header class="mb-24 text-center">
+<div class="flex flex-col items-center mb-10">
+<span class="font-accent text-[10px] uppercase tracking-[0.4em] text-red-800 mb-6">Soutien & Patrimoine</span>
+<div class="h-[1px] w-12 bg-red-200 mb-10"></div>
+
+        <h2 class="font-display text-4xl md:text-6xl font-extrabold text-black mb-10 leading-[1.1] tracking-tighter uppercase">
+            La <br>
+            <span class="italic font-light serif text-red-900 lowercase" style="font-family: 'Cinzel', serif;">Boutique</span>
+        </h2>
+        
+        <p class="text-xl text-gray-400 max-w-xl mx-auto font-light leading-relaxed italic">
+            "Soutenez nos actions culturelles en acquérant nos ouvrages et créations originales."
+        </p>
+    </div>
+</header>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-24">
+    {{-- Produit 1 : Livre --}}
+    <div class="group flex flex-col">
+        {{-- Présentation en Arche --}}
+        <div class="relative mb-10 overflow-hidden" style="border-radius: 50% 50% 0 0 / 40% 40% 0 0;">
+            <img src="https://picsum.photos/seed/book/800/1000" 
+                 alt="Livre Art chrétien créole" 
+                 class="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
             
-            <div class="p-8">
-                <p class="text-[10px] font-black text-red-600 uppercase tracking-[0.2em] mb-3">Ouvrage de collection</p>
-                <h3 class="text-2xl font-bold text-slate-900 mb-6 group-hover:text-red-600 transition-colors">Livre "Art chrétien créole"</h3>
-                
-                <a href="https://www.helloasso.com/associations/apacc-m/boutiques/livre" target="_blank" 
-                   class="flex items-center justify-center gap-3 w-full bg-slate-900 text-white py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-red-600 transition-all transform hover:-translate-y-1 shadow-xl shadow-slate-900/10 hover:shadow-red-600/20">
-                    Commander <i class="fas fa-external-link-alt text-[10px]"></i>
-                </a>
-                <p class="text-center text-[10px] text-slate-400 mt-4 italic">Paiement sécurisé via HelloAsso</p>
+            {{-- Badge Prix --}}
+            <div class="absolute bottom-8 right-8 bg-black text-white px-6 py-3 rounded-full shadow-2xl">
+                <span class="text-lg font-light serif italic" style="font-family: 'Cinzel', serif;">35€</span>
             </div>
         </div>
         
-        {{-- On peut imaginer d'autres produits ici --}}
+        <div class="px-4 space-y-4 text-center">
+            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest bg-red-50 px-3 py-1 rounded">Ouvrage de collection</span>
+            
+            <h3 class="text-2xl font-bold tracking-tighter uppercase group-hover:text-red-900 transition-colors">
+                Livre "Art chrétien créole"
+            </h3>
+            
+            <p class="text-sm text-gray-500 font-light leading-relaxed italic px-4">
+                Un voyage photographique et historique au cœur du patrimoine sacré de la Martinique.
+            </p>
+            
+            <div class="pt-8 flex flex-col items-center gap-4">
+                <a href="https://www.helloasso.com/associations/apacc-m/boutiques/livre" 
+                   target="_blank" 
+                   class="w-full py-5 bg-black text-white text-[10px] font-black uppercase tracking-[0.3em] rounded-full hover:bg-red-900 transition-all shadow-xl shadow-black/10">
+                    Acquérir l'ouvrage
+                </a>
+                <div class="flex items-center gap-2 opacity-30">
+                    <i class="fas fa-lock text-[8px]"></i>
+                    <span class="text-[8px] font-bold uppercase tracking-widest">Paiement sécurisé via HelloAsso</span>
+                </div>
+            </div>
+        </div>
     </div>
+
+    {{-- Produit 2 : Estampe (Exemple pour montrer la grille) --}}
+    <div class="group flex flex-col opacity-60 grayscale hover:opacity-100 transition-opacity">
+        <div class="relative mb-10 overflow-hidden" style="border-radius: 50% 50% 0 0 / 40% 40% 0 0;">
+            <div class="w-full aspect-[4/5] bg-gray-50 flex items-center justify-center border border-dashed border-gray-200">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Prochainement</span>
+            </div>
+        </div>
+        <div class="px-4 space-y-2 text-center">
+            <h3 class="text-xl font-bold tracking-tighter uppercase text-gray-300">Série d'estampes limitées</h3>
+            <p class="text-[10px] text-gray-300 italic">Nouvelle collection d'art sacré en préparation.</p>
+        </div>
+    </div>
+
+    {{-- Produit 3 : Adhésion --}}
+    <div class="group flex flex-col">
+        <div class="relative mb-10 overflow-hidden" style="border-radius: 50% 50% 0 0 / 40% 40% 0 0;">
+            <img src="https://picsum.photos/seed/membership/800/1000" 
+                 class="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
+            <div class="absolute inset-0 bg-red-900/20 group-hover:bg-transparent transition-colors"></div>
+        </div>
+        
+        <div class="px-4 space-y-4 text-center">
+            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest bg-red-50 px-3 py-1 rounded">Engagement</span>
+            <h3 class="text-2xl font-bold tracking-tighter uppercase">Adhésion Annuelle</h3>
+            <p class="text-sm text-gray-500 font-light leading-relaxed italic">
+                Rejoignez notre mission et bénéficiez d'un accès privilégié à nos événements et publications.
+            </p>
+            <div class="pt-8">
+                <a href="{{ route('contact') }}" 
+                   class="w-full block py-5 border border-black/10 text-black text-[10px] font-black uppercase tracking-[0.3em] rounded-full hover:bg-black hover:text-white transition-all">
+                    Devenir Membre
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</section>
+
+{{-- Section Don (Alternative) --}}
+
+<section class="py-24 bg-gray-50 border-y border-gray-100">
+<div class="max-w-3xl mx-auto px-6 text-center">
+<h3 class="font-display text-3xl font-bold mb-8 uppercase tracking-tighter">Soutien Libre</h3>
+<p class="text-gray-500 font-light italic mb-12 leading-relaxed">
+"Chaque contribution aide directement à la préservation des œuvres et au soutien des artistes locaux."
+</p>
+<a href="#" class="inline-flex items-center gap-6 text-[11px] font-black uppercase tracking-[0.4em] text-red-900 group">
+Faire un don à l'association
+<span class="w-12 h-[1px] bg-red-900 group-hover:w-20 transition-all"></span>
+</a>
+</div>
 </section>
 @endsection

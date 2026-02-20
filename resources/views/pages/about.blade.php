@@ -3,59 +3,55 @@
 @section('title', 'À propos de l\'APACC-M')
 
 @section('content')
-<section class="py-20 px-6 max-w-5xl mx-auto">
-    {{-- En-tête de page --}}
-    <div class="mb-16 text-center">
-        <div class="inline-block p-3 rounded-full bg-red-50 mb-6">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-16 w-auto">
-        </div>
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Notre Mission & Nos Engagements</h2>
-        <p class="text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-            L'APACC-M est née d'une volonté profonde de faire rayonner l'identité chrétienne au cœur de la culture martiniquaise.
+
+<section class="py-24 px-6 max-w-6xl mx-auto">
+{{-- En-tête de page --}}
+<div class="mb-24 text-center">
+<div class="flex flex-col items-center mb-10">
+<span class="font-accent text-[10px] uppercase tracking-[0.4em] text-red-800 mb-6">Notre Histoire</span>
+<div class="h-[1px] w-12 bg-red-200 mb-10"></div>
+
+        <h2 class="font-display text-4xl md:text-6xl font-extrabold text-black mb-10 leading-[1.1] tracking-tighter uppercase">
+            Mission & <br>
+            <span class="italic font-light serif text-red-900 lowercase" style="font-family: 'Cinzel', serif;">Engagements</span>
+        </h2>
+        
+        <p class="text-xl text-gray-500 max-w-3xl mx-auto font-light leading-relaxed italic">
+            "L'APACC-M est née d'une volonté profonde de faire rayonner l'identité chrétienne au cœur de la culture martiniquaise."
         </p>
     </div>
+</div>
 
-    {{-- Cartes Vision et Valeurs --}}
-    <div class="grid md:grid-cols-2 gap-8 mb-12">
-        <div class="bg-white p-8 rounded-[2.5rem] border border-red-100 shadow-sm group hover:border-red-200 transition-all">
-            <h3 class="font-bold text-red-600 text-xl mb-4 flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-red-600">
-                    <i class="fas fa-eye"></i>
-                </div>
-                Notre vision
-            </h3>
-            <p class="text-slate-600 leading-relaxed">
-                Promouvoir et valoriser l'art et la culture chrétienne martiniquaise, à travers notamment sa culture créole et son patrimoine. Nous soutenons les activités artistiques par des événements, des expositions et des formations.
-            </p>
-        </div>
-        
-        <div class="bg-red-600 p-8 rounded-[2.5rem] text-white shadow-xl shadow-red-600/20 relative overflow-hidden group">
-            <div class="relative z-10">
-                <h3 class="font-bold text-amber-400 text-xl mb-4 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-amber-400">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    Nos valeurs
-                </h3>
-                <p class="text-white/90 leading-relaxed font-medium">
-                    Dignité humaine, éthique, bienveillance et solidarité. L'association se veut un lieu de rencontre et de partage, un espace de dialogue pour la transmission des richesses de la culture créole.
-                </p>
-            </div>
-            {{-- Décoration subtile en fond de carte --}}
-            <div class="absolute -bottom-6 -right-6 text-white/10 text-8xl transform -rotate-12 group-hover:rotate-0 transition-transform">
-                <i class="fas fa-cross"></i>
-            </div>
-        </div>
+{{-- Cartes Vision et Valeurs - Style Minimaliste --}}
+<div class="grid md:grid-cols-2 gap-16 mb-24">
+    <div class="space-y-8 border-l border-gray-100 pl-10 relative">
+        <div class="absolute -left-[1px] top-0 h-12 w-[1px] bg-red-600"></div>
+        <h3 class="font-bold text-black text-2xl tracking-tighter uppercase flex items-center gap-4">
+            <span class="text-red-800 font-light italic serif" style="font-family: 'Cinzel', serif;">01.</span> 
+            Notre vision
+        </h3>
+        <p class="text-gray-500 leading-relaxed font-light text-lg">
+            Promouvoir et valoriser l'art et la culture chrétienne martiniquaise, à travers notamment sa culture créole et son patrimoine. Nous soutenons les activités artistiques par des événements, des expositions et des formations.
+        </p>
     </div>
+    
+    <div class="space-y-8 border-l border-gray-100 pl-10 relative">
+        <div class="absolute -left-[1px] top-0 h-12 w-[1px] bg-red-600"></div>
+        <h3 class="font-bold text-black text-2xl tracking-tighter uppercase flex items-center gap-4">
+            <span class="text-red-800 font-light italic serif" style="font-family: 'Cinzel', serif;">02.</span> 
+            Nos valeurs
+        </h3>
+        <p class="text-gray-500 leading-relaxed font-light text-lg">
+            Dignité humaine, éthique, bienveillance et solidarité. L'association se veut un lieu de rencontre et de partage, un espace de dialogue pour la transmission des richesses de la culture créole.
+        </p>
+    </div>
+</div>
 
-    {{-- Texte descriptif --}}
-    <div class="bg-white p-10 md:p-14 rounded-[3rem] border border-slate-100 shadow-sm mb-12 relative">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-6">
-            <i class="fas fa-ellipsis-h text-amber-500 tracking-[0.5em]"></i>
-        </div>
-        
-        <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center md:text-left">Qui sommes-nous ?</h3>
-        <div class="grid md:grid-cols-2 gap-10 text-slate-600 text-lg leading-relaxed italic">
+{{-- Texte descriptif - Section Qui sommes-nous --}}
+<div class="py-24 border-y border-gray-50 mb-24">
+    <div class="max-w-4xl mx-auto">
+        <h3 class="text-[10px] font-black uppercase tracking-[0.5em] text-gray-400 mb-12 text-center italic">Qui sommes-nous ?</h3>
+        <div class="grid md:grid-cols-2 gap-16 text-gray-800 text-lg leading-relaxed font-light">
             <p>
                 L'Association pour la Promotion de l'Art et la Culture Chrétienne (APACC-M) s'adresse à tous : artistes confirmés, amateurs d'art, membres de la communauté chrétienne ou simples curieux.
             </p>
@@ -64,64 +60,66 @@
             </p>
         </div>
     </div>
+</div>
 
-    {{-- Cadre Institutionnel (Style Solennel) --}}
-    <div class="bg-slate-900 text-slate-300 p-10 md:p-14 rounded-[3rem] relative overflow-hidden border-b-8 border-amber-500">
-        <div class="relative z-10">
-            <div class="flex items-center gap-4 mb-10">
-                <h3 class="text-2xl font-bold text-white uppercase tracking-widest text-sm italic">Cadre Institutionnel</h3>
-                <div class="flex-grow h-px bg-slate-800"></div>
+{{-- Cadre Institutionnel (Style Archive/Musée) --}}
+<div class="bg-white border border-gray-100 p-12 md:p-20 shadow-sm relative overflow-hidden">
+    <div class="relative z-10">
+        <div class="text-center mb-16">
+            <h3 class="font-accent text-[10px] uppercase tracking-[0.5em] text-red-800 mb-4">Informations Légales</h3>
+            <h4 class="text-2xl font-bold tracking-tighter uppercase italic" style="font-family: 'Cinzel', serif;">Cadre Institutionnel</h4>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-16">
+            <div class="space-y-10">
+                <div class="flex flex-col gap-2">
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-gray-400">Statut Juridique</span>
+                    <span class="text-lg font-medium text-black">Association loi 1901</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-gray-400">RNA</span>
+                    <span class="text-lg font-medium text-black">W9M1011611</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-gray-400">SIRET</span>
+                    <span class="text-lg font-medium text-black">924 433 808 00012</span>
+                </div>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-6">
-                    <div class="flex items-center gap-4 group">
-                        <div class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center group-hover:border-amber-500 transition-colors">
-                            <i class="fas fa-file-signature text-amber-500"></i>
-                        </div>
-                        <span class="text-base"><strong>Statut :</strong> Association loi 1901</span>
-                    </div>
-                    <div class="flex items-center gap-4 group">
-                        <div class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center group-hover:border-amber-500 transition-colors">
-                            <i class="fas fa-hashtag text-amber-500"></i>
-                        </div>
-                        <span class="text-base"><strong>RNA :</strong> W9M1011611</span>
-                    </div>
-                    <div class="flex items-center gap-4 group">
-                        <div class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center group-hover:border-amber-500 transition-colors">
-                            <i class="fas fa-id-card text-amber-500"></i>
-                        </div>
-                        <span class="text-base"><strong>Siret :</strong> 924 433 808 00012</span>
-                    </div>
+            <div class="space-y-10 border-l border-gray-50 md:pl-16">
+                <div class="flex flex-col gap-2">
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-gray-400">Siège Social</span>
+                    <span class="text-lg font-medium text-black leading-snug">
+                        11 Avenue Franz Fanon <br>
+                        97200 Fort de France
+                    </span>
                 </div>
-                
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4 group">
-                        <div class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center group-hover:border-amber-500 transition-colors shrink-0">
-                            <i class="fas fa-map-marker-alt text-amber-500"></i>
-                        </div>
-                        <span class="text-base leading-snug"><strong>Siège Social :</strong><br>11 Avenue Franz Fanon, 97200 Fort de France</span>
-                    </div>
-                    <div class="flex items-center gap-4 group">
-                        <div class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center group-hover:border-amber-500 transition-colors">
-                            <i class="fas fa-balance-scale text-amber-500"></i>
-                        </div>
-                        <span class="text-base italic">Enregistrée à la Préfecture de la Martinique</span>
+                <div class="flex flex-col gap-2 pt-4">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 bg-gray-50 rounded-full w-fit">
+                        <i class="fas fa-balance-scale text-red-700 text-xs"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Enregistrée en Préfecture</span>
                     </div>
                 </div>
             </div>
         </div>
-        {{-- Effet de lumière dorée --}}
-        <div class="absolute -top-20 -right-20 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl"></div>
     </div>
+    
+    {{-- Filigrane discret --}}
+    <div class="absolute -bottom-10 -right-10 opacity-[0.03] select-none pointer-events-none">
+        <img src="{{ asset('images/logo.png') }}" alt="" class="w-96 grayscale">
+    </div>
+</div>
 
-    {{-- CTA Final --}}
-    <div class="mt-20 text-center">
-        <p class="text-slate-500 mb-8 italic text-lg font-serif">"L'art est le reflet de l'âme d'un peuple."</p>
-        <a href="{{ route('contact') }}" class="group inline-flex items-center gap-4 px-10 py-5 bg-red-600 text-white rounded-2xl font-bold shadow-xl shadow-red-600/30 hover:bg-red-700 transition-all hover:-translate-y-1">
-            Nous contacter pour plus d'infos 
-            <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
-        </a>
-    </div>
+{{-- CTA Final --}}
+<div class="mt-32 text-center">
+    <div class="h-[1px] w-24 bg-gray-100 mx-auto mb-12"></div>
+    <p class="text-gray-400 mb-10 italic text-xl font-light serif" style="font-family: 'Cinzel', serif;">"L'art est le reflet de l'âme d'un peuple."</p>
+    <a href="{{ route('contact') }}" class="inline-flex items-center px-12 py-5 bg-black text-white text-[11px] font-bold uppercase tracking-[0.3em] hover:bg-red-900 transition-all duration-500">
+        Nous contacter 
+        <span class="ml-4 transform transition-transform group-hover:translate-x-1">→</span>
+    </a>
+</div>
+
+
 </section>
 @endsection

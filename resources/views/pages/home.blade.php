@@ -1,84 +1,152 @@
 @extends('layouts.app')
 
-@section('content')
-<header class="py-4 px-6 text-center">
-    <div class="max-w-4xl mx-auto">
-        {{-- Ajout du Logo --}}
-        <div class="mb-1">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo APACC-M" class="h-32 mx-auto">
-        </div>
+@section('title', 'Accueil - APACC-M Martinique')
 
-        <span class="inline-block px-4 py-1.5 bg-red-50 text-red-600 rounded-full text-xs font-bold mb-6 float-anim border border-red-100">
-            ✨ Association pour la Promotion de l'Art et la Culture Chrétienne
-        </span>
+@section('content')
+
+{{-- Section En-tête (Hero) --}}
+
+<header class="pt-20 pb-28 px-6 text-center relative overflow-hidden bg-neutral-950 text-white">
+
+    {{-- Image fond --}}
+    <div class="absolute inset-0 z-0 opacity-50 pointer-events-none">
+        <div class="w-full h-full bg-[url('https://images.pexels.com/photos/272337/pexels-photo-272337.jpeg')] bg-cover bg-center"></div>
+    </div>
+
+    {{-- Gradient --}}
+    <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/70 via-black/60 to-black/90 pointer-events-none"></div>
+
+    {{-- CONTENU --}}
+    <div class="relative z-10 max-w-4xl mx-auto">
+{{-- Logo --}}
+<div class="mb-8 opacity-90">
+<img src="{{ asset('images/logo.png') }}" alt="Logo APACC-M" class="h-40 mx-auto">
+</div>
+
+    <div class="flex flex-col items-center mb-10">
+        <span class="font-accent text-[10px] uppercase tracking-[0.4em] text-red-800 mb-4">Martinique</span>
+        <div class="h-[1px] w-12 bg-red-200 mb-8"></div>
         
-        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
-            APACC-M : <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-amber-500">Valoriser notre patrimoine</span>
+        <h1 class="font-display text-4xl md:text-6xl font-extrabold text-white mb-8 leading-[1.1] tracking-tight" style="text-shadow: 0 0 40px rgba(185,28,28,0.4);">
+            Promouvoir l'Art et la <br>
+            <span class="italic font-light serif text-red-900" style="font-family: 'Cinzel', serif;">Culture Chrétienne</span>
         </h1>
         
-        <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">Promouvoir et valoriser l'art et la culture chrétienne martiniquaise à travers sa culture créole.</p>
-        
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="{{ route('about') }}" class="px-8 py-3.5 bg-slate-900 text-white rounded-2xl font-bold shadow-lg hover:bg-slate-800 transition-all">Découvrir l'association</a>
-            <a href="{{ route('events') }}" class="px-8 py-3.5 bg-red-600 text-white rounded-2xl font-bold shadow-lg hover:bg-red-700 transition-all">Nos événements</a>
-        </div>
+        <p class="text-lg text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">
+            Valoriser le patrimoine et la création martiniquaise à travers le prisme de la foi et de la culture créole.
+        </p>
     </div>
+    
+    <div class="flex flex-col sm:flex-row justify-center gap-6">
+        <a href="{{ route('about') }}" class="px-10 py-4 border border-white/30 text-white text-[11px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-500">
+            L'Association
+        </a>
+        <a href="{{ route('events') }}" class="px-10 py-4 border border-gray-200 text-white text-[11px] font-bold uppercase tracking-widest hover:border-black transition-all duration-500">
+            Nos Événements
+        </a>
+    </div>
+</div>
+
+
 </header>
 
-<section class="py-16 px-6 max-w-6xl mx-auto border-t border-slate-100">
-    <div class="flex justify-between items-end mb-12">
-        <div>
-            <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tighter">Actualités</h2>
-            <p class="text-slate-500 border-l-4 border-amber-500 pl-3">Les derniers moments forts de l'association</p>
+{{-- Section Actualités --}}
+
+<section class="py-28 px-6 max-w-7xl mx-auto bg-neutral-100">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+<div class="space-y-2">
+<h2 class="font-accent text-[10px] uppercase tracking-[0.4em] text-gray-400">Actualités</h2>
+<h3 class="text-3xl font-extrabold tracking-tighter uppercase">Dernières Réflexions</h3>
+</div>
+<div class="h-[1px] flex-grow bg-gray-100 mx-8 hidden md:block"></div>
+{{-- Correction de la route inexistante 'news' vers 'events' --}}
+<a href="{{ route('events') }}" class="text-[10px] font-bold uppercase tracking-widest border-b border-black pb-1 hover:text-red-700 hover:border-red-700 transition">Voir tout</a>
+</div>
+
+@php
+    $articles = [
+        [
+            'slug' => 'sacre-en-couleurs',
+            'title' => 'Exposition : "Sacré en couleurs"',
+            'date' => '10 Fév. 2026',
+            'category' => 'Exposition',
+            'excerpt' => 'Découvrez les œuvres d\'artistes martiniquais explorant le sacré à travers le prisme créole.',
+            'image' => 'expo'
+        ],
+        [
+            'slug' => 'patrimoine-religieux-2026',
+            'title' => 'Sauvegarde du patrimoine 2026',
+            'date' => '05 Fév. 2026',
+            'category' => 'Patrimoine',
+            'excerpt' => 'Lancement de notre nouvelle campagne d\'inventaire des calvaires de l\'île.',
+            'image' => 'church'
+        ],
+        [
+            'slug' => 'nouveaux-artistes-reseau',
+            'title' => 'Le réseau s\'agrandit',
+            'date' => '28 Janv. 2026',
+            'category' => 'Réseau',
+            'excerpt' => 'Trois nouveaux sculpteurs nous rejoignent pour promouvoir l\'artisanat chrétien.',
+            'image' => 'artist'
+        ]
+    ];
+@endphp
+
+<div class="grid md:grid-cols-3 gap-12">
+    @foreach($articles as $article)
+    <article class="group cursor-pointer">
+        {{-- Conteneur en forme d'Arche --}}
+        <div class="arch-container w-full mb-8 overflow-hidden transition-transform duration-700 group-hover:shadow-lg">
+            <div class="overflow-hidden" style="border-radius: 50% 50% 0 0 / 40% 40% 0 0;">
+                <img src="https://picsum.photos/seed/{{ $article['image'] }}/800/1000" 
+                     alt="{{ $article['title'] }}" 
+                     class="w-full aspect-[3/4] object-cover transition-transform duration-1000 group-hover:scale-110 grayscale hover:grayscale-0">
+            </div>
         </div>
-    </div>
-
-    @php
-        $articles = [
-            [
-                'slug' => 'sacre-en-couleurs',
-                'title' => 'Exposition : "Sacré en couleurs"',
-                'date' => '10 Fév. 2026',
-                'excerpt' => 'Découvrez les œuvres d\'artistes martiniquais explorant le sacré à travers le prisme créole.',
-                'image' => 'expo'
-            ],
-            [
-                'slug' => 'patrimoine-religieux-2026',
-                'title' => 'Sauvegarde du patrimoine 2026',
-                'date' => '05 Fév. 2026',
-                'excerpt' => 'Lancement de notre nouvelle campagne d\'inventaire des calvaires de l\'île.',
-                'image' => 'church'
-            ],
-            [
-                'slug' => 'nouveaux-artistes-reseau',
-                'title' => 'Le réseau s\'agrandit',
-                'date' => '28 Janv. 2026',
-                'excerpt' => 'Trois nouveaux sculpteurs nous rejoignent pour promouvoir l\'artisanat chrétien.',
-                'image' => 'artist'
-            ]
-        ];
-    @endphp
-
-    <div class="grid md:grid-cols-3 gap-8">
-        @foreach($articles as $article)
-        <article class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:border-amber-200 transition-all duration-500 flex flex-col group">
-            <div class="relative overflow-hidden h-52">
-                <img src="https://picsum.photos/seed/{{ $article['image'] }}/600/400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black uppercase text-red-600 border border-red-100">
-                    {{ $article['date'] }}
-                </div>
+        
+        <div class="space-y-4">
+            <div class="flex items-center gap-4">
+                <span class="text-[9px] font-black uppercase tracking-widest text-red-700">{{ $article['category'] }}</span>
+                <span class="h-[1px] w-4 bg-gray-200"></span>
+                <span class="text-[9px] font-bold uppercase tracking-widest text-gray-400">{{ $article['date'] }}</span>
             </div>
-            <div class="p-8 flex-grow">
-                <h3 class="font-bold text-xl mb-3 text-slate-900 group-hover:text-red-600 transition-colors">{{ $article['title'] }}</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-6">{{ $article['excerpt'] }}</p>
-            </div>
-            <div class="px-8 pb-8">
-                <a href="{{ route('news.show', $article['slug']) }}" class="inline-flex items-center text-sm font-black uppercase tracking-widest text-red-600 hover:text-amber-600 transition-colors">
-                    Lire la suite <i class="fas fa-arrow-right ml-2 text-xs"></i>
+            
+            <h4 class="text-xl font-bold leading-tight group-hover:text-red-900 transition-colors">
+                {{ $article['title'] }}
+            </h4>
+            
+            <p class="text-sm text-gray-500 font-light leading-relaxed line-clamp-2">
+                {{ $article['excerpt'] }}
+            </p>
+            
+            <div class="pt-4">
+                {{-- Note : Vérifiez que la route 'news.show' est bien définie dans votre fichier web.php --}}
+                <a href="{{ route('events') }}" class="text-[10px] font-black uppercase tracking-[0.2em] inline-flex items-center gap-2 group/link">
+                    Explorer 
+                    <span class="transform transition-transform group-hover/link:translate-x-1">→</span>
                 </a>
             </div>
-        </article>
-        @endforeach
-    </div>
+        </div>
+    </article>
+    @endforeach
+</div>
+
+
 </section>
+
+{{-- Section Citation --}}
+
+<section class="py-32 bg-neutral-900 text-center px-6 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none">
+    <div class="w-full h-full bg-[url('https://images.unsplash.com/photo-1507692049790-de58290a4334')] bg-cover bg-center"></div>
+</div>
+<div class="max-w-3xl mx-auto">
+<i class="fas fa-quote-left text-red-100 text-5xl mb-8"></i>
+<p class="font-accent text-2xl md:text-3xl text-white leading-relaxed mb-8">
+"L'art est le chemin le plus court entre l'homme et Dieu."
+</p>
+<div class="h-[1px] w-12 bg-red-600 mx-auto"></div>
+</div>
+</section>
+
 @endsection

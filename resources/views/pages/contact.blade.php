@@ -3,131 +3,145 @@
 @section('title', 'Contact - APACC-M')
 
 @section('content')
-{{-- Hero Section Prestige --}}
-<section class="relative pt-40 pb-20 bg-slate-950 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-red-900/20 via-slate-950 to-slate-950"></div>
-    <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        <h1 class="text-5xl md:text-7xl font-black text-white mb-6 tracking-tighter uppercase">Restons en <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-amber-500">Contact</span></h1>
-        <p class="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed italic">"Une question, un projet ou une envie de contribuer ? Notre équipe vous répond avec bienveillance."</p>
-    </div>
-</section>
+{{-- Hero Section Curatoriale --}}
 
-<section class="py-20 px-6 -mt-16 relative z-20">
-    <div class="max-w-6xl mx-auto">
-        <div class="bg-white rounded-[3.5rem] shadow-2xl overflow-hidden border border-slate-100">
-            <div class="grid lg:grid-cols-5 gap-0">
-                
-                {{-- Colonne Infos Sombre (2/5) --}}
-                <div class="lg:col-span-2 bg-slate-900 p-10 md:p-14 text-white relative overflow-hidden">
-                    <div class="relative z-10">
-                        <h3 class="text-2xl font-black mb-12 uppercase tracking-tight">Nos Coordonnées</h3>
-                        
-                        <div class="space-y-10">
-                            <div class="flex items-start gap-6 group">
-                                <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-500 group-hover:bg-red-600 group-hover:text-white transition-all duration-500">
-                                    <i class="fas fa-map-marker-alt text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="text-red-500 text-[10px] uppercase font-black tracking-[0.2em] mb-2">Siège social</p>
-                                    <p class="text-lg leading-snug font-medium text-slate-200">11 Avenue Franz Fanon,<br>97200 Fort de France</p>
-                                </div>
+<header class="pt-32 pb-24 px-6 bg-white overflow-hidden">
+<div class="max-w-6xl mx-auto text-center">
+<span class="font-accent text-[10px] uppercase tracking-[0.5em] text-red-800 mb-8 block">Ouverture & Dialogue</span>
+
+    <h1 class="font-display text-5xl md:text-8xl font-extrabold text-black mb-10 tracking-tighter uppercase leading-[0.9]">
+        Restons en <br>
+        <span class="italic font-light serif text-red-900 lowercase" style="font-family: 'Cinzel', serif;">Contact</span>
+    </h1>
+    
+    <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed italic">
+        "Une question, un projet ou une envie de contribuer ? Notre équipe vous reçoit avec bienveillance."
+    </p>
+</div>
+
+
+</header>
+
+<section class="pb-32 px-6 relative z-20">
+<div class="max-w-7xl mx-auto">
+<div class="bg-white rounded-[4rem] shadow-2xl overflow-hidden border border-gray-50">
+<div class="grid lg:grid-cols-5 gap-0">
+
+            {{-- Colonne Infos (2/5) - Style "Sacreristie" Sombre --}}
+            <div class="lg:col-span-2 bg-black p-12 md:p-16 text-white relative overflow-hidden flex flex-col justify-between">
+                <div class="relative z-10">
+                    <h3 class="font-display text-2xl font-bold mb-16 uppercase tracking-tight">Nos Coordonnées</h3>
+                    
+                    <div class="space-y-12">
+                        {{-- Adresse --}}
+                        <div class="flex items-start gap-8 group">
+                            <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-red-400 group-hover:bg-white group-hover:text-black transition-all duration-500">
+                                <i class="fas fa-map-marker-alt text-xs"></i>
                             </div>
-
-                            <div class="flex items-start gap-6 group">
-                                <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-500 group-hover:bg-red-600 group-hover:text-white transition-all duration-500">
-                                    <i class="fas fa-phone text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="text-red-500 text-[10px] uppercase font-black tracking-[0.2em] mb-2">Téléphone</p>
-                                    <p class="text-lg font-medium text-slate-200">0596 61 23 45</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-6 group">
-                                <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-500 group-hover:bg-red-600 group-hover:text-white transition-all duration-500">
-                                    <i class="fas fa-envelope text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="text-red-500 text-[10px] uppercase font-black tracking-[0.2em] mb-2">Email</p>
-                                    <p class="text-lg font-medium text-slate-200">contact@apacc-m.fr</p>
-                                </div>
+                            <div>
+                                <p class="text-red-500 text-[9px] uppercase font-black tracking-widest mb-3">Siège social</p>
+                                <p class="text-lg leading-snug font-light italic text-gray-200">11 Avenue Franz Fanon,<br>97200 Fort de France</p>
                             </div>
                         </div>
 
-                        {{-- Réseaux Sociaux --}}
-                        <div class="mt-20">
-                            <p class="text-slate-500 text-[10px] uppercase font-black tracking-[0.2em] mb-6">Suivez notre actualité</p>
-                            <div class="flex gap-4">
-                                @foreach(['facebook-f', 'instagram', 'youtube'] as $icon)
-                                <a href="#" class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-all text-slate-300 hover:text-white">
-                                    <i class="fab fa-{{ $icon }}"></i>
-                                </a>
-                                @endforeach
+                        {{-- Email --}}
+                        <div class="flex items-start gap-8 group">
+                            <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-red-400 group-hover:bg-white group-hover:text-black transition-all duration-500">
+                                <i class="fas fa-envelope text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-red-500 text-[9px] uppercase font-black tracking-widest mb-3">Correspondance</p>
+                                <p class="text-lg font-light italic text-gray-200">contact@apacc-m.fr</p>
+                            </div>
+                        </div>
+
+                        {{-- Social --}}
+                        <div class="flex items-start gap-8 group">
+                            <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-red-400 group-hover:bg-white group-hover:text-black transition-all duration-500">
+                                <i class="fas fa-share-alt text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-red-500 text-[9px] uppercase font-black tracking-widest mb-3">Réseaux Sociaux</p>
+                                <div class="flex gap-6 mt-4">
+                                    @foreach(['facebook-f', 'instagram', 'youtube'] as $icon)
+                                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                            <i class="fab fa-{{ $icon }} text-lg"></i>
+                                        </a>
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    {{-- Décoration --}}
-                    <div class="absolute bottom-0 right-0 w-64 h-64 bg-red-600/10 rounded-full -mr-32 -mb-32 blur-3xl"></div>
                 </div>
 
-                {{-- Colonne Formulaire (3/5) --}}
-                <div class="lg:col-span-3 p-10 md:p-14 bg-white">
-                    <form action="#" method="POST" class="space-y-8">
-                        @csrf
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div class="space-y-3">
-                                <label class="text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Nom complet</label>
-                                <input type="text" name="name" placeholder="Votre nom" 
-                                    class="w-full px-6 py-5 bg-slate-50 border border-slate-100 rounded-[1.5rem] focus:ring-4 focus:ring-red-600/5 focus:border-red-600/30 outline-none transition-all placeholder:text-slate-300">
-                            </div>
-                            <div class="space-y-3">
-                                <label class="text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Adresse email</label>
-                                <input type="email" name="email" placeholder="email@exemple.com" 
-                                    class="w-full px-6 py-5 bg-slate-50 border border-slate-100 rounded-[1.5rem] focus:ring-4 focus:ring-red-600/5 focus:border-red-600/30 outline-none transition-all placeholder:text-slate-300">
-                            </div>
-                        </div>
+                {{-- Décoration Filigrane --}}
+                <div class="mt-20 opacity-10 font-display text-8xl font-black pointer-events-none select-none">
+                    APACC
+                </div>
+            </div>
 
-                        <div class="space-y-3">
-                            <label class="text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Sujet de votre message</label>
-                            <div class="relative">
-                                <select name="subject" class="w-full px-6 py-5 bg-slate-50 border border-slate-100 rounded-[1.5rem] focus:ring-4 focus:ring-red-600/5 outline-none transition-all appearance-none font-medium text-slate-700">
-                                    <option>Demande d'information</option>
-                                    <option>Partenariat / Artiste</option>
-                                    <option>Devenir bénévole</option>
-                                    <option>Autre demande</option>
-                                </select>
-                                <i class="fas fa-chevron-down absolute right-6 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
-                            </div>
+            {{-- Colonne Formulaire (3/5) --}}
+            <div class="lg:col-span-3 p-12 md:p-20 bg-white">
+                <form action="#" method="POST" class="space-y-12">
+                    @csrf
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="relative group">
+                            <label class="text-[9px] font-black text-black uppercase tracking-[0.3em] mb-4 block">Votre Nom</label>
+                            <input type="text" name="name" placeholder="Nom complet" 
+                                class="w-full pb-4 bg-transparent border-t-0 border-x-0 border-b border-gray-100 focus:border-red-900 focus:ring-0 outline-none transition-all placeholder:text-gray-200 font-light italic">
                         </div>
-
-                        <div class="space-y-3">
-                            <label class="text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Votre message</label>
-                            <textarea name="message" rows="5" placeholder="Comment pouvons-nous vous aider ?" 
-                                class="w-full px-6 py-5 bg-slate-50 border border-slate-100 rounded-[1.5rem] focus:ring-4 focus:ring-red-600/5 outline-none transition-all resize-none placeholder:text-slate-300"></textarea>
+                        <div class="relative group">
+                            <label class="text-[9px] font-black text-black uppercase tracking-[0.3em] mb-4 block">Votre Email</label>
+                            <input type="email" name="email" placeholder="adresse@email.com" 
+                                class="w-full pb-4 bg-transparent border-t-0 border-x-0 border-b border-gray-100 focus:border-red-900 focus:ring-0 outline-none transition-all placeholder:text-gray-200 font-light italic">
                         </div>
+                    </div>
 
-                        <button type="submit" class="group w-full md:w-auto px-12 py-5 bg-red-600 hover:bg-slate-900 text-white font-black uppercase tracking-[0.2em] text-xs rounded-2xl transition-all shadow-xl shadow-red-600/20 flex items-center justify-center gap-4 transform hover:-translate-y-1">
-                            Envoyer le message
-                            <i class="fas fa-paper-plane text-[10px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                    <div class="relative">
+                        <label class="text-[9px] font-black text-black uppercase tracking-[0.3em] mb-4 block">Sujet de l'échange</label>
+                        <select name="subject" class="w-full pb-4 bg-transparent border-t-0 border-x-0 border-b border-gray-100 focus:border-red-900 focus:ring-0 outline-none transition-all appearance-none font-light italic text-gray-500">
+                            <option>Demande d'information culturelle</option>
+                            <option>Partenariat / Artiste</option>
+                            <option>Soutien & Bénévolat</option>
+                            <option>Autre demande</option>
+                        </select>
+                        <i class="fas fa-chevron-down absolute right-0 bottom-4 text-[10px] text-gray-300 pointer-events-none"></i>
+                    </div>
+
+                    <div class="relative">
+                        <label class="text-[9px] font-black text-black uppercase tracking-[0.3em] mb-4 block">Votre Message</label>
+                        <textarea name="message" rows="4" placeholder="Écrivez ici..." 
+                            class="w-full pb-4 bg-transparent border-t-0 border-x-0 border-b border-gray-100 focus:border-red-900 focus:ring-0 outline-none transition-all resize-none placeholder:text-gray-200 font-light italic"></textarea>
+                    </div>
+
+                    <div class="pt-6">
+                        <button type="submit" class="group flex items-center gap-8 text-[11px] font-black uppercase tracking-[0.4em] text-black">
+                            Envoyer la demande
+                            <span class="relative flex items-center">
+                                <span class="w-12 h-[1px] bg-black group-hover:w-20 transition-all duration-500"></span>
+                                <i class="fas fa-paper-plane text-[8px] ml-2 opacity-0 group-hover:opacity-100 transition-all"></i>
+                            </span>
                         </button>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
+
+
 </section>
 
-{{-- Section Carte --}}
-<section class="pb-24 px-6">
-    <div class="max-w-6xl mx-auto h-[450px] rounded-[3.5rem] overflow-hidden border-8 border-white shadow-2xl relative">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.33!2d-61.07!3d14.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM2JzAwLjAiTiA2McKwMDQnMDAuMCJX!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" 
-            class="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-[2s]" 
-            allowfullscreen="" 
-            loading="lazy">
-        </iframe>
-        <div class="absolute inset-0 pointer-events-none border-[1px] border-black/5 rounded-[3.5rem]"></div>
-    </div>
+{{-- Section Carte - Style Minimaliste Arched --}}
+
+<section class="pb-32 px-6">
+<div class="max-w-7xl mx-auto h-[500px] overflow-hidden grayscale hover:grayscale-0 transition-all duration-[3s] shadow-inner" style="border-radius: 250px 250px 40px 40px;">
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.33!2d-61.07!3d14.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM2JzAwLjAiTiA2McKwMDQnMDAuMCJX!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr"
+class="w-full h-full border-0"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+</div>
 </section>
 @endsection
