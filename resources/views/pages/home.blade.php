@@ -24,7 +24,7 @@
 </div>
 
     <div class="flex flex-col items-center mb-10">
-        <span class="font-accent text-[10px] uppercase tracking-[0.4em] text-red-800 mb-4">Martinique</span>
+        <span class="font-accent text-[30px] uppercase tracking-[0.4em] text-red-800 mb-4">Martinique</span>
         <div class="h-[1px] w-12 bg-red-200 mb-8"></div>
         
         <h1 class="font-display text-4xl md:text-6xl font-extrabold text-white mb-8 leading-[1.1] tracking-tight" style="text-shadow: 0 0 40px rgba(185,28,28,0.4);">
@@ -33,7 +33,7 @@
         </h1>
         
         <p class="text-lg text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">
-            Valoriser le patrimoine et la création martiniquaise à travers le prisme de la foi et de la culture créole.
+            Valoriser le patrimoine et la création martiniquaise à travers le prisme de l'art et de la culture créole.
         </p>
     </div>
     
@@ -67,11 +67,11 @@
     $articles = [
         [
             'slug' => 'sacre-en-couleurs',
-            'title' => 'Exposition : "Sacré en couleurs"',
-            'date' => '10 Fév. 2026',
-            'category' => 'Exposition',
-            'excerpt' => 'Découvrez les œuvres d\'artistes martiniquais explorant le sacré à travers le prisme créole.',
-            'image' => 'expo'
+            'title' => 'Atelier (réservé aux adultes)',
+            'date' => '28 Fév. 2026',
+            'category' => 'Atelier',
+            'excerpt' => 'Plongez dans l’élégance de l’écriture à la plume et découvrez les bases de la calligraphie italique, telle qu’elle se pratiquait au XVIᵉ siècle.  Lors de cet atelier d’initiation, vous apprendrez à former les minuscules et majuscules, à manier la plume avec précision et à goûter à la beauté du geste lent et maîtrisé.',
+            'image' => 'atelier28'
         ],
         [
             'slug' => 'patrimoine-religieux-2026',
@@ -98,7 +98,7 @@
         {{-- Conteneur en forme d'Arche --}}
         <div class="arch-container w-full mb-8 overflow-hidden transition-transform duration-700 group-hover:shadow-lg">
             <div class="overflow-hidden" style="border-radius: 50% 50% 0 0 / 40% 40% 0 0;">
-                <img src="https://picsum.photos/seed/{{ $article['image'] }}/800/1000" 
+                <img src="{{ asset("images/{$article['image']}.jpeg") }}" 
                      alt="{{ $article['title'] }}" 
                      class="w-full aspect-[3/4] object-cover transition-transform duration-1000 group-hover:scale-110 grayscale hover:grayscale-0">
             </div>
@@ -120,7 +120,6 @@
             </p>
             
             <div class="pt-4">
-                {{-- Note : Vérifiez que la route 'news.show' est bien définie dans votre fichier web.php --}}
                 <a href="{{ route('events') }}" class="text-[10px] font-black uppercase tracking-[0.2em] inline-flex items-center gap-2 group/link">
                     Explorer 
                     <span class="transform transition-transform group-hover/link:translate-x-1">→</span>
@@ -130,7 +129,6 @@
     </article>
     @endforeach
 </div>
-
 
 </section>
 
