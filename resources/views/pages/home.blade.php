@@ -136,7 +136,7 @@
 
 <section class="py-32 bg-neutral-900 text-center px-6 text-white relative overflow-hidden">
     <div class="absolute inset-0 opacity-5 pointer-events-none">
-    <div class="w-full h-full bg-[url('https://images.unsplash.com/photo-1507692049790-de58290a4334')] bg-cover bg-center"></div>
+    <div class="w-full h-full bg-[url('images/testok.png')] bg-cover bg-center"></div>
 </div>
 <div class="max-w-3xl mx-auto">
 <i class="fas fa-quote-left text-red-100 text-5xl mb-8"></i>
