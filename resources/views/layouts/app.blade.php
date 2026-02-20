@@ -104,7 +104,7 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
     <div class="bg-white pt-4 text-center">
         <h1 class="font-accent text-3xl tracking-widest text-red-900 lowercase" style="font-family: 'Cinzel', serif;">apacc-m</h1>
         <div class="narthex-line-double mt-2"></div>
-        <p class="text-[10px] uppercase tracking-[0.3em] font-bold py-1">Art sacré · Patrimoine religieux Martiniquais· Création Traditionelles</p>
+        <p class="text-[10px] uppercase tracking-[0.3em] font-bold py-1">Art sacré · Patrimoine chrétien Martiniquais· Créations Locales</p>
     </div>
 
     <!-- Navigation Bureau -->
