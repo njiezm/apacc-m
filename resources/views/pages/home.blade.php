@@ -10,7 +10,7 @@
 
     {{-- Image fond --}}
     <div class="absolute inset-0 z-0 opacity-50 pointer-events-none">
-        <div class="w-full h-full bg-[url('images/testok.png')] bg-cover bg-[position:60%_center]"></div>
+        <div class="w-full h-full bg-[url('images/testok.png')] bg-cover bg-[position:59%_center]"></div>
     </div>
 
     {{-- Gradient --}}
@@ -38,7 +38,12 @@
     </div>
     
     <div class="flex flex-col sm:flex-row justify-center gap-6">
-        <a href="{{ route('about') }}" class="px-10 py-4 border border-white/30 text-white text-[11px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-500">
+        <a href="{{ route('about') }}" class="px-10 py-4 
+       bg-white text-black 
+       border border-white 
+       text-[11px] font-bold uppercase tracking-widest 
+       hover:bg-transparent hover:text-white hover:shadow-lg
+       transition-all duration-500 ease-in-out">
             L'Association
         </a>
         <a href="{{ route('events') }}" class="px-10 py-4 border border-gray-200 text-white text-[11px] font-bold uppercase tracking-widest hover:border-black transition-all duration-500">
