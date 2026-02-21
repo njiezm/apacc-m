@@ -32,7 +32,7 @@
             <span class="italic font-light serif text-red-900" style="font-family: 'Cinzel', serif;">Culture Chrétienne</span>
         </h1>
         
-        <p class="text-lg text-gray-500 max-w-5xl mx-auto font-light leading-relaxed">
+        <p class="text-lg text-white-500 max-w-5xl mx-auto font-light leading-relaxed">
             Valoriser le patrimoine et la création martiniquaise à travers le prisme de l'art et de la culture créole.
         </p>
     </div>
