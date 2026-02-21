@@ -14,7 +14,7 @@
     </div>
 
     {{-- Gradient --}}
-    <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/70 via-black/60 to-black/90 pointer-events-none"></div>
+    <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70 pointer-events-none"></div>
 
     {{-- CONTENU --}}
     <div class="relative z-10 max-w-4xl mx-auto">
