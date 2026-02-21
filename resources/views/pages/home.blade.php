@@ -10,7 +10,12 @@
 
     {{-- Image fond --}}
     <div class="absolute inset-0 z-0 opacity-50 pointer-events-none">
-        <div class="w-full h-full bg-[url('images/testok.png')] bg-cover bg-[position:59%_center]"></div>
+        <div class="w-full h-full 
+            bg-[url('images/testok.png')] 
+            bg-cover 
+            bg-[position:51.8%_center] 
+            md:bg-[position:59%_center]">
+</div>
     </div>
 
     {{-- Gradient --}}
