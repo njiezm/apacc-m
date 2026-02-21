@@ -14,7 +14,7 @@
     </div>
 
     {{-- Gradient --}}
-    <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70 pointer-events-none"></div>
+    <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/70 via-black/60 pointer-events-none"></div>
 
     {{-- CONTENU --}}
     <div class="relative z-10 max-w-4xl mx-auto">
@@ -100,7 +100,7 @@
             <div class="overflow-hidden" style="border-radius: 50% 50% 0 0 / 40% 40% 0 0;">
                 <img src="{{ asset("images/{$article['image']}.jpeg") }}" 
                      alt="{{ $article['title'] }}" 
-                     class="w-full aspect-[3/4] object-cover transition-all duration-700 
+                     class="w-full max-w-[260px] mx-auto aspect-[3/4] object-cover transition-all duration-700 
        group-hover:scale-105 
        group-hover:grayscale">
             </div>
