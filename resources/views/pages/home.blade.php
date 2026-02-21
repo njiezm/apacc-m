@@ -10,7 +10,7 @@
 
     {{-- Image fond --}}
     <div class="absolute inset-0 z-0 opacity-50 pointer-events-none">
-        <div class="w-full h-full bg-[url('images/testok.png')] bg-cover bg-center"></div>
+        <div class="w-full h-full bg-[url('images/testok.png')] bg-cover bg-[position:60%_center]"></div>
     </div>
 
     {{-- Gradient --}}
@@ -19,7 +19,7 @@
     {{-- CONTENU --}}
     <div class="relative z-10 w-full max-w-[1400px] mx-auto px-6">
 {{-- Logo --}}
-<div class="mb-8 opacity-90">
+<div class="mt-12 mb-8 opacity-90">
 <img src="{{ asset('images/logo.png') }}" alt="Logo APACC-M" class="h-40 mx-auto">
 </div>
 
