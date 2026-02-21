@@ -17,7 +17,7 @@
     <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/70 via-black/60 to-black/50 pointer-events-none"></div>
 
     {{-- CONTENU --}}
-    <div class="relative z-10 max-w-4xl mx-auto">
+    <div class="relative z-10 w-full max-w-[1400px] mx-auto px-6">
 {{-- Logo --}}
 <div class="mb-8 opacity-90">
 <img src="{{ asset('images/logo.png') }}" alt="Logo APACC-M" class="h-40 mx-auto">
@@ -27,12 +27,12 @@
         <span class="font-accent text-[30px] uppercase tracking-[0.4em] text-red-800 mb-4">Martinique</span>
         <div class="h-[1px] w-12 bg-red-200 mb-8"></div>
         
-        <h1 class="font-display text-4xl md:text-6xl font-extrabold text-white mb-8 leading-[1.1] tracking-tight" style="text-shadow: 0 0 40px rgba(185,28,28,0.4);">
+        <h1 class="font-display text-5xl md:text-6xl font-extrabold text-white mb-8 leading-[1.1] tracking-tight" style="text-shadow: 0 0 40px rgba(185,28,28,0.4);">
             Promouvoir l'Art et la <br>
             <span class="italic font-light serif text-red-900" style="font-family: 'Cinzel', serif;">Culture Chrétienne</span>
         </h1>
         
-        <p class="text-lg text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">
+        <p class="text-lg text-gray-500 max-w-5xl mx-auto font-light leading-relaxed">
             Valoriser le patrimoine et la création martiniquaise à travers le prisme de l'art et de la culture créole.
         </p>
     </div>
@@ -140,7 +140,7 @@
     <div class="absolute inset-0 opacity-5 pointer-events-none">
     <div class="w-full h-full bg-[url('images/testok.png')] bg-cover bg-center"></div>
 </div>
-<div class="max-w-3xl mx-auto">
+<div class="max-w-4xl mx-auto">
 <i class="fas fa-quote-left text-red-100 text-5xl mb-8"></i>
 <p class="font-accent text-2xl md:text-3xl text-white leading-relaxed mb-8">
 "L'art est le chemin le plus court entre l'homme et Dieu."
