@@ -6,7 +6,7 @@
 
 {{-- Section En-tête (Hero) --}}
 
-<header class="pt-20 pb-28 px-6 text-center relative overflow-hidden bg-neutral-250 text-white">
+<header class="pt-20 pb-28 px-6 text-center relative overflow-hidden text-white">
 
     {{-- Image fond --}}
     <div class="absolute inset-0 z-0 opacity-50 pointer-events-none">
@@ -100,7 +100,9 @@
             <div class="overflow-hidden" style="border-radius: 50% 50% 0 0 / 40% 40% 0 0;">
                 <img src="{{ asset("images/{$article['image']}.jpeg") }}" 
                      alt="{{ $article['title'] }}" 
-                     class="w-full aspect-[3/4] object-cover transition-transform duration-1000 group-hover:scale-110 grayscale hover:grayscale-0">
+                     class="w-full aspect-[3/4] object-cover transition-all duration-700 
+       group-hover:scale-105 
+       group-hover:grayscale">
             </div>
         </div>
         
