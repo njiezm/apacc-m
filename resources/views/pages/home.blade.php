@@ -6,7 +6,7 @@
 
 {{-- Section En-tête (Hero) --}}
 
-<header class="pt-20 pb-28 px-6 text-center relative overflow-hidden bg-neutral-550 text-white">
+<header class="pt-20 pb-28 px-6 text-center relative overflow-hidden bg-neutral-250 text-white">
 
     {{-- Image fond --}}
     <div class="absolute inset-0 z-0 opacity-50 pointer-events-none">
