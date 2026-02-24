@@ -4,6 +4,7 @@
 
 @section('content')
 
+
 {{-- Section En-tête (Hero) --}}
 
 <header class="pt-20 pb-28 px-6 text-center relative overflow-hidden text-white">

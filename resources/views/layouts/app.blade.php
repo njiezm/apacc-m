@@ -7,6 +7,7 @@
     <title>@yield('title', 'APACC-M - Art et Culture Chrétienne')</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
@@ -212,5 +213,6 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
         openBtn.addEventListener('click', () => menu.classList.add('open'));
         closeBtn.addEventListener('click', () => menu.classList.remove('open'));
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
