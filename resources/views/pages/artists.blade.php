@@ -44,7 +44,7 @@
                 'tags' => ['Sculpture', 'Art Visuel'],
                 'photo' => 'victor_anicet.jpg',
                 'oeuvre' => 'victor_anicet_oeuvre1.jpg',
-                'gallery' => ['victor_anicet_oeuvre1.jpg', 'victor_anicet_oeuvre3.jpg', 'victor_anicet_oeuvre4.jpg'],
+                'gallery' => ['victor_anicet_oeuvre1.jpg'],
                 'links' => [
                     ['url' => 'http://ladoration.fr/vanicet', 'text' => 'Mes œuvres']
                 ]
