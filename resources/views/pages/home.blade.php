@@ -67,7 +67,7 @@
 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
 <div class="space-y-2">
 <h2 class="font-accent text-[10px] uppercase tracking-[0.4em] text-gray-400">Actualités</h2>
-<h3 class="text-3xl font-extrabold tracking-tighter uppercase">Dernières Réflexions</h3>
+<h3 class="text-3xl font-extrabold tracking-tighter uppercase">Dernières Actus</h3>
 </div>
 <div class="h-[1px] flex-grow bg-gray-100 mx-8 hidden md:block"></div>
 {{-- Correction de la route inexistante 'news' vers 'events' --}}
@@ -85,20 +85,20 @@
             'image' => 'atelier28'
         ],
         [
-            'slug' => 'patrimoine-religieux-2026',
-            'title' => 'Sauvegarde du patrimoine 2026',
-            'date' => '05 Fév. 2026',
+            'slug' => 'n-5revue-transandas',
+            'title' => 'N° 5  de la revue TRANSANDAS',
+            'date' => 'Mars 2026',
             'category' => 'Patrimoine',
-            'excerpt' => 'Lancement de notre nouvelle campagne d\'inventaire des calvaires de l\'île.',
-            'image' => 'church'
+            'excerpt' => 'Découvrez le dernier numéro de notre revue dédiée au patrimoine religieux martiniquais, avec des articles inédits et des analyses approfondies.',
+            'image' => 'transandas5'
         ],
         [
-            'slug' => 'nouveaux-artistes-reseau',
-            'title' => 'Le réseau s\'agrandit',
-            'date' => '28 Janv. 2026',
-            'category' => 'Réseau',
-            'excerpt' => 'Trois nouveaux sculpteurs nous rejoignent pour promouvoir l\'artisanat chrétien.',
-            'image' => 'artist'
+            'slug' => 'festival-2025',
+            'title' => 'Festival de l\'Art Sacré 2025',
+            'date' => 'Juin 2025',
+            'category' => 'Événement',
+            'excerpt' => 'Retour sur notre festival annuel qui a rassemblé des artistes locaux et internationaux autour de l\'art sacré.',
+            'image' => 'festival2025'
         ]
     ];
 @endphp
@@ -154,8 +154,9 @@
 <div class="max-w-4xl mx-auto">
 <i class="fas fa-quote-left text-red-100 text-5xl mb-8"></i>
 <p class="font-accent text-2xl md:text-3xl text-white leading-relaxed mb-8">
-"L'art est le chemin le plus court entre l'homme et Dieu."
+"À tous ceux qui, avec un dévouement passionné,  cherchent de nouvelles «épiphanies» de la beauté pour en faire don au monde  dans la création artistique."
 </p>
+St Jean-Paul II
 <div class="h-[1px] w-12 bg-red-600 mx-auto"></div>
 </div>
 </section>

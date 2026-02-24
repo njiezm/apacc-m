@@ -27,6 +27,17 @@
     @php
         $artists = [
             [
+                'name' => 'Victor ANICET',
+                'desc' => 'Artiste créateur dont l\'œuvre puise dans les traditions et la spiritualité martiniquaise.',
+                'tags' => ['Sculpture', 'Art Visuel'],
+                'photo' => 'victor_anicet.jpg',
+                'oeuvre' => 'victor_anicet_oeuvre1.jpg',
+                'gallery' => ['victor_anicet_oeuvre1.jpg'],
+                'links' => [
+                    ['url' => 'http://ladoration.fr/vanicet', 'text' => 'Mes œuvres']
+                ]
+            ],
+            [
                 'name' => 'Danielle Guiteau',
                 'desc' => 'Artiste multidisciplinaire explorant les thèmes de la spiritualité et de l\'identité martiniquaise.',
                 'tags' => ['Peinture', 'Art Sacré'],
@@ -36,17 +47,6 @@
                 'links' => [
                     ['url' => 'https://danielled.art/', 'text' => 'Portfolio'],
                     ['url' => 'https://www.facebook.com/share/1CAf94dANK/', 'text' => 'Facebook']
-                ]
-            ],
-            [
-                'name' => 'Victor ANICET',
-                'desc' => 'Artiste créateur dont l\'œuvre puise dans les traditions et la spiritualité martiniquaise.',
-                'tags' => ['Sculpture', 'Art Visuel'],
-                'photo' => 'victor_anicet.jpg',
-                'oeuvre' => 'victor_anicet_oeuvre1.jpg',
-                'gallery' => ['victor_anicet_oeuvre1.jpg'],
-                'links' => [
-                    ['url' => 'http://ladoration.fr/vanicet', 'text' => 'Mes œuvres']
                 ]
             ],
             [

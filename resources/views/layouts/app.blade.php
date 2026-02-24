@@ -197,8 +197,9 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
                 <div>
                     <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-6">Partenaires</h4>
                     <div class="opacity-40 grayscale flex flex-col gap-4">
-                        <span class="text-[10px] font-bold">Conférence des Évêques de France</span>
                         <span class="text-[10px] font-bold">Diocèse de Martinique</span>
+                        <a href="#" class="text-[10px] font-bold hover:opacity-70 transition">Devenir partenaire</a>
+                        <a href="#" class="text-[10px] font-bold hover:opacity-70 transition">Devenir membre - Adhérer</a>
                     </div>
                 </div>
             </div>

@@ -14,15 +14,15 @@
     </h1>
     
     <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed italic">
-        "Découvrez les édifices, les œuvres d'art et les traditions qui façonnent l'âme spirituelle de la Martinique."
+        "Découvrez les édifices, les lieux de mémoire et le patrimoine immatériel chrétien qui façonnent l'âme de la Martinique"
     </p>
 </div>
 </header>
 
 <section class="pb-32 px-6 mt-5">
 <div class="max-w-7xl mx-auto">
-{{-- Grille principale modifiée en 3 colonnes --}}
-<div class="grid lg:grid-cols-3 gap-16 lg:gap-12 items-start">
+{{-- Grille principale modifiée en 4 colonnes --}}
+<div class="grid lg:grid-cols-4 gap-16 lg:gap-10 items-start">
 
         {{-- Section Églises Remarquables - Colonne Gauche --}}
         <div class="space-y-16">
@@ -30,10 +30,10 @@
                 <div class="space-y-6">
                     <div class="flex items-center gap-4">
                         <span class="w-12 h-[1px] bg-red-900"></span>
-                        <h3 class="text-3xl font-bold tracking-tighter uppercase">Églises Remarquables</h3>
+                        <h3 class="text-2xl font-bold tracking-tighter uppercase">Églises Remarquables</h3>
                     </div>
                     <p class="text-gray-500 font-light italic leading-relaxed">
-                        Témoins de l'architecture coloniale et de la ferveur populaire.
+                        Témoins de l'architecture créole et de la ferveur populaire.
                     </p>
                     
                     <ul class="space-y-8 pt-6">
@@ -41,6 +41,11 @@
                             <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Fort-de-France</span>
                             <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Cathédrale Saint-Louis</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">Structure métallique iconique signée Henri Picq.</p>
+                        </li>
+                        <li class="border-b border-gray-100 pb-6 group/item">
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Saint-Pierre</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Co Cathédrale ND de l'Assomption</h4>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">Élégance baroque et résilience face à l'éruption de 1902.</p>
                         </li>
                         <li class="border-b border-gray-100 pb-6 group/item">
                             <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Balata</span>
@@ -67,13 +72,46 @@
             </div>
         </div>
 
-        {{-- Section Calvaires - Colonne Centrale --}}
+        {{-- Section Sanctuaires - Colonne 2 --}}
         <div class="space-y-16">
             <div class="group">
                 <div class="space-y-6">
                     <div class="flex items-center gap-4">
                         <span class="w-12 h-[1px] bg-red-900"></span>
-                        <h3 class="text-3xl font-bold tracking-tighter uppercase">Calvaires & Chemins</h3>
+                        <h3 class="text-2xl font-bold tracking-tighter uppercase">Sanctuaires</h3>
+                    </div>
+                    <p class="text-gray-500 font-light italic leading-relaxed">
+                        Lieux de pèlerinage et de dévotion, hauts lieux de spiritualité.
+                    </p>
+                    
+                    <ul class="space-y-8 pt-6">
+                        <li class="border-b border-gray-100 pb-6 group/item">
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Fort-de-France</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Saint Antoine de Padoue</h4>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">Sanctuaire des Terres Sainville, lieu de prière et de recueillement.</p>
+                        </li>
+                        <li class="border-b border-gray-100 pb-6 group/item">
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Fort-de-France</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Basilique Montmartre de Balata</h4>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">Réplique parfaite du Sacré-Cœur, vue panoramique exceptionnelle.</p>
+                        </li>
+                        <li class="border-b border-gray-100 pb-6 group/item">
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Le Morne Rouge</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">ND de la Délivrande</h4>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">Sanctuaire marial au cœur de la montagne, pèlerinage important.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {{-- Section Calvaires - Colonne 3 --}}
+        <div class="space-y-16">
+            <div class="group">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <span class="w-12 h-[1px] bg-red-900"></span>
+                        <h3 class="text-2xl font-bold tracking-tighter uppercase">Calvaires & Chemins</h3>
                     </div>
                     <p class="text-gray-500 font-light italic leading-relaxed">
                         Sentinelles silencieuses perchées sur nos mornes, offrant un point de recueillement face aux grands paysages.
@@ -82,8 +120,18 @@
                     <ul class="space-y-8 pt-6">
                         <li class="border-b border-gray-100 pb-6 group/item">
                             <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Fort-de-France</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Chapelle du Calvaire</h4>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">(1874-1935) Point de vue exceptionnel sur la ville basse, chemin de croix traditionnel.</p>
+                        </li>
+                        <li class="border-b border-gray-100 pb-6 group/item">
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Fort-de-France</span>
                             <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Chemin de Croix du Morne Pichevin</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">Surplombant la baie, un lieu de pèlerinage important.</p>
+                        </li>
+                        <li class="border-b border-gray-100 pb-6 group/item">
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Sainte-Anne</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Notre Dame de la Salette</h4>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">Chemin de croix spirituel au cœur du sud de l'île.</p>
                         </li>
                         <li class="border-b border-gray-100 pb-6 group/item">
                             <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Morne-Rouge</span>
@@ -100,13 +148,13 @@
             </div>
         </div>
 
-        {{-- NOUVELLE SECTION : Art & Tradition - Colonne Droite --}}
+        {{-- Section Art & Tradition - Colonne Droite --}}
         <div class="space-y-16">
             <div class="group">
                 <div class="space-y-6">
                     <div class="flex items-center gap-4">
                         <span class="w-12 h-[1px] bg-red-900"></span>
-                        <h3 class="text-3xl font-bold tracking-tighter uppercase">Art & Tradition</h3>
+                        <h3 class="text-2xl font-bold tracking-tighter uppercase">Art & Tradition</h3>
                     </div>
                     <p class="text-gray-500 font-light italic leading-relaxed">
                         Au-delà de la pierre, un patrimoine vivant où la foi s'exprime à travers l'art, la musique et les savoir-faire locaux.
@@ -142,19 +190,19 @@
 <div class="max-w-5xl mx-auto">
 <div class="text-center mb-20">
 <h3 class="font-display text-3xl md:text-5xl font-bold mb-6 uppercase tracking-tighter">Visites <span class="italic font-light serif text-red-400" style="font-family: 'Cinzel', serif;">Guidées</span></h3>
-<p class="text-gray-400 font-light italic">Participez à nos circuits exclusifs pour comprendre l'histoire cachée de ces lieux.</p>
+<p class="text-gray-400 font-light italic">Découvrez nos circuits thématiques pour explorer le patrimoine chrétien de la Martinique.</p>
 </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-        {{-- Carte Visite 1 --}}
+        {{-- Circuit Nord --}}
         <div class="p-10 border border-white/10 rounded-[2rem] hover:bg-white/5 transition-all flex flex-col justify-between">
             <div>
                 <div class="flex justify-between items-start mb-8">
-                    <span class="text-[9px] font-black uppercase tracking-[0.3em] text-red-400 px-3 py-1 border border-red-400/30 rounded-full">Mars 2024</span>
+                    <span class="text-[9px] font-black uppercase tracking-[0.3em] text-red-400 px-3 py-1 border border-red-400/30 rounded-full">Nord</span>
                     <i class="fas fa-arrow-right text-xs opacity-20 group-hover:opacity-100"></i>
                 </div>
-                <h4 class="text-2xl font-bold uppercase tracking-tight mb-2">Circuit des Églises du Nord</h4>
-                <p class="text-sm text-gray-400 font-light italic">Une journée d'exploration entre architecture et légendes.</p>
+                <h4 class="text-2xl font-bold uppercase tracking-tight mb-2">Circuit Nord</h4>
+                <p class="text-sm text-gray-400 font-light italic">Des églises historiques de Saint-Pierre aux sanctuaires du Morne Rouge, découverte du patrimoine du nord.</p>
             </div>
             <div class="mt-12">
                 <a href="{{ route('contact') }}" class="inline-block w-full py-4 bg-white text-black text-center text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-red-400 transition-colors">
@@ -163,33 +211,33 @@
             </div>
         </div>
 
-        {{-- Carte Visite 2 --}}
+        {{-- Circuit Centre --}}
         <div class="p-10 border border-white/10 rounded-[2rem] hover:bg-white/5 transition-all flex flex-col justify-between">
             <div>
                 <div class="flex justify-between items-start mb-8">
-                    <span class="text-[9px] font-black uppercase tracking-[0.3em] text-red-400 px-3 py-1 border border-red-400/30 rounded-full">Avril 2024</span>
+                    <span class="text-[9px] font-black uppercase tracking-[0.3em] text-red-400 px-3 py-1 border border-red-400/30 rounded-full">Centre</span>
                 </div>
-                <h4 class="text-2xl font-bold uppercase tracking-tight mb-2">Balade Spirituelle au Diamant</h4>
-                <p class="text-sm text-gray-400 font-light italic">Méditation et découverte du patrimoine côtier.</p>
+                <h4 class="text-2xl font-bold uppercase tracking-tight mb-2">Circuit Centre</h4>
+                <p class="text-sm text-gray-400 font-light italic">Fort-de-France et ses trésors, de la cathédrale Saint-Louis aux calvaires surplombant la ville.</p>
             </div>
             <div class="mt-12">
-                <a href="{{ route('contact') }}" class="inline-block w-full py-4 border border-white/20 text-white text-center text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors">
+                <a href="{{ route('contact') }}" class="inline-block w-full py-4 border border-white/20 text-white text-center text-[10px] font-black uppercase tracking-widest rounded-full transition-all duration-300 hover:bg-white hover:!text-black">
                     S'inscrire
                 </a>
             </div>
         </div>
 
-        {{-- NOUVELLE CARTE VISITE 3 --}}
+        {{-- Circuit Sud --}}
         <div class="p-10 border border-white/10 rounded-[2rem] hover:bg-white/5 transition-all flex flex-col justify-between">
             <div>
                 <div class="flex justify-between items-start mb-8">
-                    <span class="text-[9px] font-black uppercase tracking-[0.3em] text-red-400 px-3 py-1 border border-red-400/30 rounded-full">Mai 2024</span>
+                    <span class="text-[9px] font-black uppercase tracking-[0.3em] text-red-400 px-3 py-1 border border-red-400/30 rounded-full">Sud</span>
                 </div>
-                <h4 class="text-2xl font-bold uppercase tracking-tight mb-2">Fort-de-France : Cœur de l'Île</h4>
-                <p class="text-sm text-gray-400 font-light italic">De la cathédrale au calvaire, plongez au cœur de la capitale.</p>
+                <h4 class="text-2xl font-bold uppercase tracking-tight mb-2">Circuit Sud</h4>
+                <p class="text-sm text-gray-400 font-light italic">De Sainte-Anne au Diamant, exploration des églises du sud et des sites de pèlerinage côtiers.</p>
             </div>
             <div class="mt-12">
-                <a href="{{ route('contact') }}" class="inline-block w-full py-4 border border-white/20 text-white text-center text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors">
+                <a href="{{ route('contact') }}" class="inline-block w-full py-4 border border-white/20 text-white text-center text-[10px] font-black uppercase tracking-widest rounded-full transition-all duration-300 hover:bg-white hover:!text-black">
                     S'inscrire
                 </a>
             </div>
