@@ -118,13 +118,40 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 
             <div class="hidden lg:flex gap-8">
                 <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Accueil</a>
-                <a href="{{ route('about') }}" class="nav-link">À propos</a>
-                <a href="{{ route('events') }}" class="nav-link">Événements</a>
-                <a href="{{ route('artists') }}" class="nav-link">Artistes</a>
-                <a href="{{ route('heritage') }}" class="nav-link">Patrimoine</a>
-                <a href="{{ route('resources') }}" class="nav-link">Ressources</a>
-                <a href="{{ route('shop') }}" class="nav-link">Boutique</a>
-                <a href="{{ route('contact') }}" class="nav-link">Contact</a>
+                <a href="{{ route('about') }}" 
+   class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}">
+   À propos
+</a>
+
+<a href="{{ route('events') }}" 
+   class="nav-link {{ request()->routeIs('events') ? 'active' : '' }}">
+   Événements
+</a>
+
+<a href="{{ route('artists') }}" 
+   class="nav-link {{ request()->routeIs('artists') ? 'active' : '' }}">
+   Artistes
+</a>
+
+<a href="{{ route('heritage') }}" 
+   class="nav-link {{ request()->routeIs('heritage') ? 'active' : '' }}">
+   Patrimoine
+</a>
+
+<a href="{{ route('resources') }}" 
+   class="nav-link {{ request()->routeIs('resources') ? 'active' : '' }}">
+   Ressources
+</a>
+
+<a href="{{ route('shop') }}" 
+   class="nav-link {{ request()->routeIs('shop') ? 'active' : '' }}">
+   Boutique
+</a>
+
+<a href="{{ route('contact') }}" 
+   class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">
+   Contact
+</a>
             </div>
 
             <button id="menu-open" class="text-xl p-2">
