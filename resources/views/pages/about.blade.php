@@ -12,7 +12,7 @@
 <div class="h-[1px] w-12 bg-red-200 mb-10"></div>
 
         <h2 class="font-display text-4xl md:text-6xl font-extrabold text-black mb-10 leading-[1.1] tracking-tighter uppercase">
-            Mission & <br>
+            Missions & <br>
             <span class="italic font-light serif text-red-900 lowercase" style="font-family: 'Cinzel', serif;">Engagements</span>
         </h2>
         

@@ -148,9 +148,9 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
         </div>
 
         <div class="flex flex-col items-center">
-            <a href="{{ route('home') }}" class="mobile-link">Acceuil</a>
-            <a href="{{ route('about') }}" class="mobile-link">A propos</a>
-            <a href="{{ route('events') }}" class="mobile-link">Evènement</a>
+            <a href="{{ route('home') }}" class="mobile-link">Accueil</a>
+            <a href="{{ route('about') }}" class="mobile-link">À propos</a>
+            <a href="{{ route('events') }}" class="mobile-link">Événements</a>
             <a href="{{ route('artists') }}" class="mobile-link">Artistes</a>
             <a href="{{ route('heritage') }}" class="mobile-link">Patrimoine</a>
             <a href="{{ route('resources') }}" class="mobile-link">Ressources</a>
