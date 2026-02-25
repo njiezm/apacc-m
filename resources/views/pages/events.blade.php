@@ -264,8 +264,16 @@
                 $daysInMonth = cal_days_in_month(CAL_GREGORIAN, $month, $year);
                 $firstDayOfWeek = (int)date('N', strtotime("$year-$month-01")); // 1 (Lundi) à 7 (Dimanche)
                 setlocale(LC_TIME, 'fr_FR.UTF-8', 'fra');
-                $monthName = utf8_encode(strftime('%B %Y', strtotime("$year-$month-01")));
+            $formatter = new IntlDateFormatter(
+    'fr_FR',
+    IntlDateFormatter::LONG,
+    IntlDateFormatter::NONE,
+    null,
+    null,
+    'MMMM yyyy'
+);
 
+$monthName = $formatter->format(new DateTime("$year-$month-01"));
                 // === CORRECTION : Tableau de traduction des mois pour le parsing de date ===
                 $months = [
                     'janvier'   => 'January',
