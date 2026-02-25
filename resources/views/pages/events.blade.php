@@ -269,7 +269,7 @@
                 // === CORRECTION : Tableau de traduction des mois pour le parsing de date ===
                 $months = [
                     'janvier'   => 'January',
-                    'février'   => 'February',
+                    'fevrier'   => 'February',
                     'mars'      => 'March',
                     'avril'     => 'April',
                     'mai'       => 'May',
