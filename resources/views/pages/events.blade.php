@@ -228,7 +228,7 @@
             @if($loop->iteration == 3)
             {{-- === MODIFICATION : Ajout d'un ID et d'un curseur pour le clic === --}}
             <div id="discoverMore" class="col-span-full flex flex-col items-center justify-center py-16 cursor-pointer">
-                <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-6">Découvrir la suite</p>
+                <p class="text-[16px] font-black uppercase tracking-widest text-gray-400 mb-6">Découvrir la suite de nos évènements</p>
                 <div class="animate-bounce">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20 26L14 20L15.4 18.6L20 23.2L24.6 18.6L26 20L20 26Z" fill="#DC2626"/>
