@@ -116,7 +116,7 @@
         </h1>
 
         <p class="text-neutral-300 mt-8 max-w-xl mx-auto italic text-lg">
-            "Célébrer la foi à travers l'expression artistique et le partage."
+            "Une expression artistique et culturelle partagée."
         </p>
     </div>
 </header>
