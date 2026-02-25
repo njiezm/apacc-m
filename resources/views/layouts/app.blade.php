@@ -98,6 +98,31 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             background: #f9fafb;
             border-top: 1px solid #eee;
         }
+        /* Partenaires Footer */
+.footer-partners {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.footer-partners:hover {
+    opacity: 1;
+}
+
+.partner-item {
+    font-size: 0.7rem; /* plus grand qu'avant */
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #555;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Effet au survol */
+.partner-item:hover {
+    color: var(--cardinal);
+    transform: translateX(5px);
+}
     </style>
 </head>
 <body>
@@ -223,11 +248,11 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 
                 <div>
                     <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-6">Partenaires</h4>
-                    <div class="opacity-40 grayscale flex flex-col gap-4">
-                        <span class="text-[10px] font-bold">Diocèse de Martinique</span>
-                        <a href="#" class="text-[10px] font-bold hover:opacity-70 transition">Devenir partenaire</a>
-                        <a href="#" class="text-[10px] font-bold hover:opacity-70 transition">Devenir membre - Adhérer</a>
-                    </div>
+                    <div class="footer-partners flex flex-col gap-4">
+    <span class="partner-item">Diocèse de Martinique</span>
+    <a href="#" class="partner-item">Devenir partenaire</a>
+    <a href="#" class="partner-item">Devenir membre - Adhérer</a>
+</div>
                 </div>
             </div>
         </div>

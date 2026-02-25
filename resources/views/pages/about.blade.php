@@ -44,33 +44,6 @@
         </div>
     </div>
 
-    {{-- Objet de l'association --}}
-    <div class="mb-24 bg-red-900 text-white p-12 md:p-16">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-[10px] font-black uppercase tracking-[0.5em] text-red-200 mb-8 italic">Objet principal de l'association</h3>
-            <div class="space-y-6">
-                <div class="flex items-start gap-4">
-                    <span class="text-red-400 mt-1">•</span>
-                    <p class="text-red-50 leading-relaxed text-lg">
-                        Favoriser et soutenir toutes activités/initiatives culturelles et artistiques chrétiennes de Martinique,
-                    </p>
-                </div>
-                <div class="flex items-start gap-4">
-                    <span class="text-red-400 mt-1">•</span>
-                    <p class="text-red-50 leading-relaxed text-lg">
-                        D'assurer le développement et la valorisation des arts et de la culture chrétienne martiniquaise dite créole, sous toutes ses formes d'expression artistique : art sacré, art littéraire, linguistique, musical, pictural, patrimonial..., et d'en assurer la production, la diffusion, et la transmission à un large public,
-                    </p>
-                </div>
-                <div class="flex items-start gap-4">
-                    <span class="text-red-400 mt-1">•</span>
-                    <p class="text-red-50 leading-relaxed text-lg">
-                        Promouvoir le rapprochement entre arts et culture chrétienne et autres formes d'expressions artistiques et culturelles en Martinique
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     {{-- Cartes Vision et Valeurs - Style Minimaliste --}}
     <div class="grid md:grid-cols-2 gap-16 mb-24">
         <div class="space-y-8 border-l border-gray-100 pl-10 relative">
@@ -99,8 +72,8 @@
     {{-- Texte descriptif - Section Qui sommes-nous --}}
     <div class="py-24 border-y border-gray-50 mb-24">
         <div class="max-w-4xl mx-auto">
-            <h3 class="text-[10px] font-black uppercase tracking-[0.5em] text-gray-400 mb-12 text-center italic">Qui sommes-nous ?</h3>
-            <div class="grid md:grid-cols-2 gap-16 text-gray-800 text-lg leading-relaxed font-light">
+            <h3 class="text-[22px] font-black uppercase tracking-[0.5em] text-gray-400 mb-12 text-center italic">Qui sommes-nous ?</h3>
+            <div class="grid md:grid-cols-2 gap-16 text-gray-800 text-2xl leading-relaxed font-light">
                 <p>
                     L'Association pour la Promotion de l'Art et la Culture Chrétienne (APACC-M) s'adresse à tous : artistes confirmés, amateurs d'art, membres de la communauté chrétienne ou simples curieux.
                 </p>
@@ -111,39 +84,63 @@
         </div>
     </div>
 
-    {{-- Cadre Institutionnel (Style Archive/Musée) --}}
-    <div class="bg-white border border-gray-100 p-12 md:p-20 shadow-sm relative overflow-hidden">
+    {{-- Cadre Institutionnel avec Objet de l'association (Style Archive/Musée) --}}
+    <div class="bg-white border border-gray-100 p-8 md:p-12 shadow-sm relative overflow-hidden mb-24">
         <div class="relative z-10">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12">
                 <h3 class="font-accent text-[10px] uppercase tracking-[0.5em] text-red-800 mb-4">Informations Légales</h3>
                 <h4 class="text-2xl font-bold tracking-tighter uppercase italic" style="font-family: 'Cinzel', serif;">Cadre Institutionnel</h4>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-16">
-                <div class="space-y-10">
+            <div class="mb-12">
+                <h3 class="text-[10px] font-black uppercase tracking-[0.5em] text-red-200 mb-6 italic bg-red-900 text-white inline-block px-3 py-1">Objet principal de l'association</h3>
+                <div class="space-y-4 bg-red-50 p-6 rounded">
+                    <div class="flex items-start gap-3">
+                        <span class="text-red-600 mt-1 text-sm">•</span>
+                        <p class="text-gray-700 leading-relaxed text-base">
+                            Favoriser et soutenir toutes activités/initiatives culturelles et artistiques chrétiennes de Martinique,
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-red-600 mt-1 text-sm">•</span>
+                        <p class="text-gray-700 leading-relaxed text-base">
+                            D'assurer le développement et la valorisation des arts et de la culture chrétienne martiniquaise dite créole, sous toutes ses formes d'expression artistique : art sacré, art littéraire, linguistique, musical, pictural, patrimonial..., et d'en assurer la production, la diffusion, et la transmission à un large public,
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-red-600 mt-1 text-sm">•</span>
+                        <p class="text-gray-700 leading-relaxed text-base">
+                            Promouvoir le rapprochement entre arts et culture chrétienne et autres formes d'expressions artistiques et culturelles en Martinique
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6">
                     <div class="flex flex-col gap-2">
                         <span class="text-[9px] font-bold uppercase tracking-widest text-gray-400">Statut Juridique</span>
-                        <span class="text-lg font-medium text-black">Association loi 1901</span>
+                        <span class="text-base font-medium text-black">Association loi 1901</span>
                     </div>
                     <div class="flex flex-col gap-2">
                         <span class="text-[9px] font-bold uppercase tracking-widest text-gray-400">RNA</span>
-                        <span class="text-lg font-medium text-black">W9M1011611</span>
+                        <span class="text-base font-medium text-black">W9M1011611</span>
                     </div>
                     <div class="flex flex-col gap-2">
                         <span class="text-[9px] font-bold uppercase tracking-widest text-gray-400">SIRET</span>
-                        <span class="text-lg font-medium text-black">924 433 808 00012</span>
+                        <span class="text-base font-medium text-black">924 433 808 00012</span>
                     </div>
                 </div>
                 
-                <div class="space-y-10 border-l border-gray-50 md:pl-16">
+                <div class="space-y-6 border-l border-gray-50 md:pl-12">
                     <div class="flex flex-col gap-2">
                         <span class="text-[9px] font-bold uppercase tracking-widest text-gray-400">Siège Social</span>
-                        <span class="text-lg font-medium text-black leading-snug">
+                        <span class="text-base font-medium text-black leading-snug">
                             11 Avenue Franz Fanon <br>
                             97200 Fort de France
                         </span>
                     </div>
-                    <div class="flex flex-col gap-2 pt-4">
+                    <div class="flex flex-col gap-2 pt-2">
                         <div class="inline-flex items-center gap-3 px-4 py-2 bg-gray-50 rounded-full w-fit">
                             <i class="fas fa-balance-scale text-red-700 text-xs"></i>
                             <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Enregistrée en Préfecture</span>

@@ -59,12 +59,22 @@
                 'links' => []
             ],
             [
-                'name' => 'Joël JEAN-PIERRE',
+                'name' => 'Joel JEAN-PIERRE',
                 'desc' => 'Photographe capturant la lumière et l\'essence de la Martinique à travers son objectif.',
                 'tags' => ['Photographie', 'Art Visuel'],
                 'photo' => 'joel_jean_pierre.jpg',
                 'oeuvre' => 'joel_jean_pierre_oeuvre1.jpg',
                 'gallery' => ['joel_jean_pierre_oeuvre1.jpg', 'joel_jean_pierre_oeuvre2.jpg', 'joel_jean_pierre_oeuvre3.jpg', 'joel_jean_pierre_oeuvre4.jpg'],
+                'links' => []
+            ],
+            // -- NOUVELLE ARTISTE AJOUTÉE --
+            [
+                'name' => 'Jaqueline HAUSTANT',
+                'desc' => 'Artiste potière, elle façonne la terre pour donner vie à des pièces uniques, inspirées par les formes et les couleurs de la Martinique.',
+                'tags' => ['Céramique', 'Artisanat d\'Art'],
+                'photo' => 'jaqueline_haustant.jpg',
+                'oeuvre' => 'jaqueline_haustant_oeuvre1.jpg',
+                'gallery' => ['jaqueline_haustant_oeuvre1.jpg', 'jaqueline_haustant_oeuvre2.jpg', 'jaqueline_haustant_oeuvre3.jpg'],
                 'links' => []
             ]
         ];
