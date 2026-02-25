@@ -257,42 +257,20 @@
         </div>
 
         <div class="bg-white p-8 md:p-12 shadow-lg border border-gray-100">
-            @php
-                // Logique pour générer le calendrier
-                $month = date('n'); // Mois actuel (1-12)
-                $year = date('Y'); // Année actuelle
-                $daysInMonth = cal_days_in_month(CAL_GREGORIAN, $month, $year);
-                $firstDayOfWeek = (int)date('N', strtotime("$year-$month-01")); // 1 (Lundi) à 7 (Dimanche)
-                setlocale(LC_TIME, 'fr_FR.UTF-8', 'fra');
-            $formatter = new IntlDateFormatter(
-    'fr_FR',
-    IntlDateFormatter::LONG,
-    IntlDateFormatter::NONE,
-    null,
-    null,
-    'MMMM yyyy'
-);
-
-$monthName = $formatter->format(new DateTime("$year-$month-01"));
-                // === CORRECTION : Tableau de traduction des mois pour le parsing de date ===
-                $months = [
-                    'janvier'   => 'January',
-                    'fevrier'   => 'February',
-                    'mars'      => 'March',
-                    'avril'     => 'April',
-                    'mai'       => 'May',
-                    'juin'      => 'June',
-                    'juillet'   => 'July',
-                    'août'      => 'August',
-                    'septembre' => 'September',
-                    'octobre'   => 'October',
-                    'novembre'  => 'November',
-                    'décembre'  => 'December',
-                ];
-            @endphp
-
-            <div class="mb-8 text-center">
-                <h3 class="text-2xl font-bold tracking-tight uppercase">{{ $monthName }}</h3>
+            <div class="mb-8 flex justify-between items-center">
+                <button id="prevMonth" class="p-2 rounded-full hover:bg-gray-100 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                
+                <h3 id="currentMonth" class="text-2xl font-bold tracking-tight uppercase"></h3>
+                
+                <button id="nextMonth" class="p-2 rounded-full hover:bg-gray-100 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
             </div>
 
             <div class="grid grid-cols-7 gap-2 text-center mb-4">
@@ -305,57 +283,30 @@ $monthName = $formatter->format(new DateTime("$year-$month-01"));
                 <div class="text-[9px] font-black uppercase tracking-widest text-gray-400">D</div>
             </div>
 
-            <div class="grid grid-cols-7 gap-2">
-                {{-- Jours vides avant le début du mois --}}
-                @for ($i = 1; $i < $firstDayOfWeek; $i++)
-                    <div class="aspect-square"></div>
-                @endfor
-
-                {{-- Jours du mois --}}
-                @for ($day = 1; $day <= $daysInMonth; $day++)
-                    @php
-                        $hasEvent = false;
-                        foreach($events as $event) {
-                            // === CORRECTION : On traduit la date avant de la parser ===
-                            $englishDateString = strtr(strtolower($event['date']), $months);
-                            try {
-                                $eventDate = new DateTime($englishDateString);
-                                if ($eventDate->format('Y') == $year && $eventDate->format('n') == $month && $eventDate->format('j') == $day) {
-                                    $hasEvent = true;
-                                    break;
-                                }
-                            } catch (\Exception $e) {
-                                // En cas d'erreur de parsing, on ignore et on continue
-                                continue; 
-                            }
-                        }
-                    @endphp
-                    <div class="aspect-square flex flex-col items-center justify-center border border-gray-100 {{ $hasEvent ? 'bg-red-900 text-white font-bold' : 'text-gray-600' }} transition-all duration-300 {{ $hasEvent ? 'hover:scale-105 cursor-pointer' : '' }}">
-                        <span class="text-sm">{{ $day }}</span>
-                        @if($hasEvent)
-                            <span class="w-1 h-1 bg-white rounded-full mt-1"></span>
-                        @endif
-                    </div>
-                @endfor
-            </div>
-        </div>
-
-        <div class="mt-16">
-            <h4 class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-8 text-center">Prochaines dates clés</h4>
-            <div class="space-y-4">
-                @foreach($events as $event)
-                <div class="flex items-center justify-between p-4 bg-white border border-gray-100">
-                    <div class="flex items-center gap-4">
-                        <span class="text-[9px] font-black uppercase tracking-widest text-red-700">{{ $event['category_label'] }}</span>
-                        <h5 class="font-bold text-black uppercase tracking-tighter">{{ $event['title'] }}</h5>
-                    </div>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">{{ $event['date'] }}</span>
-                </div>
-                @endforeach
+            <div id="calendarDays" class="grid grid-cols-7 gap-2">
+                {{-- Les jours du calendrier seront générés par JavaScript --}}
             </div>
         </div>
     </div>
 </section>
+
+{{-- Modal pour afficher les événements d'une date --}}
+<div id="eventModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-center mb-6">
+            <h3 id="modalDate" class="text-2xl font-bold uppercase tracking-tight"></h3>
+            <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        
+        <div id="modalEvents" class="space-y-4">
+            {{-- Les événements seront insérés ici par JavaScript --}}
+        </div>
+    </div>
+</div>
 
 {{-- === AJOUT : Styles pour l'animation de masquage === --}}
 <style>
@@ -383,6 +334,53 @@ $monthName = $formatter->format(new DateTime("$year-$month-01"));
 
     .event-card {
         transition: all 0.5s ease;
+    }
+    
+    /* Styles pour le calendrier */
+    .calendar-day {
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e5e7eb;
+        transition: all 0.3s;
+        min-height: 50px;
+    }
+    
+    .calendar-day.has-event {
+        background-color: #7f1d1d;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .calendar-day.has-event:hover {
+        transform: scale(1.05);
+    }
+    
+    .event-indicator {
+        width: 6px;
+        height: 6px;
+        background-color: white;
+        border-radius: 50%;
+        margin-top: 4px;
+    }
+    
+    /* Styles pour le modal */
+    #eventModal {
+        transition: opacity 0.3s;
+    }
+    
+    .event-modal-item {
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .event-modal-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
     }
 </style>
 
@@ -476,6 +474,196 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     };
+    
+    // CALENDRIER INTERACTIF
+    // Événements passés à JavaScript
+    const events = @json($events);
+    
+    // État du calendrier
+    let currentMonth = new Date().getMonth(); // 0-11
+    let currentYear = new Date().getFullYear();
+    
+    // Éléments du DOM
+    const prevMonthBtn = document.getElementById('prevMonth');
+    const nextMonthBtn = document.getElementById('nextMonth');
+    const currentMonthEl = document.getElementById('currentMonth');
+    const calendarDaysEl = document.getElementById('calendarDays');
+    
+    // Modal
+    const eventModal = document.getElementById('eventModal');
+    const modalDate = document.getElementById('modalDate');
+    const modalEvents = document.getElementById('modalEvents');
+    const closeModalBtn = document.getElementById('closeModal');
+    
+    // Tableau de traduction des mois
+    const monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 
+                       'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    
+    // Fonction pour générer le calendrier
+    function generateCalendar(month, year) {
+        // Mettre à jour le titre du mois
+        currentMonthEl.textContent = monthNames[month] + ' ' + year;
+        
+        // Vider le calendrier
+        calendarDaysEl.innerHTML = '';
+        
+        // Nombre de jours dans le mois
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        
+        // Premier jour de la semaine (0-6, où 0 est dimanche)
+        const firstDayOfWeek = new Date(year, month, 1).getDay();
+        // Ajuster pour que lundi soit 0 et dimanche soit 6
+        const adjustedFirstDay = firstDayOfWeek === 0 ? 6 : firstDayOfWeek - 1;
+        
+        // Ajouter les jours vides avant le début du mois
+        for (let i = 0; i < adjustedFirstDay; i++) {
+            const emptyDay = document.createElement('div');
+            calendarDaysEl.appendChild(emptyDay);
+        }
+        
+        // Ajouter les jours du mois
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dayEl = document.createElement('div');
+            dayEl.className = 'calendar-day';
+            dayEl.textContent = day;
+            
+            // Vérifier si ce jour a des événements
+            const dayEvents = getEventsForDay(day, month, year);
+            
+            if (dayEvents.length > 0) {
+                dayEl.classList.add('has-event');
+                
+                // Ajouter un indicateur visuel
+                const indicator = document.createElement('div');
+                indicator.className = 'event-indicator';
+                dayEl.appendChild(indicator);
+                
+                // Ajouter un gestionnaire d'événements pour ouvrir le modal
+                dayEl.addEventListener('click', function() {
+                    openEventModal(day, month, year, dayEvents);
+                });
+            }
+            
+            calendarDaysEl.appendChild(dayEl);
+        }
+    }
+    
+    // Fonction pour obtenir les événements d'un jour spécifique
+    function getEventsForDay(day, month, year) {
+        return events.filter(event => {
+            // Extraire le jour, le mois et l'année de la date de l'événement
+            const dateParts = event.date.split(' ');
+            const eventDay = parseInt(dateParts[0]);
+            const eventMonthStr = dateParts[1].toLowerCase();
+            const eventYear = parseInt(dateParts[2]);
+            
+            // Tableau de correspondance des mois français vers index (0-11)
+            const monthMap = {
+                'janvier': 0, 'février': 1, 'mars': 2, 'avril': 3, 'mai': 4, 'juin': 5,
+                'juillet': 6, 'août': 7, 'septembre': 8, 'octobre': 9, 'novembre': 10, 'décembre': 11
+            };
+            
+            const eventMonth = monthMap[eventMonthStr];
+            
+            return (
+                eventDay === day &&
+                eventMonth === month &&
+                eventYear === year
+            );
+        });
+    }
+    
+    // Fonction pour ouvrir le modal avec les événements du jour
+    function openEventModal(day, month, year, dayEvents) {
+        // Formater la date pour l'affichage
+        const date = new Date(year, month, day);
+        const dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+        
+        // Mettre à jour le titre du modal
+        modalDate.textContent = dayNames[date.getDay()] + ' ' + day + ' ' + monthNames[month] + ' ' + year;
+        
+        // Vider le contenu précédent
+        modalEvents.innerHTML = '';
+        
+        // Ajouter chaque événement au modal
+        dayEvents.forEach(event => {
+            const eventEl = document.createElement('div');
+            eventEl.className = 'event-modal-item';
+            
+            // Vérifier si la date limite d'inscription est passée
+            const today = new Date();
+            const registrationDeadline = new Date(event.registration_deadline);
+            const isPastDeadline = today > registrationDeadline;
+            
+            eventEl.innerHTML = `
+                <div class="flex items-center gap-4 mb-2">
+                    <span class="text-[9px] font-black uppercase tracking-widest text-red-700">${event.category_label}</span>
+                    <span class="h-[1px] w-4 bg-gray-200"></span>
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-gray-400">${event.time}</span>
+                </div>
+                
+                <h4 class="text-lg font-bold leading-tight uppercase tracking-tighter mb-2">${event.title}</h4>
+                
+                <p class="text-sm text-gray-500 font-light leading-relaxed mb-3">${event.description}</p>
+                
+                <div class="flex items-center gap-3 text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">
+                    <i class="fas fa-map-marker-alt text-red-300"></i>
+                    ${event.location}
+                </div>
+                
+                <div class="pt-2">
+                    ${isPastDeadline 
+                        ? '<button disabled class="inline-block w-full text-center py-3 border border-gray-100 text-[10px] font-black uppercase tracking-[0.2em] bg-gray-100 text-gray-400 cursor-not-allowed">Inscriptions closes</button>'
+                        : '<a href="' + (window.location.origin + '/contact') + '" class="inline-block w-full text-center py-3 border border-gray-100 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all duration-500">S\'inscrire</a>'
+                    }
+                </div>
+            `;
+            
+            modalEvents.appendChild(eventEl);
+        });
+        
+        // Afficher le modal
+        eventModal.classList.remove('hidden');
+        eventModal.classList.add('flex');
+    }
+    
+    // Fonction pour fermer le modal
+    function closeEventModal() {
+        eventModal.classList.add('hidden');
+        eventModal.classList.remove('flex');
+    }
+    
+    // Gestionnaires d'événements pour la navigation du calendrier
+    prevMonthBtn.addEventListener('click', function() {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        generateCalendar(currentMonth, currentYear);
+    });
+    
+    nextMonthBtn.addEventListener('click', function() {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        generateCalendar(currentMonth, currentYear);
+    });
+    
+    // Gestionnaire d'événement pour fermer le modal
+    closeModalBtn.addEventListener('click', closeEventModal);
+    
+    // Fermer le modal en cliquant en dehors du contenu
+    eventModal.addEventListener('click', function(e) {
+        if (e.target === eventModal) {
+            closeEventModal();
+        }
+    });
+    
+    // Générer le calendrier initial
+    generateCalendar(currentMonth, currentYear);
 });
 </script>
 
