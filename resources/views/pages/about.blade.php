@@ -4,6 +4,13 @@
 
 @section('content')
 
+<style>
+    .text-justify {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+</style>
+
 <section class="py-24 px-6 max-w-6xl mx-auto">
     {{-- En-tête de page --}}
     <div class="mb-24 text-center">
@@ -16,7 +23,7 @@
                 <span class="italic font-light serif text-red-900 lowercase" style="font-family: 'Cinzel', serif;">Engagements</span>
             </h2>
             
-            <p class="text-xl text-gray-500 max-w-3xl mx-auto font-light leading-relaxed italic">
+            <p class="text-xl text-gray-500 max-w-3xl mx-auto font-light leading-relaxed italic text-justify">
                 "L'APACC-M est née d'une volonté profonde de faire rayonner l'identité chrétienne au cœur de la culture martiniquaise."
             </p>
         </div>
@@ -27,14 +34,14 @@
         <div class="max-w-4xl mx-auto">
             <h3 class="text-[10px] font-black uppercase tracking-[0.5em] text-red-700 mb-8 italic">Mot du Président</h3>
             <div class="space-y-6">
-                <p class="text-gray-700 leading-relaxed text-lg font-light italic">
+                <p class="text-gray-700 leading-relaxed text-lg font-light italic text-justify">
                     "Pourquoi l'APACC-M ?
                 </p>
-                <p class="text-gray-700 leading-relaxed text-lg font-light">
+                <p class="text-gray-700 leading-relaxed text-lg font-light text-justify">
                     Parce que tout art a une culture. Le transcendant est déjà présent en l'homme. Il y a quelque chose qui est inscrit dans l'homme et qui l'amène à un dépassement.
                     Et l'artiste peut exprimer cette réalité, inscrite en l'homme et en toutes choses ; ce qui nous amène finalement à nous élever au-dessus de la simple matérialité des choses. Et c'est là que se trouve aussi l'universalisme, l'universalité de l'art : une Parole est dite, par l'œuvre artistique, pour le monde et pour la culture locale, la culture créole, et qui permet de dépasser les drames de l'humanité, comme celui de l'esclavage, vers quelque chose de transcendant. L'Art est en quelque sorte Résilience, parce qu'il permet et amène à ce dépassement-là.
                 </p>
-                <p class="text-gray-700 leading-relaxed text-lg font-light">
+                <p class="text-gray-700 leading-relaxed text-lg font-light text-justify">
                     Finalement, l'artiste est tel un prophète, un élu, qui dit ce qu'on a du mal à entendre, révèle ce qu'on a du mal à voir, exprime la beauté déjà présente mais insuffisamment connue. L'artiste nous donne accès à une dimension de la réalité trop souvent insoupçonnée."
                 </p>
                 <p class="text-right text-red-800 font-medium mt-8">
@@ -52,7 +59,7 @@
                 <span class="text-red-800 font-light italic serif" style="font-family: 'Cinzel', serif;">01.</span> 
                 Notre vision
             </h3>
-            <p class="text-gray-500 leading-relaxed font-light text-lg">
+            <p class="text-gray-500 leading-relaxed font-light text-lg text-justify">
                 Promouvoir et valoriser l'art et la culture chrétienne martiniquaise, à travers notamment sa culture créole et son patrimoine. Nous soutenons les activités artistiques par des événements, des expositions et des formations.
             </p>
         </div>
@@ -63,7 +70,7 @@
                 <span class="text-red-800 font-light italic serif" style="font-family: 'Cinzel', serif;">02.</span> 
                 Nos valeurs
             </h3>
-            <p class="text-gray-500 leading-relaxed font-light text-lg">
+            <p class="text-gray-500 leading-relaxed font-light text-lg text-justify">
                 Dignité humaine, éthique, bienveillance et solidarité. L'association se veut un lieu de rencontre et de partage, un espace de dialogue pour la transmission des richesses de la culture créole.
             </p>
         </div>
@@ -74,10 +81,10 @@
         <div class="max-w-4xl mx-auto">
             <h3 class="text-[22px] font-black uppercase tracking-[0.5em] text-gray-400 mb-12 text-center italic">Qui sommes-nous ?</h3>
             <div class="grid md:grid-cols-2 gap-16 text-gray-800 text-2xl leading-relaxed font-light">
-                <p>
+                <p class="text-justify">
                     L'Association pour la Promotion de l'Art et la Culture Chrétienne (APACC-M) s'adresse à tous : artistes confirmés, amateurs d'art, membres de la communauté chrétienne ou simples curieux.
                 </p>
-                <p>
+                <p class="text-justify">
                     Nous croyons que l'art est un vecteur universel de médiation et de paix. En documentant les œuvres inspirées par la foi, nous préservons une part essentielle de l'âme martiniquaise.
                 </p>
             </div>
@@ -97,19 +104,19 @@
                 <div class="space-y-4 bg-red-50 p-6 rounded">
                     <div class="flex items-start gap-3">
                         <span class="text-red-600 mt-1 text-sm">•</span>
-                        <p class="text-gray-700 leading-relaxed text-base">
+                        <p class="text-gray-700 leading-relaxed text-base text-justify">
                             Favoriser et soutenir toutes activités/initiatives culturelles et artistiques chrétiennes de Martinique,
                         </p>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="text-red-600 mt-1 text-sm">•</span>
-                        <p class="text-gray-700 leading-relaxed text-base">
+                        <p class="text-gray-700 leading-relaxed text-base text-justify">
                             D'assurer le développement et la valorisation des arts et de la culture chrétienne martiniquaise dite créole, sous toutes ses formes d'expression artistique : art sacré, art littéraire, linguistique, musical, pictural, patrimonial..., et d'en assurer la production, la diffusion, et la transmission à un large public,
                         </p>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="text-red-600 mt-1 text-sm">•</span>
-                        <p class="text-gray-700 leading-relaxed text-base">
+                        <p class="text-gray-700 leading-relaxed text-base text-justify">
                             Promouvoir le rapprochement entre arts et culture chrétienne et autres formes d'expressions artistiques et culturelles en Martinique
                         </p>
                     </div>
