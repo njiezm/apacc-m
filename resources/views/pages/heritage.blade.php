@@ -162,7 +162,7 @@
                     
                     <ul class="space-y-8 pt-6">
                         <li class="border-b border-gray-100 pb-6 group/item">
-                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Baroque Créole</span>
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Oeuvres</span>
                             <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Statuaire & Retables</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">Statues de la Vierge en bois de rose, Saint Jacques le Majeur en procession.</p>
                         </li>
