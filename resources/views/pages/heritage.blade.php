@@ -174,7 +174,7 @@
                         <li class="border-b border-gray-100 pb-6 group/item">
                             <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Spiritualité Chantée</span>
                             <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Musique sacré et tradition créole</h4>
-                            <p class="text-sm text-gray-400 font-light italic mt-1">De l'orgue Cavaillé-Coll aux Bélè Légliz, une âme musicale créole.</p>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">De l'orgue Cavaillé-Coll au Bélè Légliz, une âme musicale créole.</p>
                         </li>
                     </ul>
                 </div>
