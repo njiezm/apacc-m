@@ -235,6 +235,20 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
                     <p class="text-sm text-gray-500 max-w-sm leading-relaxed">
                         Le portail de la culture chrétienne en Martinique. Patrimoine, création contemporaine et dialogue spirituel.
                     </p>
+                    <p>
+                        <span class="text-red-600 font-bold">A</span>ssociation 
+                        <span class="text-red-600 font-bold">P</span>our la romotion de l’
+                        <span class="text-red-600 font-bold">A</span>rt et de la 
+                        <span class="text-red-600 font-bold">C</span>ulture 
+                        <span class="text-red-600 font-bold">C</span>hretienne en
+                        <span class="text-red-600 font-bold">M</span>artinique
+                    </p>
+                    <p class="text-sm text-gray-400 uppercase tracking-[0.2em] font-bold">Suivez-nous</p>
+                    <div class="flex gap-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-gray-600 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-gray-600 transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+
                 </div>
                 
                 <div>
