@@ -42,11 +42,11 @@
                             <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Cathédrale Saint-Louis</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">Structure métallique iconique signée Henri Picq.</p>
                         </li>
-                        <li class="border-b border-gray-100 pb-6 group/item">
+                        <!--li class="border-b border-gray-100 pb-6 group/item">
                             <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Saint-Pierre</span>
                             <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Co Cathédrale ND de l'Assomption</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">Élégance baroque et résilience face à l'éruption de 1902.</p>
-                        </li>
+                        </!--li-->
                         <li class="border-b border-gray-100 pb-6 group/item">
                             <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Balata</span>
                             <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Sacré-Cœur</h4>
@@ -64,7 +64,7 @@
                         </li>
                         <li class="border-b border-gray-100 pb-6 group/item">
                             <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Case-Pilote</span>
-                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Église Saint-Joseph</h4>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors">Notre-Dame de l'Assomption</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">Joyau architectural du 17ème siècle, l'une des plus anciennes.</p>
                         </li>
                     </ul>
