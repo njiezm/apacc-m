@@ -43,7 +43,7 @@
                 'tags' => ['Peinture', 'Art Sacré'],
                 'photo' => 'danielle_guiteau.jpg',
                 'oeuvre' => 'danielle_guiteau_oeuvre6.jpg',
-                'gallery' => [ 'danielle_guiteau_oeuvre7.jpg', 'danielle_guiteau_oeuvre6.jpg', 'danielle_guiteau_oeuvre5.jpg','danielle_guiteau_oeuvre8.jpg'],
+                'gallery' => [ 'danielle_guiteau_oeuvre7.jpg', 'danielle_guiteau_oeuvre9.jpg', 'danielle_guiteau_oeuvre5.jpg','danielle_guiteau_oeuvre8.jpg'],
                 'links' => [
                     ['url' => 'https://danielled.art/', 'text' => 'Portfolio'],
                     ['url' => 'https://www.facebook.com/share/1CAf94dANK/', 'text' => 'Facebook']
