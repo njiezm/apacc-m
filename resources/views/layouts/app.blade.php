@@ -236,8 +236,8 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
                         Le portail de la culture chrétienne en Martinique. Patrimoine, création contemporaine et dialogue spirituel.
                     </p>
                     <p>
-                        <span class="text-red-600 font-bold">A</span>ssociation 
-                        <span class="text-red-600 font-bold">P</span>our la romotion de l’
+                        <span class="text-red-600 font-bold">A</span>ssociation pour la 
+                        <span class="text-red-600 font-bold">P</span>romotion de l’
                         <span class="text-red-600 font-bold">A</span>rt et de la 
                         <span class="text-red-600 font-bold">C</span>ulture 
                         <span class="text-red-600 font-bold">C</span>hretienne en
