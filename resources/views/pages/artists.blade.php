@@ -74,7 +74,7 @@
                 'tags' => ['Céramique', 'Artisanat d\'Art'],
                 'photo' => 'jaqueline_haustant.jpg',
                 'oeuvre' => 'jaqueline_haustant_oeuvre1.jpg',
-                'gallery' => ['jaqueline_haustant_oeuvre1.jpg', 'jaqueline_haustant_oeuvre2.jpg', 'jaqueline_haustant_oeuvre3.jpg'],
+                'gallery' => ['jaqueline_haustant_oeuvre1.jpg', 'jaqueline_haustant_oeuvre2.jpg', 'jaqueline_haustant_oeuvre3.jpg', 'jaqueline_haustant_oeuvre4.jpg'],
                 'links' => []
             ],
 
