@@ -17,7 +17,7 @@
         </h2>
         
         <p class="text-xl text-gray-500 max-w-3xl mx-auto font-light leading-relaxed italic">
-            "Notre réseau rassemble des créateurs martiniquais s'inspirant de la culture chrétienne. Découvrez leurs talents et soutenez la création locale."
+            "Notre réseau rassemble des créateurs martiniquais et de martinique s'inspirant de la culture chrétienne. Découvrez leurs talents et soutenez la création locale."
         </p>
     </div>
 </header>
@@ -29,7 +29,7 @@
             [
                 'name' => 'Victor ANICET',
                 'desc' => 'Artiste créateur dont l\'œuvre puise dans les traditions et la spiritualité martiniquaise.',
-                'tags' => ['Sculpture', 'Art Visuel'],
+                'tags' => ['Vitrailliste', 'Ceramiste'],
                 'photo' => 'victor_anicet.jpg',
                 'oeuvre' => 'victor_anicet_oeuvre1.jpg',
                 'gallery' => ['victor_anicet_oeuvre1.jpg'],
@@ -63,11 +63,11 @@
                 'desc' => 'Photographe capturant la lumière et l\'essence de la Martinique à travers son objectif.',
                 'tags' => ['Photographie', 'Art Visuel'],
                 'photo' => 'joel_jean_pierre.jpg',
-                'oeuvre' => 'joel_jean_pierre_oeuvre1.jpg',
+                'oeuvre' => 'joel_jean_pierre_pp.jpg',
                 'gallery' => ['joel_jean_pierre_oeuvre1.jpg', 'joel_jean_pierre_oeuvre2.jpg', 'joel_jean_pierre_oeuvre3.jpg', 'joel_jean_pierre_oeuvre4.jpg'],
                 'links' => []
             ],
-            // -- NOUVELLE ARTISTE AJOUTÉE --
+           
             [
                 'name' => 'Jaqueline HAUSTANT',
                 'desc' => 'Artiste potière, elle façonne la terre pour donner vie à des pièces uniques, inspirées par les formes et les couleurs de la Martinique.',
@@ -76,6 +76,19 @@
                 'oeuvre' => 'jaqueline_haustant_oeuvre1.jpg',
                 'gallery' => ['jaqueline_haustant_oeuvre1.jpg', 'jaqueline_haustant_oeuvre2.jpg', 'jaqueline_haustant_oeuvre3.jpg'],
                 'links' => []
+            ],
+
+             // -- NOUVELLE ARTISTE AJOUTÉE --
+            [
+                'name' => 'Eric CHAUVINEAU',
+                'desc' => 'Artiste vitrailliste et enlumineur, il crée des œuvres inspirées par les traditions artistiques de la Martinique.',
+                'tags' => ['Vitrail', 'Enluminure'],
+                'photo' => 'eric_chauvineau.jpg',
+                'oeuvre' => 'eric_chauvineau_oeuvre1.jpg',
+                'gallery' => ['eric_chauvineau_oeuvre1.jpg', 'eric_chauvineau_oeuvre2.jpg', 'eric_chauvineau_oeuvre3.jpg', 'eric_chauvineau_oeuvre4.jpg'],
+                'links' => [
+                    ['url' => 'https://www.vitrailmartinique.com/', 'text' => 'Portfolio']
+                ]
             ]
         ];
     @endphp
@@ -136,7 +149,7 @@
     <div class="relative z-10 max-w-2xl mx-auto">
         <h3 class="font-display text-3xl md:text-5xl font-bold mb-8 uppercase tracking-tighter italic" style="font-family: 'Cinzel', serif;">Vous êtes artiste ?</h3>
         <p class="mb-12 text-gray-400 font-light text-lg leading-relaxed">
-            Partagez votre talent et rejoignez une communauté engagée pour le rayonnement de notre culture et de notre foi.
+            Partagez votre talent et rejoignez une communauté engagée pour le rayonnement de notre culture chrétienne.
         </p>
         <a href="{{ route('contact') }}" class="inline-block px-12 py-5 border border-white/20 text-[11px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all duration-500">
             Rejoindre le réseau
