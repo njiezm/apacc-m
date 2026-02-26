@@ -85,7 +85,7 @@
                 'tags' => ['Vitrail', 'Enluminure'],
                 'photo' => 'eric_chauvineau.jpg',
                 'oeuvre' => 'eric_chauvineau_oeuvre1.jpg',
-                'gallery' => ['eric_chauvineau_oeuvre1.jpg', 'eric_chauvineau_oeuvre2.jpg', 'eric_chauvineau_oeuvre3.jpg', 'eric_chauvineau_oeuvre4.jpg'],
+                'gallery' => ['eric_chauvineau_oeuvre1.jpg', 'eric_chauvineau_oeuvre2.jpg', 'eric_chauvineau_oeuvre3.jpg'],
                 'links' => [
                     ['url' => 'https://www.vitrailmartinique.com/', 'text' => 'Portfolio']
                 ]
