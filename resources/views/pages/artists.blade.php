@@ -38,12 +38,12 @@
                 ]
             ],
             [
-                'name' => 'Danielle Guiteau',
+                'name' => 'Danielle Guiteaud',
                 'desc' => 'Artiste multidisciplinaire explorant les thèmes de la spiritualité et de l\'identité martiniquaise.',
                 'tags' => ['Peinture', 'Art Sacré'],
                 'photo' => 'danielle_guiteau.jpg',
-                'oeuvre' => 'danielle_guiteau_oeuvre4.jpg',
-                'gallery' => ['danielle_guiteau_oeuvre1.jpg', 'danielle_guiteau_oeuvre2.jpg', 'danielle_guiteau_oeuvre3.jpg', 'danielle_guiteau_oeuvre4.jpg'],
+                'oeuvre' => 'danielle_guiteau_oeuvre6.jpg',
+                'gallery' => [ 'danielle_guiteau_oeuvre7.jpg', 'danielle_guiteau_oeuvre6.jpg', 'danielle_guiteau_oeuvre5.jpg','danielle_guiteau_oeuvre8.jpg'],
                 'links' => [
                     ['url' => 'https://danielled.art/', 'text' => 'Portfolio'],
                     ['url' => 'https://www.facebook.com/share/1CAf94dANK/', 'text' => 'Facebook']
