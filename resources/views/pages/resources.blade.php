@@ -111,10 +111,10 @@
 
 // NOUVELLES DONNÉES POUR LA SECTION "NOS ACTIONS EN IMAGES"
  $actionImages = [
-    ['title' => 'Traduction', 'sub' => 'Les textes sacrés traduits en créole martiniquais', 'img' => 'festival-esprit'],
+    ['title' => 'Traduction', 'sub' => 'Les textes sacrés traduits en créole martiniquais', 'img' => 'traduction'],
     ['title' => 'Paramentique', 'sub' => 'Les parements en mode créoles', 'img' => 'paramentique'],
     ['title' => 'Culture et Société', 'sub' => 'Dialoguer le sacré en monde créole', 'img' => 'exposition-art'],
-    ['title' => 'Ecole d\'Art Sacrée', 'sub' => 'Former et transmettre le sacré', 'img' => 'atelier-geometrie'],
+    ['title' => 'Ecole d\'Arts Sacrés', 'sub' => 'Former et transmettre le sacré', 'img' => 'atelier-geometrie'],
 ];
 
 @endphp
