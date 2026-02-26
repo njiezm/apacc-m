@@ -27,7 +27,8 @@
     @php
         $artists = [
             [
-                'name' => 'Victor ANICET',
+                'firstname' => 'Victor',
+                'lastname' => 'ANICET',
                 'desc' => 'Artiste créateur dont l\'œuvre puise dans les traditions et la spiritualité martiniquaise.',
                 'tags' => ['Vitrailliste', 'Ceramiste'],
                 'photo' => 'victor_anicet.jpg',
@@ -38,7 +39,9 @@
                 ]
             ],
             [
-                'name' => 'Danielle Guiteaud',
+                'name' => 'Danielle   Guiteaud',
+                'firstname' => 'Danielle',
+                'lastname' => 'Guiteaud ',
                 'desc' => 'Artiste multidisciplinaire explorant les thèmes de la spiritualité et de l\'identité martiniquaise.',
                 'tags' => ['Peinture', 'Art Sacré'],
                 'photo' => 'danielle_guiteau.jpg',
@@ -50,7 +53,9 @@
                 ]
             ],
             [
-                'name' => 'Yveline Guillon',
+                'name' => 'Yveline   Guillon',
+                'firstname' => 'Yveline',
+                'lastname' => 'Guillon',
                 'desc' => 'Artiste explorant les paysages et les symboles de la Martinique à travers une approche contemporaine.',
                 'tags' => ['Peinture', 'Art Contemporain'],
                 'photo' => 'yveline_guillon.jpg',
@@ -59,7 +64,9 @@
                 'links' => []
             ],
             [
-                'name' => 'Joel JEAN-PIERRE',
+                'name' => 'Joel   JEAN-PIERRE',
+                'firstname' => 'Joel',
+                'lastname' => 'JEAN-PIERRE',
                 'desc' => 'Photographe capturant la lumière et l\'essence de la Martinique à travers son objectif.',
                 'tags' => ['Photographie', 'Art Visuel'],
                 'photo' => 'joel_jean_pierre.jpg',
@@ -69,7 +76,9 @@
             ],
            
             [
-                'name' => 'Jaqueline HAUSTANT',
+                'name' => 'Jaqueline   HAUSTANT',
+                'firstname' => 'Jaqueline',
+                'lastname' => 'HAUSTANT',
                 'desc' => 'Artiste potière, elle façonne la terre pour donner vie à des pièces uniques, inspirées par les formes et les couleurs de la Martinique.',
                 'tags' => ['Céramique', 'Artisanat d\'Art'],
                 'photo' => 'jaqueline_haustant.jpg',
@@ -80,7 +89,9 @@
 
              // -- NOUVELLE ARTISTE AJOUTÉE --
             [
-                'name' => 'Eric CHAUVINEAU',
+                'name' => 'Eric   CHAUVINEAU',
+                'firstname' => 'Eric',
+                'lastname' => 'CHAUVINEAU',
                 'desc' => 'Artiste vitrailliste et enlumineur, il crée des œuvres inspirées par les traditions artistiques de la Martinique.',
                 'tags' => ['Vitrail', 'Enluminure'],
                 'photo' => 'eric_chauvineau.jpg',
@@ -100,7 +111,7 @@
             <div class="flex-shrink-0">
                 <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mx-auto md:mx-0 border-4 border-red-100">
                     <img src="{{ asset('images/artistes/' . $artist['photo']) }}" 
-                         alt="{{ $artist['name'] }}" 
+                         alt="{{ $artist['firstname'] }} {{ $artist['lastname'] }}" 
                          class="w-full h-full object-cover">
                 </div>
             </div>
@@ -113,7 +124,8 @@
                 </div>
                 
                 <h3 class="text-2xl font-bold tracking-tighter uppercase group-hover:text-red-900 transition-colors text-center md:text-left">
-                    {{ $artist['name'] }}
+                   <span class="mr-3">{{ $artist['firstname'] }}</span>
+<span class="tracking-widest">{{ $artist['lastname'] }}</span>
                 </h3>
                 
                 <p class="text-sm text-gray-500 font-light leading-relaxed italic mt-4 text-center md:text-left">
@@ -123,7 +135,7 @@
                 {{-- Photo de l'œuvre principale --}}
                 <div class="mt-6 mb-6 overflow-hidden rounded-lg">
                     <img src="{{ asset('images/artistes/' . $artist['oeuvre']) }}" 
-                         alt="Œuvre de {{ $artist['name'] }}" 
+                         alt="Œuvre de {{ $artist['firstname'] }} {{ $artist['lastname'] }}" 
                          class="w-full h-64 object-cover cursor-pointer hover:scale-105 transition-all duration-700"
                          data-bs-toggle="modal" 
                          data-bs-target="#artistModal{{ $index }}">
@@ -169,7 +181,7 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="artistModalLabel{{ $index }}">Œuvres de {{ $artist['name'] }}</h5>
+                    <h5 class="modal-title" id="artistModalLabel{{ $index }}">Œuvres de {{ $artist['firstname'] }} {{ $artist['lastname'] }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -178,14 +190,14 @@
                             @foreach($artist['gallery'] as $photo)
                             <div class="col-md-6">
                                 <img src="{{ asset('images/artistes/' . $photo) }}" 
-                                     alt="Œuvre de {{ $artist['name'] }}" 
+                                     alt="Œuvre de {{ $artist['firstname'] }} {{ $artist['lastname'] }}" 
                                      class="img-fluid rounded">
                             </div>
                             @endforeach
                         @else
                             <div class="col-md-12">
                                 <img src="{{ asset('images/artistes/' . $artist['oeuvre']) }}" 
-                                     alt="Œuvre de {{ $artist['name'] }}" 
+                                     alt="Œuvre de {{ $artist['firstname'] }} {{ $artist['lastname'] }}" 
                                      class="img-fluid rounded">
                             </div>
                         @endif
