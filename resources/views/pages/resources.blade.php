@@ -111,10 +111,10 @@
 
 // NOUVELLES DONNÉES POUR LA SECTION "NOS ACTIONS EN IMAGES"
  $actionImages = [
-    ['title' => 'Festival du Saint-Esprit', 'sub' => 'Vibrations culturelles et spirituelles', 'img' => 'festival-esprit'],
-    ['title' => 'Journées du Patrimoine', 'sub' => 'Portes ouvertes sur l\'histoire', 'img' => 'journees-patrimoine'],
-    ['title' => 'Exposition d\'Art Sacré', 'sub' => 'Les créateurs de lumière', 'img' => 'exposition-art'],
-    ['title' => 'Atelier de Géométrie Sacrée', 'sub' => 'Les formes de l\'invisible', 'img' => 'atelier-geometrie'],
+    ['title' => 'Traduction', 'sub' => 'Les textes sacrés traduits en créole martiniquais', 'img' => 'festival-esprit'],
+    ['title' => 'Paramentique', 'sub' => 'Les parements en mode créoles', 'img' => 'paramentique'],
+    ['title' => 'Culture et Société', 'sub' => 'Dialoguer le sacré en monde créole', 'img' => 'exposition-art'],
+    ['title' => 'Ecole d\'Art Sacrée', 'sub' => 'Former et transmettre le sacré', 'img' => 'atelier-geometrie'],
 ];
 
 @endphp
@@ -239,10 +239,12 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             @foreach($actionImages as $index => $action)
             <div class="group relative aspect-[3/4] overflow-hidden {{ $index % 2 != 0 ? 'lg:mt-12' : '' }}" style="border-radius: 120px 120px 20px 20px;">
-                <img src="https://picsum.photos/seed/{{ $action['img'] }}/600/800" class="absolute inset-0 w-full h-full object-cover scale-110 group-hover:scale-100 transition-all duration-[2s] grayscale">
+                <img src="{{ asset('images/actions/' . $action['img'] . '.jpg') }}" class="absolute inset-0 w-full h-full object-cover scale-110 group-hover:scale-100 transition-all duration-[2s]">
                 <div class="absolute inset-0 bg-gradient-to-t from-red-900/90 via-red-900/20 to-transparent"></div>
                 <div class="absolute inset-x-0 bottom-0 p-10 text-left">
                     <h4 class="text-xl font-bold text-white mb-2 uppercase tracking-tighter">{{ $action['title'] }}</h4>
+                    {{-- {soutitre } --}}
+                    <h6 class="text-sm font-light italic text-white uppercase tracking-widest mb-4">{{ $action['sub'] }}</h6>
                     <p class="text-red-200 text-[9px] font-bold uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-700">{{ $action['sub'] }}</p>
                 </div>
             </div>
