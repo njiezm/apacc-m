@@ -25,7 +25,7 @@
 <div class="space-y-24">
 
         {{-- Badge RGPD --}}
-        <div class="bg-red-50/50 p-10 rounded-[3rem] border border-red-50 flex flex-col md:flex-row items-center gap-8">
+        <div class="bg-red-50/50 p-10 rounded-[3rem] border border-red-50 flex flex-col md:flex-row items-center gap-8 mt-5">
             <div class="w-16 h-16 bg-red-900 rounded-full flex items-center justify-center text-white shrink-0 shadow-lg shadow-red-900/20">
                 <i class="fas fa-shield-alt text-xl"></i>
             </div>
