@@ -265,8 +265,9 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
                 <a href="#" class="hover:text-red-900 transition-colors duration-200"><i class="fab fa-instagram"></i></a>
             </div>
             <p class="text-[10px] uppercase tracking-widest text-gray-300">
-                <a href="{{ route('legal') }}" class="hover:text-black transition-colors duration-200">Mentions Légales</a>
-            </p>
+            <a href="{{ route('legal') }}" class="text-black hover:text-red-600 transition-colors duration-200">
+                Mentions Légales
+            </a>            </p>
         </footer>
     </div>
 </div>
