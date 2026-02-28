@@ -254,8 +254,8 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
                 <div>
                     <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-6">Liens</h4>
                     <ul class="text-sm space-y-3 font-semibold text-gray-600">
-                        <li><a href="#" class="hover:text-purple-700 transition">Mentions légales</a></li>
-                        <li><a href="#" class="hover:text-purple-700 transition">Confidentialité</a></li>
+                        <li><a href="{{ route('legal') }}" class="hover:text-purple-700 transition">Mentions légales</a></li>
+                        <li><a href="{{ route('privacy') }}" class="hover:text-purple-700 transition">Confidentialité</a></li>
                         <li><a href="#" class="hover:text-purple-700 transition">Newsletter</a></li>
                     </ul>
                 </div>

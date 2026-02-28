@@ -103,7 +103,7 @@
                 </p>
                 <a href="mailto:contact@apacc-m.fr" class="inline-flex items-center gap-6 bg-black text-white px-10 py-5 rounded-full hover:bg-red-900 transition-all shadow-xl shadow-black/10">
                     <i class="fas fa-envelope text-red-400"></i>
-                    <span class="text-[10px] font-black uppercase tracking-[0.3em]">contact@apacc-m.fr</span>
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em]">contact@apacc-martinique.fr</span>
                 </a>
             </div>
         </article>
