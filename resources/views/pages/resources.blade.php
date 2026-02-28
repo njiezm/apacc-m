@@ -242,9 +242,9 @@
                 <img src="{{ asset('images/actions/' . $action['img'] . '.jpg') }}" class="absolute inset-0 w-full h-full object-cover scale-110 group-hover:scale-100 transition-all duration-[2s]">
                 <div class="absolute inset-0 bg-gradient-to-t from-red-900/90 via-red-900/20 to-transparent"></div>
                 <div class="absolute inset-x-0 bottom-0 p-10 text-left">
-                    <h4 class="text-xl font-bold text-white mb-2 uppercase tracking-tighter">{{ $action['title'] }}</h4>
+                    <h4 class="text-xl font-bold text-white text-[50px] mb-2 uppercase tracking-tighter">{{ $action['title'] }}</h4>
                     {{-- {soutitre } --}}
-                    <h6 class="text-sm font-light italic text-white uppercase tracking-widest mb-4">{{ $action['sub'] }}</h6>
+                    <h6 class="text-sm font-light italic text-white lowercase tracking-widest mb-4 mt-4">{{ $action['sub'] }}</h6>
                     <p class="text-red-200 text-[9px] font-bold uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-700">{{ $action['sub'] }}</p>
                 </div>
             </div>
