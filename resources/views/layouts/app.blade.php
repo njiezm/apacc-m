@@ -123,6 +123,48 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
     color: var(--cardinal);
     transform: translateX(5px);
 }
+
+/* =================== NOUVEAU MENU MOBILE COHÉRENT =================== */
+#mobile-menu { 
+    position: fixed;
+    top: 0;
+    right: -100%; /* Commence hors de l'écran */
+    width: 85%; /* Prend 85% de la largeur pour laisser un aperçu de la page */
+    max-width: 400px; /* Largeur maximale pour les grands écrans */
+    height: 100vh;
+    background: white;
+    z-index: 100;
+    transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transition Material Design */
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1); /* Ombre pour donner de la profondeur */
+}
+
+#mobile-menu.open { 
+    right: 0; 
+}
+
+/* Style des liens de navigation mobile */
+.mobile-nav-link {
+    display: block; /* Prend toute la largeur pour une zone de clic facile */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #444;
+    padding: 0.5rem 0;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Effet de survol subtil et élégant */
+.mobile-nav-link:hover {
+    color: var(--cardinal);
+    transform: translateX(5px); /* Léger décalage vers la droite */
+}
+
+/* Assure que le bouton de fermeture est bien au-dessus */
+#menu-close {
+    z-index: 101;
+}
     </style>
 </head>
 <body>
@@ -187,37 +229,48 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.08);
     </nav>
 
     <!-- Menu Mobile Plein Écran (Inspiré de votre capture) -->
-    <div id="mobile-menu">
-        <button id="menu-close" class="absolute top-8 right-8 text-white text-3xl">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <!-- Filigrane discret d'architecture en fond (optionnel) -->
-        <div class="absolute left-0 bottom-0 opacity-10 pointer-events-none">
-            <svg width="300" height="400" viewBox="0 0 100 100" fill="white">
-                <path d="M10 100 L10 40 Q50 0 90 40 L90 100 Z" fill="none" stroke="white" stroke-width="0.5"/>
-            </svg>
-        </div>
+    <!-- ======== NOUVEAU MENU MOBILE COHÉRENT ======== -->
+<div id="mobile-menu">
+    <!-- Bouton de fermeture -->
+    <button id="menu-close" class="absolute top-6 right-6 text-gray-400 text-2xl z-50 transition-colors duration-200 hover:text-black">
+        <i class="fas fa-times"></i>
+    </button>
+    
+    <div class="h-full flex flex-col">
+        <!-- En-tête du menu avec branding -->
+        <header class="px-8 pt-16 pb-8 text-center border-b border-gray-100">
+            <h2 class="font-accent text-3xl tracking-widest text-red-900 lowercase" style="font-family: 'Cinzel', serif;">apacc-m</h2>
+            <div class="narthex-line-double mt-4"></div>
+            <p class="text-[10px] uppercase tracking-[0.3em] font-bold pt-2 text-gray-500">Navigation</p>
+        </header>
 
-        <div class="flex flex-col items-center">
-            <a href="{{ route('home') }}" class="mobile-link">Accueil</a>
-            <a href="{{ route('about') }}" class="mobile-link">À propos</a>
-            <a href="{{ route('events') }}" class="mobile-link">Événements</a>
-            <a href="{{ route('artists') }}" class="mobile-link">Artistes</a>
-            <a href="{{ route('heritage') }}" class="mobile-link">Patrimoine</a>
-            <a href="{{ route('resources') }}" class="mobile-link">Ressources</a>
-            <a href="{{ route('shop') }}" class="mobile-link">Boutique</a>
-            <a href="{{ route('contact') }}" class="mobile-link">Contact</a>
-            
-            <div class="mt-12 text-center text-white/40 text-[10px] uppercase tracking-widest">
-                <p class="mb-4">© APACC-M 2026</p>
-                <div class="flex gap-4 justify-center">
-                    <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
-                </div>
+        <!-- Navigation principale -->
+        <nav class="flex-grow flex items-center justify-center px-8 py-12">
+            <ul class="text-center space-y-6 w-full">
+                <li><a href="{{ route('home') }}" class="mobile-nav-link">Accueil</a></li>
+                <li><a href="{{ route('about') }}" class="mobile-nav-link">À propos</a></li>
+                <li><a href="{{ route('events') }}" class="mobile-nav-link">Événements</a></li>
+                <li><a href="{{ route('artists') }}" class="mobile-nav-link">Artistes</a></li>
+                <li><a href="{{ route('heritage') }}" class="mobile-nav-link">Patrimoine</a></li>
+                <li><a href="{{ route('resources') }}" class="mobile-nav-link">Ressources</a></li>
+                <li><a href="{{ route('shop') }}" class="mobile-nav-link">Boutique</a></li>
+                <li><a href="{{ route('contact') }}" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Pied du menu avec infos secondaires -->
+        <footer class="px-8 pb-8 text-center">
+            <div class="flex gap-6 justify-center text-xl text-gray-400 mb-6">
+                <a href="#" class="hover:text-red-900 transition-colors duration-200"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-red-900 transition-colors duration-200"><i class="fab fa-instagram"></i></a>
             </div>
-        </div>
+            <p class="text-[10px] uppercase tracking-widest text-gray-300">
+                <a href="{{ route('legal') }}" class="hover:text-black transition-colors duration-200">Mentions Légales</a>
+            </p>
+        </footer>
     </div>
+</div>
+<!-- ======== FIN NOUVEAU MENU MOBILE ======== -->
 
     <main class="min-h-screen">
         @yield('content')
