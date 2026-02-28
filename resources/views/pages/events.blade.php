@@ -52,37 +52,70 @@
         'registration_deadline' => '2025-05-31'
     ],
     [
-        'title' => 'Conférence : "L\'icône, fenêtre sur l\'invisible"',
-        'date' => '5 Mai 2025',
-        'time' => '18h00',
-        'location' => 'Médiathèque de Schoelcher',
+        'title' => 'Initiation à la calligraphie papale',
+        'date' => '31 Janvier 2025',
+        'time' => '9h00 - 13h00',
+        'location' => 'Saint-Christophe',
+        'category' => 'atelier',
+        'category_label' => 'Atelier',
+        'image' => 'calligraphiepapale',
+        'description' => 'Initiation à la calligraphie papale, un art sacré qui exprime la spiritualité.',
+        'registration_deadline' => '2025-01-30'
+    ],
+    [
+        'title' => 'Caligraphie et enluminure, Thème : "La Nativité"',
+        'date' => '06 et 07 Décembre 2025',
+        'time' => '9h00 - 15h00',
+        'location' => 'Saint-Christophe',
+        'category' => 'atelier',
+        'category_label' => 'Atelier',
+        'image' => 'caligraphieenluminure',
+        'description' => 'Venez apprendre la calligraphie et l\'enluminure dans le thème de la Nativité.',
+        'registration_deadline' => '2025-12-05'
+    ],
+    [
+        'title' => 'Initiation à l\'enluminure',
+        'date' => '12 Mars 2025',
+        'time' => '9h00 - 13h00',
+        'location' => 'Saint-Christophe',
+        'category' => 'atelier',
+        'category_label' => 'Atelier',
+        'image' => 'initiationenluminure',
+        'description' => 'Initiation à l\'enluminure, un art sacré qui exprime la spiritualité.',
+        'registration_deadline' => '2025-03-10'
+    ],
+    [
+        'title' => 'Art sacré : regard croisé sur l\'ethique en créolité',
+        'date' => '12 Mars 2025',
+        'time' => '19h00',
+        'location' => 'Salle RP Gauthier, Paroisse de Bellevue',
         'category' => 'conference',
         'category_label' => 'Conférence',
-        'image' => 'conferenceicone',
-        'description' => 'Une conférence immersive pour comprendre la théologie et la technique derrière la création d\'icônes.',
-        'registration_deadline' => '2025-05-02'
-    ],
-    [
-        'title' => 'Circuit découverte : Les églises du Sud',
-        'date' => '20 Avril 2025',
-        'time' => '8h00 - 18h00',
-        'location' => 'Départ de FDF',
-        'category' => 'circuits',
-        'category_label' => 'Circuits découvertes',
-        'image' => 'circuitsud',
-        'description' => 'Une journée guidée à la découverte du patrimoine architectural et artistique des églises du sud de l\'île.',
-        'registration_deadline' => '2025-04-17'
-    ],
-    [
-        'title' => 'Rencontre avec l\'artiste',
-        'date' => '12 Mars 2025',
-        'time' => '16h00',
-        'location' => 'Galerie APACC-M',
-        'category' => 'rencontres',
-        'category_label' => 'Rencontres',
-        'image' => 'rencontreartiste',
-        'description' => 'Venez échanger avec un artiste local sur son processus créatif et l\'inspiration de la foi dans son œuvre.',
+        'image' => 'conferenceethique',
+        'description' => 'Une conférence qui explore les liens entre l\'art sacré, l\'éthique et la créolité dans le contexte martiniquais.',
         'registration_deadline' => '2025-03-10'
+    ],
+    [
+        'title' => 'Atelier de démonstration dorure',
+        'date' => '5 Juillet 2025',
+        'time' => '14h00 - 17h00',
+        'location' => 'Saint-Christophe',
+        'category' => 'atelier',
+        'category_label' => 'Atelier',
+        'image' => 'demonstrationdorure',
+        'description' => 'Venez échanger avec un artiste local sur son processus créatif et l\'inspiration de la foi dans son œuvre.',
+        'registration_deadline' => '2025-06-30'
+    ],
+    [
+        'title' => 'Grand concert Bélè Légliz 20 ans',
+        'date' => '14 Juillet 2025',
+        'time' => '16h00',
+        'location' => 'Saint-Christophe',
+        'category' => 'concert',
+        'category_label' => 'Concert',
+        'image' => 'concert20ans',
+        'description' => 'Venez échanger avec un artiste local sur son processus créatif et l\'inspiration de la foi dans son œuvre.',
+        'registration_deadline' => '2025-06-30'
     ]
 ];
 @endphp
