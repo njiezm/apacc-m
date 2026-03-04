@@ -52,19 +52,19 @@
                             <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalSacreCoeur">Sacré-Cœur</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">L'élégance de Montmartre nichée dans la verdure tropicale.</p>
                         </li>
-                        <li class="border-b border-gray-100 pb-6 group/item">
+                        {{-- <li class="border-b border-gray-100 pb-6 group/item">
                             <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Saint-Pierre</span>
-                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalEgliseSacreCoeur">Église du Sacré-Cœur</h4>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalEgliseSacreCoeur">CO Cathédrale de St Pierre :</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">Reconstruite après l'éruption de 1902, mémoire de la ville.</p>
-                        </li>
+                        </li> --}}
                         <li class="border-b border-gray-100 pb-6 group/item">
                             <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Le Carbet</span>
                             <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalSaintJacques">Église Saint-Jacques</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">Un sanctuaire historique parmi les plus anciens de l'île.</p>
                         </li>
                         <li class="border-b border-gray-100 pb-6 group/item">
-                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Case-Pilote</span>
-                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalNotreDameAssomption">Notre-Dame de l'Assomption</h4>
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Saint Piere</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalNotreDameAssomption">CO Cathédrale Notre-Dame de l'Assomption</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">Joyau architectural du 17ème siècle, l'une des plus anciennes.</p>
                         </li>
                     </ul>
@@ -356,12 +356,20 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalEgliseSacreCoeurLabel">Église du Sacré-Cœur</h5>
+        <h5 class="modal-title" id="modalEgliseSacreCoeurLabel">CO Cathédrale de St Pierre :</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>L'église du Sacré-Cœur de Saint-Pierre a été reconstruite après la terrible éruption de la montagne Pelée en 1902 qui a détruit la ville et ses édifices religieux. Cette reconstruction symbolise la résilience et la foi de la population de Saint-Pierre qui a su se relever après cette catastrophe.</p>
-        <p>L'architecture de l'église conserve des éléments de mémoire tout en s'adaptant aux besoins contemporains de la communauté paroissiale. Elle constitue un lieu important du patrimoine religieux de la ville, témoin de son histoire tragique et de sa renaissance.</p>
+        <p>L’Eglise du Fort, construite avant 1640 est vraisemblablement la plus ancienne.
+C’est d’abord une chapelle, puis une église paroissiales après la délimitation des
+paroisses de St Pierre. En 1851, l'église du Mouillage est érigée en cathédrale à
+l'arrivée du premier évêque de Saint-Pierre et de Fort-de-France, Mgr Leherpeur.</p>
+        <p>1924 sur les bases de l'ancienne, les travaux se poursuivent jusqu'en 1929. 3
+évêques y reposent : Mgr Leherpeur (1858) – Mgr Porchez. (1860) – Mgr Tanoux
+(1899). Le maitre-autel en marbre blanc de l’ancienne cathédrale n’y revient qu’en
+1939. Malgré son apparence d'édifice en pierre, la structure de la cathédrale est en
+ciment armé, de juin 2021 à décembre 2023 des travaux de restauration ont été
+entrepris.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
