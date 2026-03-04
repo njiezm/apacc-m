@@ -402,7 +402,7 @@
                         <div class="carousel-item">
                             <img src="{{ asset('images/festival/festival4.jpg') }}" class="d-block w-100" alt="Festival image 4">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>...à rmeplir</h5>
+                                <h5>Conférence/Débat</h5>
                                 <p>...à rmeplir</p>
                             </div>
                         </div>
