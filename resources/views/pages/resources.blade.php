@@ -488,7 +488,7 @@
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/histoire/vitrail-1.jpg') }}" class="img-fluid rounded mb-3" alt="Vitrail">
-                            <img src="{{ asset('images/histoire/vitrail-2.jpg') }}" class="img-fluid rounded" alt="Vitrail détail">
+                            {{-- <img src="{{ asset('images/histoire/vitrail-2.jpg') }}" class="img-fluid rounded" alt="Vitrail détail"> --}}
                         </div>
                     </div>
                 </div>
