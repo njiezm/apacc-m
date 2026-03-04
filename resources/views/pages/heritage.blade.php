@@ -48,17 +48,19 @@
                             <p class="text-sm text-gray-400 font-light italic mt-1">Élégance baroque et résilience face à l'éruption de 1902.</p>
                         </!--li-->
                         <li class="border-b border-gray-100 pb-6 group/item">
-                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Balata</span>
-                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalSacreCoeur">Sacré-Cœur</h4>
-                            <p class="text-sm text-gray-400 font-light italic mt-1">L'élégance de Montmartre nichée dans la verdure tropicale.</p>
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Trois Îlets</span>
+                            <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalSacreCoeur">Eglise ND de la Bonne Délivrance</h4>
+                            <p class="text-sm text-gray-400 font-light italic mt-1">De la chapelle de Cul-de-sac-à-vaches (1683) à l’église Notre Dame de la
+Délivrance</p>
                         </li>
                         {{-- <li class="border-b border-gray-100 pb-6 group/item">
                             <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Saint-Pierre</span>
                             <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalEgliseSacreCoeur">CO Cathédrale de St Pierre :</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">Reconstruite après l'éruption de 1902, mémoire de la ville.</p>
                         </li> --}}
+                        
                         <li class="border-b border-gray-100 pb-6 group/item">
-                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Le Carbet</span>
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Trois Îlets</span>
                             <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalSaintJacques">Église Saint-Jacques</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">Un sanctuaire historique parmi les plus anciens de l'île.</p>
                         </li>
@@ -443,14 +445,19 @@ entrepris.</p>
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalSacreCoeurLabel">Sacré-Cœur de Balata</h5>
+        <h5 class="modal-title" id="modalSacreCoeurLabel">Eglise ND de la Bonne Délivrance (Trois ilets)</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Né de la volonté de Mgr Lequien de faire de Balata « le Sacré Cœur martiniquais » , la 1ère pierre de l'édifice construit selon des plans identiques à celui de Paris, est posée le 2 mars 1923. L'église remplace la petite chapelle de la fin du 19 eme siècle, un des premiers édifices construits en béton avec la technique des poteaux poutres.</p>
-        <p>Le 15 aout 1924 a lieu la première célébration, l'église est toujours en construction.</p>
-        <p>Une première bénédiction a lieu le 9 août 1925 par le Père Eugène de Jaham "en présence de plus de 10 000 personnes", et reçoit la bénédiction solennelle le 20 mai 1926.</p>
-        <p>La statue du Sacré Cœur, venue de France par bateau est selon la petite histoire « miraculée » car échappée à deux incendies. La basilique de Balata abrite la tombe de Mgr Lequien. La mise en place des vitraux date de 1948 (verrier Pierre Turpin).</p>
+        <p>De la chapelle de Cul-de-sac-à-vaches (1683) à l’église Notre Dame de la
+Délivrance (1763 date possible de sa bénédiction), l’histoire de cet édifice est
+étroitement liée à celle de la famille de l’impératrice Joséphine.</p>
+        <p>Elle est le lieu du
+mariage de ses parents en 1761, de son baptême en 1763, de l’inhumation de Mme
+de la Pagerie (sa mère) en 1807.</p>
+        <p>Jusqu’à la 1ere moitié du 20 eme siècle, toutes les cérémonies de la famille
+impériale y sont célébrées.</p>
+        <p>Inscription au monuments historiques (1993).</p>
         <p class="text-sm text-gray-500 mt-3">Inscription au monuments historiques (2015)</p>
       </div>
       <div class="modal-footer">
