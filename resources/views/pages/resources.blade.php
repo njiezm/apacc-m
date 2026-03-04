@@ -513,8 +513,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="#" class="img-fluid rounded mb-3" alt="Géométrie sacrée">
-                        </div>
+<img src="{{ asset('images/mediatheque/geomaffiche.jpg') }}" class="img-fluid rounded mb-3" alt="Géométrie sacrée">                        </div>
                         <div class="col-md-6">
                             <h4>Principes fondamentaux</h4>
                             <p>La géométrie sacrée est l'étude des formes et des proportions qui structurent l'univers et que l'on retrouve dans la nature, l'art et l'architecture sacrée. Basée sur des rapports mathématiques harmonieux comme le nombre d'or (φ≈1,618) et la suite de Fibonacci, elle révèle les principes universels d'harmonie et d'équilibre.</p>
