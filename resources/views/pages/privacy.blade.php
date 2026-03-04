@@ -109,8 +109,8 @@
         </article>
 
         {{-- Cookies --}}
-        <footer class="pt-24 border-t border-gray-100">
-            <div class="flex items-start gap-6">
+        <footer class="pt-24 border-t border-gray-100 mb-2">
+            <div class="flex items-start mb-5">
                 <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600 shrink-0">
                     <i class="fas fa-cookie-bite"></i>
                 </div>
