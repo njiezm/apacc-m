@@ -60,7 +60,7 @@ Délivrance</p>
                         </li> --}}
                         
                         <li class="border-b border-gray-100 pb-6 group/item">
-                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Trois Îlets</span>
+                            <span class="text-[9px] font-black text-red-800 uppercase tracking-widest block mb-2">Carbet</span>
                             <h4 class="text-xl font-bold uppercase tracking-tight group-hover/item:text-red-900 transition-colors cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalSaintJacques">Église Saint-Jacques</h4>
                             <p class="text-sm text-gray-400 font-light italic mt-1">Un sanctuaire historique parmi les plus anciens de l'île.</p>
                         </li>
