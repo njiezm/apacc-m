@@ -526,7 +526,7 @@
                             
                             <div class="alert alert-info mt-4">
                                 <i class="fas fa-info-circle me-2"></i>
-                                <strong>Prochaine session :</strong> 15-17 juillet 2023
+                                <strong>Prochaine session :</strong> 15-17 juillet 2026
                             </div>
                         </div>
                     </div>
