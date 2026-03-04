@@ -513,7 +513,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="https://picsum.photos/seed/geometrie/600/800.jpg" class="img-fluid rounded mb-3" alt="Géométrie sacrée">
+                            <img src="#" class="img-fluid rounded mb-3" alt="Géométrie sacrée">
                         </div>
                         <div class="col-md-6">
                             <h4>Principes fondamentaux</h4>
