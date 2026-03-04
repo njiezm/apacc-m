@@ -46,7 +46,7 @@
     [
         'type' => 'gallery',
         'type_label' => 'Galerie',
-        'title' => 'Retour en images sur le festival...',
+        'title' => 'Retour en images sur le festival 2025...',
         'desc' => 'Plongez au cœur des moments forts de notre dernier festival, entre célébrations, partages et découvertes artistiques.',
         'duration' => '12 min',
         'image' => 'festival-archive',
@@ -365,7 +365,7 @@
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="galleryModalLabel">Retour en images sur le festival...</h5>
+                <h5 class="modal-title" id="galleryModalLabel">Retour en images sur le festival 2025...</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
