@@ -403,14 +403,14 @@
                             <img src="{{ asset('images/festival/festival4.jpg') }}" class="d-block w-100" alt="Festival image 4">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Conférence/Débat</h5>
-                                <p>...à rmeplir</p>
+                                <p>Regards croisés sur l'esthétique et l'éthique en creolité</p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="{{ asset('images/festival/festival5.jpg') }}" class="d-block w-100" alt="Festival image 5">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Clôture du festival</h5>
-                                <p>Célébration finale avec tous les participants</p>
+                                <h5>Grand concert</h5>
+                                <p>Les 20 ans de Bélè Légliz !</p>
                             </div>
                         </div>
                     </div>
