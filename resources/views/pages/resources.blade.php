@@ -395,8 +395,8 @@
                         <div class="carousel-item">
                             <img src="{{ asset('images/festival/festival3.jpg') }}" class="d-block w-100" alt="Festival image 3">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>...à rmeplir</h5>
-                                <p>...à rmeplir</p>
+                                <h5>Le Concert de bélè Légliz</h5>
+                                <p>Ne sont-ils pas magnifiques !</p>
                             </div>
                         </div>
                         <div class="carousel-item">
