@@ -310,8 +310,8 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
                   </div>
                   <div class="modal-body text-center">
                     {{-- Ici, image différente et plus petite --}}
-                    {{-- <img src="{{ asset('images/actions/modal/' . $action['img'] . '-small.jpg') }}" 
-                         class="mx-auto mb-4 rounded max-w-[300px] h-auto"> --}}
+                    <img src="{{ asset('images/actions/modal/' . $action['img'] . '-small.jpg') }}" 
+                         class="mx-auto mb-4 rounded max-w-[300px] h-auto">
 
                     <p class="text-gray-700 text-left whitespace-pre-line">
                         {{ $action['description'] ?? 'Description détaillée à ajouter pour ce bloc.' }}

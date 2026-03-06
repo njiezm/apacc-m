@@ -449,6 +449,8 @@ entrepris.</p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        
+<img src="{{ asset('images/3i.jpg') }}" class="img-fluid w-50" alt="Photo 1"><br>
         <p>De la chapelle de Cul-de-sac-à-vaches (1683) à l’église Notre Dame de la
 Délivrance (1763 date possible de sa bénédiction), l’histoire de cet édifice est
 étroitement liée à celle de la famille de l’impératrice Joséphine.</p>
