@@ -199,7 +199,7 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
             </div>
 
             {{-- Filtres --}}
-            <div class="flex gap-10 text-[11px] font-black uppercase tracking-widest">
+            <div class="flex flex-wrap gap-4 sm:gap-8 text-[11px] font-black uppercase tracking-widest">
                 <button class="filter-btn active border-b-2 border-black pb-2" data-tab="all">Tout</button>
                 <button class="filter-btn text-neutral-400 hover:text-black pb-2" data-tab="article">Articles</button>
                 <button class="filter-btn text-neutral-400 hover:text-black pb-2" data-tab="pdf">PDF</button>
