@@ -776,6 +776,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script>
+document.querySelectorAll('.resource-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+
+        const type = this.dataset.type;
+        const url = this.dataset.url;
+        const modalId = this.dataset.modal;
+
+        // CAS 1 : PDF → ouvrir dans un nouvel onglet (PAS de modal)
+        if(type === "pdf"){
+            e.preventDefault();
+            window.open(url, "_blank");
+            return;
+        }
+
+        // CAS 2 : autres contenus → ouvrir modal
+        if(modalId){
+            e.preventDefault();
+            const modal = new bootstrap.Modal(document.getElementById(modalId));
+            modal.show();
+        }
+
+    });
+});
+</script>
+
 {{-- Modal pour les liens externes --}}
 <div id="externalModal" class="fixed inset-0 z-[100] opacity-0 invisible transition-all duration-500">
     <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeExternalModal()"></div>
