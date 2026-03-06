@@ -742,38 +742,104 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.worker.min.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const url = "pdf/revue-transandans-5.pdf"; // PDF à afficher
-    const container = document.getElementById('pdfPreviewContainer');
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.resource-card');
+    const searchInput = document.getElementById('searchInput');
+    const grid = document.getElementById('resourceGrid');
+    const noResultsMsg = document.getElementById('noResults');
 
-    const pdfjsLib = window['pdfjs-dist/build/pdf'];
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.worker.min.js';
+    // Assurer que la grille a une position relative pour les éléments absolus
+    grid.style.position = 'relative';
 
-    pdfjsLib.getDocument(url).promise.then(function(pdfDoc) {
-        // On veut les 5 premières pages si preview = true
-        const totalPages = pdfDoc.numPages;
+    function filterContent() {
+        const activeTab = document.querySelector('.filter-btn.active').getAttribute('data-tab');
+        const searchTerm = searchInput.value.toLowerCase();
+        let visibleCount = 0;
 
-        for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
-            pdfDoc.getPage(pageNum).then(function(page) {
-                const scale = 1.5; // zoom, ajuste ici si trop petit
-                const viewport = page.getViewport({ scale: scale });
+        cards.forEach(card => {
+            const type = card.getAttribute('data-type');
+            const title = card.getAttribute('data-title');
+            const matchesTab = activeTab === 'all' || type === activeTab;
+            const matchesSearch = title.includes(searchTerm);
 
-                const canvas = document.createElement('canvas');
-                canvas.classList.add('mb-4'); // espace entre les pages
-                container.appendChild(canvas);
+            if (matchesTab && matchesSearch) {
+                card.classList.remove('hidden-item');
+                // S'assurer que la carte est en position static pour la grille
+                card.style.position = 'static';
+                visibleCount++;
+            } else {
+                card.classList.add('hidden-item');
+            }
+        });
 
-                const ctx = canvas.getContext('2d');
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
+        noResultsMsg.classList.toggle('hidden', visibleCount > 0);
+    }
 
-                page.render({ canvasContext: ctx, viewport: viewport });
-            });
-        }
-    }).catch(function(err) {
-        container.innerHTML = '<p class="text-red-500">Impossible de charger le PDF.</p>';
-        console.error(err);
+    buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            buttons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            filterContent();
+        });
+    });
+
+    searchInput.addEventListener('input', filterContent);
+
+    // Gestion des clics sur les liens des ressources
+    document.querySelectorAll('.resource-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const isExternal = this.getAttribute('data-external') === 'true';
+            const modalId = this.getAttribute('data-modal');
+            const type = this.getAttribute('data-type');
+            
+            if (isExternal) {
+                // Pour les liens externes, on utilise le modal existant
+                externalUrl = this.href;
+                document.getElementById('externalModal').classList.add('show');
+            } else {
+                // Pour les autres types, on ouvre le modal approprié
+                if (modalId) {
+                    const modal = new bootstrap.Modal(document.getElementById(modalId));
+                    modal.show();
+                    
+                    // // Cas spécial pour le PDF avec aperçu
+                    // if (type === 'pdf' && modalId === 'pdfModal5') {
+                    //     // Gérer le bouton d'affichage complet
+                    //     document.getElementById('togglePreview').addEventListener('click', function() {
+                    //         const preview = document.getElementById('pdfPreview');
+                    //         const full = document.getElementById('pdfFull');
+                            
+                    //         if (preview.classList.contains('d-none')) {
+                    //             preview.classList.remove('d-none');
+                    //             full.classList.add('d-none');
+                    //             this.textContent = 'Afficher le document complet';
+                    //         } else {
+                    //             preview.classList.add('d-none');
+                    //             full.classList.remove('d-none');
+                    //             this.textContent = 'Afficher l\'aperçu';
+                    //         }
+                    //     });
+                    // }
+                }
+            }
+        });
+    });
+
+    // Gestion du modal externe
+    document.getElementById('confirmExternal').addEventListener('click', () => {
+        window.open(externalUrl, '_blank');ri
+        closeExternalModal();
     });
 });
+
+let externalUrl = '';
+
+function closeExternalModal() {
+    document.getElementById('externalModal').classList.remove('show');
+}
 </script>
 
 {{-- Modal pour les liens externes --}}
