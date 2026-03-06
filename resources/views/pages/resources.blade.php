@@ -44,6 +44,19 @@
         'modal_id' => 'articleModal'
     ],
     [
+        'type' => 'article',
+        'type_label' => 'Article / Réflexion',
+        'title' => 'ÉDUQUONS NOS REGARDS - La spiritualité sous nos yeux',
+        'desc' => '« Nos îles, de par leur diversité écologique, nous offrent toutes sortes de sollicitations
+visuelles. Les villes qui ont été bâties suite à l’effondrement du système d’habitation-
+plantation...',
+        'duration' => '15 min',
+        'image' => 'sous-nos-yeux',
+        'url' => 'articles/sous-nos-yeux.pdf',
+        'is_external' => false,
+        'modal_id' => 'articleModal1'
+    ],
+    [
         'type' => 'gallery',
         'type_label' => 'Galerie',
         'title' => 'Retour en images sur le festival 2025...',
@@ -124,11 +137,19 @@
 ];
 
 // NOUVELLES DONNÉES POUR LA SECTION "NOS ACTIONS EN IMAGES"
- $actionImages = [
-    ['title' => 'Traduction', 'sub' => 'Les textes sacrés traduits en créole martiniquais', 'img' => 'traduction'],
-    ['title' => 'Paramentique', 'sub' => 'Les parements en mode créoles', 'img' => 'paramentique'],
-    ['title' => 'Culture et Société', 'sub' => 'Dialoguer le sacré en monde créole', 'img' => 'exposition-art'],
-    ['title' => 'Ecole d\'Arts Sacrés', 'sub' => 'Former et transmettre le sacré', 'img' => 'atelier-geometrie'],
+$actionImages = [
+    ['title' => 'Traduction', 'sub' => 'Les textes sacrés traduits en créole martiniquais', 'img' => 'traduction', 'description' => 'Des équipes de bénévole composée de passionné.e.s de la langue créole (linguiste
+professionnel et amateur) travaillent sur la traduction des textes sacrés. Bientôt une
+version des Évangiles en créole martiniquais.'],
+    ['title' => 'Paramentique', 'sub' => 'Les parements en mode créoles', 'img' => 'paramentique', 'description' => 'Le pôle paramentique de l’APACC-M propose la création de parements liturgiques
+ancrés dans la culture créole. Les talents des couturier.e.s, stylistes au service du
+sacré en monde créole.'],
+    ['title' => 'Culture et Société', 'sub' => 'Dialoguer le sacré en monde créole', 'img' => 'exposition-art', 'description' => 'Conférences, tables ronds, réflexions et rencontres avec les composantes de la
+société martiniquaise sur la question du sacré et de la culture chrétienne.'],
+    ['title' => "École d'Arts Sacrés", 'sub' => 'Former et transmettre le sacré', 'img' => 'atelier-geometrie', 'description' => 'Former et transmettre : les ateliers de l’Apacc-M forment aux pratiques artistiques de
+l’art sacré, ses techniques, son histoire, son patrimoine.
+Nos ateliers : iconographie, vitrail, callygraphie, art floral
+Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoine chrétien'],
 ];
 @endphp
 
@@ -254,18 +275,50 @@
 {{-- Section "Nos actions en images" (anciennement "La parole en images") --}}
 <section class="py-32 bg-gray-50">
     <div class="max-w-7xl mx-auto px-6 text-center">
-        <h2 class="font-display text-4xl font-bold mb-20 tracking-tighter uppercase">Nos actions <span class="italic serif font-light lowercase" style="font-family: 'Cinzel', serif;">en images</span></h2>
+        <h2 class="font-display text-4xl font-bold mb-20 tracking-tighter uppercase">
+            Nos actions <span class="italic serif font-light lowercase" style="font-family: 'Cinzel', serif;">en images</span>
+        </h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             @foreach($actionImages as $index => $action)
-            <div class="group relative aspect-[3/4] overflow-hidden {{ $index % 2 != 0 ? 'lg:mt-12' : '' }}" style="border-radius: 120px 120px 20px 20px;">
-                <img src="{{ asset('images/actions/' . $action['img'] . '.jpg') }}" class="absolute inset-0 w-full h-full object-cover scale-110 group-hover:scale-100 transition-all duration-[2s]">
+            <div class="group relative aspect-[3/4] overflow-hidden {{ $index % 2 != 0 ? 'lg:mt-12' : '' }}" 
+                 style="border-radius: 120px 120px 20px 20px; cursor:pointer;" 
+                 data-bs-toggle="modal" data-bs-target="#modalAction{{ $index }}">
+                
+                <img src="{{ asset('images/actions/' . $action['img'] . '.jpg') }}" 
+                     class="absolute inset-0 w-full h-full object-cover scale-110 group-hover:scale-100 transition-all duration-[2s]">
+                
                 <div class="absolute inset-0 bg-gradient-to-t from-red-900/90 via-red-900/20 to-transparent"></div>
+                
                 <div class="absolute inset-0 flex flex-col justify-end items-center p-10 text-center">
-                    <h4 class="font-bold text-white text-[30px] sm:text-[35px] md:text-[35px] mb-2 uppercase tracking-tighter text-center">{{ $action['title'] }}</h4>
-                    <h6 class="text-sm font-light italic text-white lowercase tracking-widest mb-4 mt-5">{{ $action['sub'] }}</h6>
-                    <p class="text-red-200 text-[9px] font-bold uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-700">{{ $action['sub'] }}</p>
+                    <h4 class="font-bold text-white text-[30px] sm:text-[35px] md:text-[35px] mb-2 uppercase tracking-tighter text-center">
+                        {{ $action['title'] }}
+                    </h4>
+                    <h6 class="text-sm font-light italic text-white lowercase tracking-widest mb-4 mt-5">
+                        {{ $action['sub'] }}
+                    </h6>
                 </div>
+            </div>
+
+            <!-- Modal Bootstrap -->
+            <div class="modal fade" id="modalAction{{ $index }}" tabindex="-1" aria-labelledby="modalLabel{{ $index }}" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel{{ $index }}">{{ $action['title'] }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-center">
+                    {{-- Ici, image différente et plus petite --}}
+                    {{-- <img src="{{ asset('images/actions/modal/' . $action['img'] . '-small.jpg') }}" 
+                         class="mx-auto mb-4 rounded max-w-[300px] h-auto"> --}}
+
+                    <p class="text-gray-700 text-left whitespace-pre-line">
+                        {{ $action['description'] ?? 'Description détaillée à ajouter pour ce bloc.' }}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
             @endforeach
         </div>
@@ -345,6 +398,27 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="articleModalLabel">Dire le sacré en société animiste : « BWA BRILÉ » d'Eugène MONA</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div style="height: 600px; overflow: auto;">
+                    <iframe src="articles/bwa-brile-mona.pdf" width="100%" height="100%"></iframe>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                <a href="articles/bwa-brile-mona.pdf" class="btn btn-primary" target="_blank">Télécharger</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="articleModal1" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="articleModalLabel">ÉDUQUONS NOS REGARDS - La spiritualité sous nos yeux</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">

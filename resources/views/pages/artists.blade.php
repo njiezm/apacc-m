@@ -67,7 +67,12 @@
                         'tags' => ['Vitrailliste', 'Ceramiste'],
                         'photo' => 'victor_anicet.jpg',
                         'oeuvre' => 'victor_anicet_oeuvre1.jpg',
-                        'gallery' => ['victor_anicet_oeuvre1.jpg'],
+                        'gallery' => [
+                            [
+                                'image' => 'victor_anicet_oeuvre1.jpg',
+                                'description' => ''
+                            ]
+                        ],
                         'links' => [
                             ['url' => 'http://ladoration.fr/vanicet', 'text' => 'Mes œuvres']
                         ]
@@ -80,7 +85,24 @@
                         'tags' => ['Peinture', 'Art Sacré'],
                         'photo' => 'danielle_guiteau.jpg',
                         'oeuvre' => 'danielle_guiteau_oeuvre6.jpg',
-                        'gallery' => [ 'danielle_guiteau_oeuvre7.jpg', 'danielle_guiteau_oeuvre9.jpg', 'danielle_guiteau_oeuvre5.jpg','danielle_guiteau_oeuvre8.jpg'],
+                        'gallery' => [
+                            [
+                                'image' => 'danielle_guiteau_oeuvre7.jpg',
+                                'description' => 'Peinture Saint Carlo ACUTIS'
+                            ],
+                            [
+                                'image' => 'danielle_guiteau_oeuvre9.jpg',
+                                'description' => 'Représentation de l’icône du Christ trônant'
+                            ],
+                            [
+                                'image' => 'danielle_guiteau_oeuvre5.jpg',
+                                'description' => 'Peinture portrait de Jésus Christ'
+                            ],
+                            [
+                                'image' => 'danielle_guiteau_oeuvre8.jpg',
+                                'description' => 'Peinture portrait de Jésus Christ'
+                            ]
+                        ],
                         'links' => [
                             ['url' => 'https://danielled.art/', 'text' => 'Portfolio'],
                             ['url' => 'https://www.facebook.com/share/1CAf94dANK/', 'text' => 'Facebook']
@@ -94,7 +116,24 @@
                         'tags' => ['Peinture', 'Art Contemporain'],
                         'photo' => 'yveline_guillon.jpg',
                         'oeuvre' => 'yveline_guillon_oeuvre1.jpg',
-                        'gallery' => ['yveline_guillon_oeuvre1.jpg', 'yveline_guillon_oeuvre2.jpg', 'yveline_guillon_oeuvre3.jpg', 'yveline_guillon_oeuvre4.jpg'],
+                        'gallery' => [
+                            [
+                                'image' => 'yveline_guillon_oeuvre1.jpg',
+                                'description' => 'Chemin de croix – 14 stations visibles à l’église de Trinité'
+                            ],
+                            [
+                                'image' => 'yveline_guillon_oeuvre2.jpg',
+                                'description' => 'Chemin de croix – 14 stations visibles à l’église de Trinité.'
+                            ],
+                            [
+                                'image' => 'yveline_guillon_oeuvre3.jpg',
+                                'description' => 'Chemin de croix – 14 stations visibles à l’église de Trinité'
+                            ],
+                            [
+                                'image' => 'yveline_guillon_oeuvre4.jpg',
+                                'description' => 'Chemin de croix – 14 stations visibles à l’église de Trinité'
+                            ]
+                        ],
                         'links' => []
                     ],
                     [
@@ -105,7 +144,24 @@
                         'tags' => ['Photographie', 'Art Visuel'],
                         'photo' => 'joel_jean_pierre.jpg',
                         'oeuvre' => 'joel_jean_pierre_pp.jpg',
-                        'gallery' => ['joel_jean_pierre_oeuvre1.jpg', 'joel_jean_pierre_oeuvre2.jpg', 'joel_jean_pierre_oeuvre3.jpg', 'joel_jean_pierre_oeuvre4.jpg'],
+                        'gallery' => [
+                            [
+                                'image' => 'joel_jean_pierre_oeuvre1.jpg',
+                                'description' => '“Le Sacré”, Coeur de Cathédrale de Fort de France,'
+                            ],
+                            [
+                                'image' => 'joel_jean_pierre_oeuvre2.jpg',
+                                'description' => '“Vierge Marie et l’enfant Jésus” Cathédrale de Fort de France'
+                            ],
+                            [
+                                'image' => 'joel_jean_pierre_oeuvre3.jpg',
+                                'description' => '“Le Divin” Coupole autel de l’église Sainte Catherine de Grand Rivière'
+                            ],
+                            [
+                                'image' => 'joel_jean_pierre_oeuvre4.jpg',
+                                'description' => '”Saint Jean Baptiste” Église de Basse-Pointe'
+                            ]
+                        ],
                         'links' => []
                     ],
                     [
@@ -116,7 +172,24 @@
                         'tags' => ['Céramique', 'Artisanat d\'Art'],
                         'photo' => 'jaqueline_haustant.jpg',
                         'oeuvre' => 'jaqueline_haustant_oeuvre1.jpg',
-                        'gallery' => ['jaqueline_haustant_oeuvre1.jpg', 'jaqueline_haustant_oeuvre2.jpg', 'jaqueline_haustant_oeuvre3.jpg', 'jaqueline_haustant_oeuvre4.jpg'],
+                        'gallery' => [
+                            [
+                                'image' => 'jaqueline_haustant_oeuvre1.jpg',
+                                'description' => 'Santons créoles (poterie)'
+                            ],
+                            [
+                                'image' => 'jaqueline_haustant_oeuvre2.jpg',
+                                'description' => 'Santons créoles (poterie)'
+                            ],
+                            [
+                                'image' => 'jaqueline_haustant_oeuvre3.jpg',
+                                'description' => 'Santons créoles (poterie)'
+                            ],
+                            [
+                                'image' => 'jaqueline_haustant_oeuvre4.jpg',
+                                'description' => 'Santons créoles (poterie)'
+                            ]
+                        ],
                         'links' => []
                     ],
                     [
@@ -127,7 +200,24 @@
                         'tags' => ['Vitrail', 'Enluminure'],
                         'photo' => 'eric_chauvineau.jpg',
                         'oeuvre' => 'eric_chauvineau_oeuvre1.jpg',
-                        'gallery' => ['eric_chauvineau_oeuvre1.jpg', 'eric_chauvineau_oeuvre2-b.jpg', 'eric_chauvineau_oeuvre3.jpg', 'eric_chauvineau_oeuvre4.jpg'],
+                        'gallery' => [
+                            [
+                                'image' => 'eric_chauvineau_oeuvre1.jpg',
+                                'description' => 'Vitrail prophète Ézéchiel XI eme siècle'
+                            ],
+                            [
+                                'image' => 'eric_chauvineau_oeuvre2-b.jpg',
+                                'description' => 'Vitrail Christ de Wissembourg (plus vieux vitrail de France)'
+                            ],
+                            [
+                                'image' => 'eric_chauvineau_oeuvre3.jpg',
+                                'description' => 'Vitrail la Vierge'
+                            ],
+                            [
+                                'image' => 'eric_chauvineau_oeuvre4.jpg',
+                                'description' => 'Enluminure : réalisation atelier'
+                            ]
+                        ],
                         'links' => [
                             ['url' => 'https://www.vitrailmartinique.com/', 'text' => 'Portfolio']
                         ]
@@ -228,20 +318,30 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row g-3">
+                    <div class="row g-4">
                         @if(isset($artist['gallery']))
-                            @foreach($artist['gallery'] as $photo)
+                            @foreach($artist['gallery'] as $artwork)
                             <div class="col-md-6">
-                                <img src="{{ asset('images/artistes/' . $photo) }}" 
-                                     alt="Œuvre de {{ $artist['firstname'] }} {{ $artist['lastname'] }}" 
-                                     class="img-fluid rounded">
+                                <div class="artwork-container">
+                                    <img src="{{ asset('images/artistes/' . $artwork['image']) }}" 
+                                         alt="Œuvre de {{ $artist['firstname'] }} {{ $artist['lastname'] }}" 
+                                         class="img-fluid rounded mb-3">
+                                    <p class="artwork-description text-sm text-gray-600 italic">
+                                        {{ $artwork['description'] }}
+                                    </p>
+                                </div>
                             </div>
                             @endforeach
                         @else
                             <div class="col-md-12">
-                                <img src="{{ asset('images/artistes/' . $artist['oeuvre']) }}" 
-                                     alt="Œuvre de {{ $artist['firstname'] }} {{ $artist['lastname'] }}" 
-                                     class="img-fluid rounded">
+                                <div class="artwork-container">
+                                    <img src="{{ asset('images/artistes/' . $artist['oeuvre']) }}" 
+                                         alt="Œuvre de {{ $artist['firstname'] }} {{ $artist['lastname'] }}" 
+                                         class="img-fluid rounded mb-3">
+                                    <p class="artwork-description text-sm text-gray-600 italic">
+                                        Œuvre représentative de l'artiste {{ $artist['firstname'] }} {{ $artist['lastname'] }}.
+                                    </p>
+                                </div>
                             </div>
                         @endif
                     </div>
