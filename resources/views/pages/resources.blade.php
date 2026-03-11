@@ -128,7 +128,7 @@ pratique de nègres sans éducation (en créole martiniquais : bagay vié nèg).
     [
         'type' => 'audio',
         'type_label' => 'Podcast',
-        'title' => 'Chants sacrés créoles',
+        'title' => 'Chants sacrés créoles, Bélè Légliz',
         'desc' => 'Écoutez les chants traditionnels qui mêlent spiritualité chrétienne et rythmes créoles.',
         'duration' => '25 min',
         'image' => 'chants-sacres',
