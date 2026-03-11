@@ -55,6 +55,19 @@
     'is_external' => false,
     'modal_id' => null, // plus de modal
     'open_new_tab' => true
+],[
+    'type' => 'article',
+    'type_label' => 'Article / Réflexion',
+    'title' => 'LE BÈLÈ MARTINIQUAIS EN CONTEXTE MODERNE',
+    'desc' => 'Dans cet article, il s’agit de réfléchir sur les valeurs philosophiques et spirituelles que portent le bèlè. 
+En effet, cette pratique musico-chorégraphique martiniquaise a longtemps été considérée comme une 
+pratique de nègres sans éducation (en créole martiniquais : bagay vié nèg).  ',
+    'duration' => '15 min',
+    'image' => 'belemod',
+    'url' => 'articles/belemoderne.pdf',
+    'is_external' => false,
+    'modal_id' => null, // plus de modal
+    'open_new_tab' => true
 ],
     [
         'type' => 'gallery',

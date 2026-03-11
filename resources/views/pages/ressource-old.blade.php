@@ -55,6 +55,18 @@ plantation...',
         'url' => 'articles/sous-nos-yeux.pdf',
         'is_external' => false,
         'modal_id' => 'articleModal1'
+    ],[
+        'type' => 'article',
+        'type_label' => 'Article / Réflexion',
+        'title' => 'LE BÈLÈ MARTINIQUAIS EN CONTEXTE MODERNE',
+        'desc' => 'Dans cet article, il s’agit de réfléchir sur les valeurs philosophiques et spirituelles que portent le bèlè. 
+En effet, cette pratique musico-chorégraphique martiniquaise a longtemps été considérée comme une 
+pratique de nègres sans éducation (en créole martiniquais : bagay vié nèg).  ',
+        'duration' => '55 min',
+        'image' => 'belemod',
+        'url' => 'articles/belemoderne.pdf',
+        'is_external' => false,
+        'modal_id' => 'articleModal2'
     ],
     [
         'type' => 'gallery',
@@ -419,6 +431,25 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="articleModalLabel">ÉDUQUONS NOS REGARDS - La spiritualité sous nos yeux</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div style="height: 600px; overflow: auto;">
+                    <iframe src="articles/bwa-brile-mona.pdf" width="100%" height="100%"></iframe>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                <a href="articles/bwa-brile-mona.pdf" class="btn btn-primary" target="_blank">Télécharger</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="articleModal2" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="articleModalLabel">LE BÈLÈ MARTINIQUAIS EN CONTEXTE MODERNE</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
