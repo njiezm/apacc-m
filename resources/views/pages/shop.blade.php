@@ -45,24 +45,23 @@
         'is_external' => true,
     ],*/
     [
-        'id' => 'revue-transandans',
-        'category' => 'publication',
-        'type' => 'revue',
-        'title' => 'Revue Transandans',
-        'subtitle' => 'Cahiers de culture',
-        'desc' => 'Réflexions sur l\'identité créole et la spiritualité.',
-        'image' => 'transandas5', // Fallback seed
-        'srcimage' => 'images/transandas5.jpeg', // Image locale
-        'issues' => [
-            ['num' => 1, 'price_paper' => '4,50€', 'price_digital' => '3,80€'],
-            ['num' => 2, 'price_paper' => '4,50€', 'price_digital' => '3,80€'],
-            ['num' => 3, 'price_paper' => '4,50€', 'price_digital' => '3,80€'],
-            ['num' => 4, 'price_paper' => '4,50€', 'price_digital' => '3,80€'],
-            ['num' => 5, 'price_paper' => '4,50€', 'price_digital' => '3,80€'],
-        ],
-        'url' => 'https://www.helloasso.com/associations/apacc-m/boutiques/revue-transandans',
-        'is_external' => true,
+    'id' => 'revue-transandans',
+    'category' => 'publication',
+    'type' => 'revue',
+    'title' => 'Revue Transandans',
+    'subtitle' => 'Cahiers de culture',
+    'desc' => 'Réflexions sur l\'identité créole et la spiritualité.',
+    'image' => 'transandas5',
+    'srcimage' => 'images/transandas5.jpeg',
+    'issues' => [
+        ['num' => 1, 'price_paper' => '4,50€', 'price_digital' => '3,80€', 'url_paper' => route('resources'), 'url_digital' => route('resources')],
+        ['num' => 2, 'price_paper' => '4,50€', 'price_digital' => '3,80€', 'url_paper' => 'https://www.helloasso.com/associations/apacc-m/boutiques/revue-trimestrielle-transandans', 'url_digital' => route('contact')],
+        ['num' => 3, 'price_paper' => '4,50€', 'price_digital' => '3,80€', 'url_paper' => 'https://www.helloasso.com/associations/apacc-m/boutiques/revue-trimestrielle-transandans', 'url_digital' => route('contact')],
+        ['num' => 4, 'price_paper' => '4,50€', 'price_digital' => '3,80€', 'url_paper' => 'https://www.helloasso.com/associations/apacc-m/boutiques/revue-trimestrielle-transandans', 'url_digital' => route('contact')],
+        ['num' => 5, 'price_paper' => '4,50€', 'price_digital' => '3,80€', 'url_paper' => 'https://www.helloasso.com/associations/apacc-m/boutiques/revue-trimestrielle-transandans', 'url_digital' => route('contact')],
     ],
+    'is_external' => true,
+],
     // CRÉATIONS & OBJETS
     [
         'id' => 'tee-shirt-festival',
@@ -88,7 +87,7 @@
         'price' => '5€',
         'image' => 'carte-postale-patrimoine', // Fallback seed
         'srcimage' => 'images/cartes.jpg', // Image locale
-        'url' => 'https://www.helloasso.com/associations/apacc-m/boutiques/carterie',
+        'url' => 'https://www.helloasso.com/associations/apacc-m/boutiques/boutique-de-l-apacc',
         'is_external' => true,
     ],
     [
@@ -149,9 +148,17 @@
                                     <div class="flex items-center justify-between p-2 border border-gray-100 rounded text-xs">
                                         <span class="font-bold uppercase tracking-wider">N°{{ $issue['num'] }}</span>
                                         <div class="flex gap-3">
-                                            <a href="{{ $item['url'] }}?num={{ $issue['num'] }}&format=paper" class="underline hover:no-underline">Papier {{ $issue['price_paper'] }}</a>
-                                            <a href="{{ $item['url'] }}?num={{ $issue['num'] }}&format=digital" class="underline hover:no-underline">Num. {{ $issue['price_digital'] }}</a>
-                                        </div>
+    <a href="{{ $issue['url_paper'] }}" 
+       class="underline hover:no-underline" 
+       @if($item['is_external']) target="_blank" @endif>
+        Papier {{ $issue['price_paper'] }}
+    </a>
+    <a href="{{ $issue['url_digital'] }}" 
+       class="underline hover:no-underline" 
+       @if($item['is_external']) target="_blank" @endif>
+        Num. {{ $issue['price_digital'] }}
+    </a>
+</div>
                                     </div>
                                     @endforeach
                                 </div>
@@ -255,7 +262,7 @@
                     Rejoignez notre mission et accédez à nos événements.
                 </p>
                 <div class="pt-4">
-                    <a href="{{ route('contact') }}" 
+                    <a href="https://www.helloasso.com/associations/apacc-m/adhesions/adhesion-apacc-m-annee-2025-2026" 
                        class="w-full block py-3 border border-black/10 text-black text-[10px] font-black uppercase tracking-[0.3em] rounded-full hover:bg-black hover:text-white transition-all">
                         Devenir Membre
                     </a>
@@ -268,7 +275,7 @@
             <p class="text-gray-500 font-light italic mb-8 leading-relaxed text-sm">
                 "Chaque contribution aide directement à la préservation des œuvres."
             </p>
-            <a href="https://www.helloasso.com/associations/apacc-m/formulaires/1" target="_blank" class="inline-flex items-center justify-center gap-4 text-[10px] font-black uppercase tracking-[0.4em] text-red-900 group">
+            <a href="https://www.helloasso.com/associations/apacc-m" target="_blank" class="inline-flex items-center justify-center gap-4 text-[10px] font-black uppercase tracking-[0.4em] text-red-900 group">
                 Faire un don
                 <span class="w-10 h-[1px] bg-red-900 group-hover:w-16 transition-all"></span>
             </a>
