@@ -351,6 +351,8 @@ Délivrance</p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+                <img src="images/cathedralesp.jpg" class="img-fluid rounded mb-3" alt="Cathédrale Saint Louis Fort de France">
+
         <p>L'Eglise du Fort, construite avant 1640 est vraisemblablement la plus ancienne. C'est d'abord une chapelle, puis une église paroissiales après la délimitation des paroisses de St Pierre. En 1851, l'église du Mouillage est érigée en cathédrale à l'arrivée du premier évêque de Saint-Pierre et de Fort-de-France, Mgr Leherpeur.</p>
         <p>L'éruption de 1902 détruit en grande partie l'édifice. Elle est reconstruite en 1923-1924 sur les bases de l'ancienne, les travaux se poursuivent jusqu'en 1929. 3 évêques y reposent : Mgr Leherpeur (1858) – Mgr Porchez. (1860) – Mgr Tanoux (1899). Le maitre-autel en marbre blanc de l'ancienne cathédrale n'y revient qu'en 1939. Malgré son apparence d'édifice en pierre, la structure de la cathédrale est en "ciment armé", de juin 2021 à décembre 2023 des travaux de restauration ont été entrepris.</p>
         <p class="text-sm text-gray-500 mt-3">Inscription au monuments historiques (1995)</p>
