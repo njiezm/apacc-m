@@ -673,7 +673,7 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
                 <img src="{{ asset('images/audio/chants-sacres.jpg') }}" class="img-fluid rounded mb-4" alt="Chants sacrés créoles">
 
                 <div class="audio-player bg-light p-4 rounded mb-4">
-                    <h6 class="mb-3" id="current-title">Le Nôtre Créole - Chant traditionnel</h6>
+                    <h6 class="mb-3" id="current-title">Bélya ba bondiè (Extrait Concert Live Festival 2025)</h6>
                     <audio id="audio-player" controls class="w-100" preload="metadata">
                         <source src="{{ asset('audio/chants-sacres.mp3')}}" type="audio/mpeg">
                         Votre navigateur ne supporte pas l'élément audio.
