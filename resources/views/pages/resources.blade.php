@@ -33,29 +33,29 @@
         'preview' => true // Affiche seulement les 5 premières pages
     ],
     [
-        'type' => 'article',
-        'type_label' => 'Article / Réflexion',
-        'title' => 'Dire le sacré en société animiste : « BWA BRILÉ » d\'Eugène MONA',
-        'desc' => 'Une analyse profonde par Max BÉLAISE de l\'œuvre d\'Eugène Mona, explorant la rencontre du sacré chrétien et de l\'animisme.',
-        'duration' => '15 min',
-        'image' => 'bwa-brile-mona',
-        'url' => 'articles/bwa-brile-mona.pdf',
-        'is_external' => false,
-        'modal_id' => 'articleModal'
-    ],
-    [
-        'type' => 'article',
-        'type_label' => 'Article / Réflexion',
-        'title' => 'ÉDUQUONS NOS REGARDS - La spiritualité sous nos yeux',
-        'desc' => '« Nos îles, de par leur diversité écologique, nous offrent toutes sortes de sollicitations
-visuelles. Les villes qui ont été bâties suite à l’effondrement du système d’habitation-
-plantation...',
-        'duration' => '15 min',
-        'image' => 'sous-nos-yeux',
-        'url' => 'articles/sous-nos-yeux.pdf',
-        'is_external' => false,
-        'modal_id' => 'articleModal1'
-    ],
+    'type' => 'article',
+    'type_label' => 'Article / Réflexion',
+    'title' => 'Dire le sacré en société animiste : « BWA BRILÉ » d\'Eugène MONA',
+    'desc' => 'Une analyse profonde par Max BÉLAISE de l\'œuvre d\'Eugène Mona, explorant la rencontre du sacré chrétien et de l\'animisme.',
+    'duration' => '15 min',
+    'image' => 'bwa-brile-mona',
+    'url' => 'articles/bwa-brile-mona.pdf',
+    'is_external' => false,
+    'modal_id' => null, // plus de modal
+    'open_new_tab' => true // ajout pour ton template
+],
+[
+    'type' => 'article',
+    'type_label' => 'Article / Réflexion',
+    'title' => 'ÉDUQUONS NOS REGARDS - La spiritualité sous nos yeux',
+    'desc' => '« Nos îles, de par leur diversité écologique, nous offrent toutes sortes de sollicitations visuelles...',
+    'duration' => '15 min',
+    'image' => 'sous-nos-yeux',
+    'url' => 'articles/sous-nos-yeux.pdf',
+    'is_external' => false,
+    'modal_id' => null, // plus de modal
+    'open_new_tab' => true
+],
     [
         'type' => 'gallery',
         'type_label' => 'Galerie',
@@ -104,8 +104,8 @@ plantation...',
     [
         'type' => 'video',
         'type_label' => 'Vidéo',
-        'title' => 'Les traditions créoles',
-        'desc' => 'Découvrez les traditions qui façonnent la culture créole martiniquaise.',
+        'title' => 'Langue creole et culture chrétienne ',
+        'desc' => 'Decouvrez comment la langue créole et la culture chrétienne se rencontrent; Quand la culture chrétienne se dit en creole',
         'duration' => '18 min',
         'image' => 'traditions-creoles',
         'url' => 'https://www.youtube.com/watch?v=ZEzXs7X5ut4&pp=ygUmdHJhZGl0aW9uIHJlbGlnaWV1c2UgY3Jlb2xlIGFydGlzdGlxdWU%3D',
@@ -170,7 +170,7 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
 
             {{-- Statistiques Minimalistes --}}
             <div class="flex gap-12 md:gap-24">
-                @foreach(['Articles' => '150+', 'Vidéos' => '85', 'Audio' => '45'] as $label => $count)
+                @foreach(['Articles' => '60+', 'Artistes' => '30+', 'Exemplaires Transandans' => '500+'] as $label => $count)
                 <div class="group">
                     <div class="text-3xl font-display font-light text-black mb-1 italic">{{ $count }}</div>
                     <div class="text-[9px] font-black text-red-900 uppercase tracking-widest opacity-60">{{ $label }}</div>
@@ -214,55 +214,65 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
 {{-- Grille de Ressources --}}
 <section class="py-16 px-6 bg-neutral-50">
     <div class="max-w-7xl mx-auto">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12" id="resourceGrid">
-            @foreach($featuredResources as $res)
-            <article 
-                class="resource-card group transition-all duration-500 ease-out"
-                data-type="{{ $res['type'] }}"
-                data-title="{{ strtolower($res['title']) }}"
+       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12" id="resourceGrid">
+    @foreach($featuredResources as $res)
+    <article 
+        class="resource-card group transition-all duration-500 ease-out"
+        data-type="{{ $res['type'] }}"
+        data-title="{{ strtolower($res['title']) }}"
+    >
+        {{-- Image --}}
+        <div class="relative overflow-hidden mb-6">
+            <img 
+                src="{{ asset('images/mediatheque/' . $res['image'] . '.jpg') }}"
+                alt="{{ $res['title'] }}"
+                class="w-full aspect-[16/10] object-cover transition-all duration-700 group-hover:scale-105"
             >
-                {{-- Image --}}
-                <div class="relative overflow-hidden mb-6">
-                    <img 
-    src="{{ asset('images/mediatheque/' . $res['image'] . '.jpg') }}"
-    alt="{{ $res['title'] }}"
-    class="w-full aspect-[16/10] object-cover transition-all duration-700 group-hover:scale-105"
->
-                </div>
-
-                {{-- Meta --}}
-                <div class="flex items-center justify-between text-[9px] font-bold uppercase tracking-widest text-neutral-400 mb-3">
-                    <span>{{ $res['type_label'] }}</span>
-                    <span>{{ $res['duration'] }}</span>
-                </div>
-
-                {{-- Titre --}}
-                <h3 class="text-lg font-bold uppercase tracking-tight mb-3 group-hover:text-red-900 transition-colors">
-                    {{ $res['title'] }}
-                </h3>
-
-                {{-- Description --}}
-                <p class="text-sm text-neutral-500 font-light leading-relaxed mb-6 line-clamp-2">
-                    {{ $res['desc'] }}
-                </p>
-
-                {{-- Lien --}}
-                <a 
-                    href="{{ $res['url'] }}"
-                    class="resource-link inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-widest border-b border-neutral-200 pb-1 hover:border-black transition-all"
-                    data-external="{{ $res['is_external'] ? 'true' : 'false' }}"
-                    data-modal="{{ $res['modal_id'] }}"
-                    data-type="{{ $res['type'] }}"
-                    data-url="{{ $res['url'] }}"
-                    @if(isset($res['preview'])) data-preview="{{ $res['preview'] ? 'true' : 'false' }}" @endif
-                    @if(isset($res['external_link'])) data-external-link="{{ $res['external_link'] }}" @endif
-                >
-                    {{ $res['is_external'] ? 'Consulter' : 'Lire' }}
-                    <i class="fas {{ $res['is_external'] ? 'fa-external-link-alt' : 'fa-arrow-right' }} text-[8px]"></i>
-                </a>
-            </article>
-            @endforeach
         </div>
+
+        {{-- Meta --}}
+        <div class="flex items-center justify-between text-[9px] font-bold uppercase tracking-widest text-neutral-400 mb-3">
+            <span>{{ $res['type_label'] }}</span>
+            <span>{{ $res['duration'] }}</span>
+        </div>
+
+        {{-- Titre --}}
+        <h3 class="text-lg font-bold uppercase tracking-tight mb-3 group-hover:text-red-900 transition-colors">
+            {{ $res['title'] }}
+        </h3>
+
+        {{-- Description --}}
+        <p class="text-sm text-neutral-500 font-light leading-relaxed mb-6 line-clamp-2">
+            {{ $res['desc'] }}
+        </p>
+
+        {{-- Lien --}}
+        @if(!empty($res['open_new_tab']))
+        <a 
+            href="{{ $res['url'] }}"
+            class="resource-link inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-widest border-b border-neutral-200 pb-1 hover:border-black transition-all"
+            target="_blank"
+        >
+            Lire <i class="fas fa-arrow-right text-[8px]"></i>
+        </a>
+        @else
+        <a 
+            href="{{ $res['url'] }}"
+            class="resource-link inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-widest border-b border-neutral-200 pb-1 hover:border-black transition-all"
+            data-external="{{ $res['is_external'] ? 'true' : 'false' }}"
+            data-modal="{{ $res['modal_id'] }}"
+            data-type="{{ $res['type'] }}"
+            data-url="{{ $res['url'] }}"
+            @if(isset($res['preview'])) data-preview="{{ $res['preview'] ? 'true' : 'false' }}" @endif
+            @if(isset($res['external_link'])) data-external-link="{{ $res['external_link'] }}" @endif
+        >
+            {{ $res['is_external'] ? 'Consulter' : 'Lire' }}
+            <i class="fas {{ $res['is_external'] ? 'fa-external-link-alt' : 'fa-arrow-right' }} text-[8px]"></i>
+        </a>
+        @endif
+    </article>
+    @endforeach
+</div>
 
         <div id="noResults" class="hidden py-20 text-center">
             <p class="text-xs font-black uppercase tracking-widest text-neutral-300">
@@ -600,7 +610,7 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
                             
                             <div class="alert alert-info mt-4">
                                 <i class="fas fa-info-circle me-2"></i>
-                                <strong>Prochaine session :</strong> 15-17 juillet 2026
+                                <strong>Prochaine session :</strong> Nous contacter
                             </div>
                         </div>
                     </div>
@@ -657,7 +667,7 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
                     </audio>
                 </div>
                 
-                <p>Les chants sacrés créoles représentent une fusion unique entre la liturgie chrétienne et les rythmes traditionnels martiniquais. Nés de la rencontre entre les traditions africaines et européennes, ces chants expriment la spiritualité à travers un langage musical qui reflète l'identité culturelle de la Martinique.</p>
+                <p>Les chants sacrés créoles, l'expérience bélè légliz. Écouter les chant créoles qui mèlent spiritualité chétienne et radition créole qui reflète l'identité culturelle de la Martinique.. Ces fusions representent la liturgie chrétienne et les rythmes traditionnels martiniquais.</p>
                 
                 <div class="mt-4">
                     <h6>Autres chants disponibles</h6>

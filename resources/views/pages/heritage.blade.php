@@ -253,24 +253,32 @@ Délivrance</p>
 <div class="modal fade" id="modalCathedraleSaintLouis" tabindex="-1" aria-labelledby="modalCathedraleSaintLouisLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
+      
       <div class="modal-header">
         <h5 class="modal-title" id="modalCathedraleSaintLouisLabel">Cathédrale Saint – Louis de Fort de France</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
       <div class="modal-body">
+
+        <!-- Image -->
+        <img src="images/cathedralesl.jpg" class="img-fluid rounded mb-3" alt="Cathédrale Saint Louis Fort de France">
+
         <p>Près de deux siècles séparent les premières chapelles en paille, édifiées vers 1665, de la construction de la cathédrale Saint-Louis en 1865. L'histoire débute avec l'installation des Capucins et l'édification d'une première chapelle, puis d'une chapelle paroissiale dédiée à saint Louis sur l'actuel site de la cathédrale (1667).</p>
         <p>Au fil du temps, l'édifice est incendié, détruit, reconstruit, endommagé puis agrandi.</p>
         <p>Inaugurée cathédrale en 1854, après la création du diocèse de Saint-Pierre et Fort-de-France, elle est à nouveau détruite par un incendie en 1890. L'actuelle cathédrale est alors reconstruite dès 1891 par l'architecte Pierre-Henri Picq.</p>
         <p>De style néogothique, longue de 66 mètres et haute de près de 59 mètres grâce à son ossature métallique, elle abrite vitraux, mobilier ancien, autel en marbre et sépultures de marquis et gouverneurs. Un édifice emblématique à découvrir.</p>
+
         <p class="text-sm text-gray-500 mt-3">Inscription aux monuments historiques</p>
       </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
       </div>
+
     </div>
   </div>
 </div>
-
 <!-- Modal Sanctuaire de Balata -->
 <div class="modal fade" id="modalBalata" tabindex="-1" aria-labelledby="modalBalataLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -322,6 +330,7 @@ Délivrance</p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <img src="images/cathedralesp.jpg" class="img-fluid rounded mb-3" alt="Cathédrale Saint Louis Fort de France">
         <p>L'Eglise du Fort, construite avant 1640 est vraisemblablement la plus ancienne. C'est d'abord une chapelle, puis une église paroissiales après la délimitation des paroisses de St Pierre. En 1851, l'église du Mouillage est érigée en cathédrale à l'arrivée du premier évêque de Saint-Pierre et de Fort-de-France, Mgr Leherpeur.</p>
         <p>L'éruption de 1902 détruit en grande partie l'édifice. Elle est reconstruite en 1923-1924 sur les bases de l'ancienne, les travaux se poursuivent jusqu'en 1929. 3 évêques y reposent : Mgr Leherpeur (1858) – Mgr Porchez. (1860) – Mgr Tanoux (1899). Le maitre-autel en marbre blanc de l'ancienne cathédrale n'y revient qu'en 1939. Malgré son apparence d'édifice en pierre, la structure de la cathédrale est en "ciment armé", de juin 2021 à décembre 2023 des travaux de restauration ont été entrepris.</p>
         <p class="text-sm text-gray-500 mt-3">Inscription au monuments historiques (1995)</p>
@@ -450,15 +459,15 @@ entrepris.</p>
       </div>
       <div class="modal-body">
         
-<img src="{{ asset('images/3i.jpg') }}" class="img-fluid w-50" alt="Photo 1"><br>
+  <img src="{{ asset('images/3i.jpg') }}" class="img-fluid w-50" alt="Photo 1"><br>
         <p>De la chapelle de Cul-de-sac-à-vaches (1683) à l’église Notre Dame de la
-Délivrance (1763 date possible de sa bénédiction), l’histoire de cet édifice est
-étroitement liée à celle de la famille de l’impératrice Joséphine.</p>
-        <p>Elle est le lieu du
-mariage de ses parents en 1761, de son baptême en 1763, de l’inhumation de Mme
-de la Pagerie (sa mère) en 1807.</p>
-        <p>Jusqu’à la 1ere moitié du 20 eme siècle, toutes les cérémonies de la famille
-impériale y sont célébrées.</p>
+        Délivrance (1763 date possible de sa bénédiction), l’histoire de cet édifice est
+        étroitement liée à celle de la famille de l’impératrice Joséphine.</p>
+                <p>Elle est le lieu du
+        mariage de ses parents en 1761, de son baptême en 1763, de l’inhumation de Mme
+        de la Pagerie (sa mère) en 1807.</p>
+                <p>Jusqu’à la 1ere moitié du 20 eme siècle, toutes les cérémonies de la famille
+        impériale y sont célébrées.</p>
         <p>Inscription au monuments historiques (1993).</p>
         <p class="text-sm text-gray-500 mt-3">Inscription au monuments historiques (2015)</p>
       </div>
