@@ -658,33 +658,46 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
             </div>
             <div class="modal-body text-center">
                 <img src="{{ asset('images/audio/chants-sacres.jpg') }}" class="img-fluid rounded mb-4" alt="Chants sacrés créoles">
-                
+
                 <div class="audio-player bg-light p-4 rounded mb-4">
-                    <h6 class="mb-3">Le Nôtre Créole - Chant traditionnel</h6>
-                    <audio controls class="w-100">
-                        <source src="audio/chants-sacres.mp3" type="audio/mpeg">
+                    <h6 class="mb-3" id="current-title">Le Nôtre Créole - Chant traditionnel</h6>
+                    <audio id="audio-player" controls class="w-100" preload="metadata">
+                        <source src="{{ asset('audio/chants-sacres.mp3')}}" type="audio/mpeg">
                         Votre navigateur ne supporte pas l'élément audio.
                     </audio>
                 </div>
-                
-                <p>Les chants sacrés créoles, l'expérience bélè légliz. Écouter les chant créoles qui mèlent spiritualité chétienne et radition créole qui reflète l'identité culturelle de la Martinique.. Ces fusions representent la liturgie chrétienne et les rythmes traditionnels martiniquais.</p>
-                
+
+                <!-- Bouton Télécharger la sélection -->
+                <a id="download-btn" href="{{ asset('audio/chants-sacres.mp3')}}" class="btn btn-primary mb-4" download>
+                    Télécharger la sélection
+                </a>
+
+                <p>Les chants sacrés créoles, l'expérience bélè légliz. Écouter les chants créoles qui mêlent spiritualité chrétienne et tradition créole reflétant l'identité culturelle de la Martinique. Ces fusions représentent la liturgie chrétienne et les rythmes traditionnels martiniquais.</p>
+
+                <!-- Lien vers le documentaire -->
+                <div class="mb-4">
+                    <h6>Regardez le documentaire sur Bèlè Légliz</h6>
+                    <a href="https://www.youtube.com/watch?v=oJL3PSF_MTs&ab_channel=FerYannick" target="_blank" class="btn btn-danger mt-2">
+                        Voir sur YouTube
+                    </a>
+                </div>
+
                 <div class="mt-4">
                     <h6>Autres chants disponibles</h6>
                     <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="#" class="list-group-item list-group-item-action audio-item" data-title="Mèsi Bondyé" data-src="{{ asset('audio/chants-sacres.mp3')}}">
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="mb-1">Mèsi Bondyé</h6>
                                 <small>3:45</small>
                             </div>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="#" class="list-group-item list-group-item-action audio-item" data-title="Lavi Krist" data-src="{{ asset('audio/chants-sacres.mp3')}}">
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="mb-1">Lavi Krist</h6>
                                 <small>4:12</small>
                             </div>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="#" class="list-group-item list-group-item-action audio-item" data-title="Lanmou ki gen pou nou" data-src="{{ asset('audio/chants-sacres.mp3')}}">
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="mb-1">Lanmou ki gen pou nou</h6>
                                 <small>5:03</small>
@@ -692,15 +705,40 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
                         </a>
                     </div>
                 </div>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                <a href="audio/chants-sacres.zip" class="btn btn-primary">Télécharger la collection</a>
             </div>
         </div>
     </div>
 </div>
 
+<script>
+    const audioItems = document.querySelectorAll('.audio-item');
+    const audioPlayer = document.getElementById('audio-player');
+    const currentTitle = document.getElementById('current-title');
+    const downloadBtn = document.getElementById('download-btn');
+
+    audioItems.forEach(item => {
+        item.addEventListener('click', function(e){
+            e.preventDefault();
+            const src = this.dataset.src;
+            const title = this.dataset.title;
+
+            // Change la source audio
+            audioPlayer.querySelector('source').src = src;
+            audioPlayer.load();
+            audioPlayer.play();
+
+            // Change le titre affiché
+            currentTitle.textContent = title;
+
+            // Change le lien de téléchargement
+            downloadBtn.href = src;
+        });
+    });
+</script>
 <style>
 .filter-btn.active { @apply bg-black text-white; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
