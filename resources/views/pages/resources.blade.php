@@ -183,7 +183,7 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
 
             {{-- Statistiques Minimalistes --}}
             <div class="flex gap-12 md:gap-24">
-                @foreach(['Articles' => '60+', 'Artistes' => '30+', 'Exemplaires Transandans' => '500+'] as $label => $count)
+                @foreach(['Articles' => '60+', 'Artistes' => '30+', 'Exemplaires Transandans' => '1500+'] as $label => $count)
                 <div class="group">
                     <div class="text-3xl font-display font-light text-black mb-1 italic">{{ $count }}</div>
                     <div class="text-[9px] font-black text-red-900 uppercase tracking-widest opacity-60">{{ $label }}</div>
