@@ -64,7 +64,7 @@
     ],
     [
         'title' => 'Caligraphie et enluminure, Thème : "La Nativité"',
-        'date' => '06 et 07 Décembre 2025',
+        'date' => '06 Décembre 2025',
         'time' => '9h00 - 15h00',
         'location' => 'Saint-Christophe',
         'category' => 'atelier',
@@ -118,6 +118,51 @@
         'registration_deadline' => '2025-06-30'
     ]
 ];
+
+// Fonction pour convertir la date textuelle en objet DateTime
+function convertDate($dateString) {
+    // Gérer le cas spécial pour "06 et 07 Décembre 2025"
+    if (strpos($dateString, ' et ') !== false) {
+        $dateString = str_replace(' et ', ' ', $dateString);
+    }
+    
+    // Remplacer les noms de mois français par des nombres
+    $months = [
+        'Janvier' => '01',
+        'Février' => '02',
+        'Mars' => '03',
+        'Avril' => '04',
+        'Mai' => '05',
+        'Juin' => '06',
+        'Juillet' => '07',
+        'Août' => '08',
+        'Septembre' => '09',
+        'Octobre' => '10',
+        'Novembre' => '11',
+        'Décembre' => '12'
+    ];
+    
+    foreach ($months as $french => $number) {
+        $dateString = str_replace($french, $number, $dateString);
+    }
+    
+    // Extraire le jour, le mois et l'année
+    $parts = explode(' ', $dateString);
+    $day = $parts[0];
+    $month = $parts[1];
+    $year = $parts[2];
+    
+    // Créer et retourner l'objet DateTime
+    return new DateTime("$year-$month-$day");
+}
+
+// Trier les événements par ordre chronologique
+// Trier les événements du plus récent au plus ancien
+usort($events, function($a, $b) {
+    $dateA = convertDate($a['date']);
+    $dateB = convertDate($b['date']);
+    return $dateB <=> $dateA;
+});
 @endphp
 
 {{-- Hero Section - Style Galerie --}}
