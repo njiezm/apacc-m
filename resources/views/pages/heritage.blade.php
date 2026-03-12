@@ -310,6 +310,8 @@ Délivrance</p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+                <img src="images/cathedraleti.jpg" class="img-fluid rounded mb-3" alt="Cathédrale Saint Louis Fort de France">
+
         <p>De la chapelle de Cul-de-sac-à-vaches (1683) à l'église Notre Dame de la Délivrance (1763 date possible de sa bénédiction), l'histoire de cet édifice est étroitement liée à celle de la famille de l'impératrice Joséphine. Elle est le lieu du mariage de ses parents en 1761, de son baptême en 1763, de l'inhumation de Mme de la Pagerie (sa mère) en 1807.</p>
         <p>Jusqu'à la 1ere moitié du 20 eme siècle, toutes les cérémonies de la famille impériale y sont célébrées.</p>
         <p class="text-sm text-gray-500 mt-3">Inscription au monuments historiques (1993)</p>

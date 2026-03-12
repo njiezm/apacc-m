@@ -85,8 +85,8 @@
             'image' => 'atelier28'
         ],
         [
-            'slug' => 'n-5revue-transandas',
-            'title' => 'N° 5  de la revue TRANSANDAS',
+            'slug' => 'n-5revue-transandans',
+            'title' => 'N° 5  de la revue TRANSANDANS',
             'date' => 'Mars 2026',
             'category' => 'Patrimoine',
             'excerpt' => 'Découvrez le dernier numéro de notre revue dédiée au patrimoine religieux martiniquais, avec des articles inédits et des analyses approfondies.',
