@@ -719,6 +719,14 @@ Nos formations : cycle de formation “géométrie sacrée”, guide du patrimoi
                     </div>
                 </div>
 
+                <div class="mb-4">
+    <h6>En savoir plus sur Bèlè Légliz</h6>
+    <a href="{{ route('bele-legliz') }}" class="btn btn-success mt-2">
+        Lire l’histoire complète
+    </a>
+</div>
+
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>

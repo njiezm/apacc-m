@@ -23,3 +23,8 @@ Route::get('/', function () { return view('pages.home'); })->name('home');
 Route::get('/actualite/{slug}', function ($slug) {
     return view('pages.news-show', ['slug' => $slug]);
 })->name('news.show');
+
+// Page dédiée à Bèlè Légliz
+Route::get('/bele-legliz', function () {
+    return view('pages.bele-legliz');
+})->name('bele-legliz');
