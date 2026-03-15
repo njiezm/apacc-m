@@ -510,7 +510,10 @@ entrepris.</p>
         <h5 class="modal-title" id="modalCalvaireLabel">Chapelle du Calvaire</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      
       <div class="modal-body">
+                <img src="images/cathedralesc.jpg" class="img-fluid rounded mb-3" alt="Cathédrale Saint Louis Fort de France">
+
         <p>La Chapelle du Calvaire de Fort-de-France, édifiée entre 1874 et 1935, domine la ville depuis les hauteurs et offre un point de vue exceptionnel sur la ville basse et la baie.</p>
         <p>Ce lieu de prière est particulièrement connu pour son chemin de croix traditionnel qui permet aux fidèles de méditer sur la passion du Christ tout en profitant d'un panorama remarquable sur Fort-de-France.</p>
         <p>La chapelle elle-même, de style simple et fonctionnel, a été conçue pour accueillir les pèlerins et les habitants du quartier venus y chercher réconfort et spiritualité. Elle représente un jalon important de la vie religieuse fort-de-française.</p>
